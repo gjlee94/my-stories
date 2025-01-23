@@ -1,16 +1,16 @@
 import { Flex } from "@/components/common/Flex";
-import { getAllPosts } from "@/pages/api";
+import { getAllPosts } from "@/lib/posts";
 import type { Post } from "@/pages/type/post";
 import { Typography } from "@/components/common/Typography";
 import { Tag } from "@/components/common/Tag";
 import Link from "next/link";
 
-export const getStaticProps = () => {
+export async function getStaticProps() {
   const posts = getAllPosts();
   return {
     props: { posts },
   };
-};
+}
 
 interface PostsPageProps {
   posts: Post[];

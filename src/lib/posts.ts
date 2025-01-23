@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
-import type { Post } from "../type/post";
+import type { Post } from "@/pages/type/post";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -9,7 +9,7 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string) {
+export function getPostBySlug(slug: string): Post {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
