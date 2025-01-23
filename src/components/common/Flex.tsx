@@ -9,6 +9,7 @@ type FlexProps = {
   gap?: number | string;
   children: React.ReactNode;
   as?: keyof JSX.IntrinsicElements;
+  css?: CSSProperties;
 };
 
 const StyledFlex = styled.div<Omit<FlexProps, "children" | "as">>`
