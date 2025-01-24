@@ -16,4 +16,13 @@ module.exports = {
     };
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/posts",
+        permanent: true, // 영구 리디렉션 (301)
+      },
+    ];
+  },
 };
