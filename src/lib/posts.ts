@@ -1,9 +1,13 @@
-import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
 import type { Post } from "@/pages/type/post";
 
 const postsDirectory = join(process.cwd(), "_posts");
+
+let fs: any;
+if (typeof window === "undefined") {
+  fs = require("fs");
+}
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
