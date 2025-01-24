@@ -1,8 +1,3 @@
-export interface Author {
-  name: string;
-  picture: string;
-}
-
 export interface Post {
   slug: string; // 동적 라우팅 경로
   title: string; // 제목

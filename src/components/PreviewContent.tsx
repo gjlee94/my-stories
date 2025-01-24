@@ -1,4 +1,4 @@
-import { Post } from "@/pages/type/post";
+import type { Post } from "@/types/post";
 import { Flex } from "./common/Flex";
 import { Typography } from "./common/Typography";
 import { Tag } from "./common/Tag";

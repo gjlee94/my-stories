@@ -2,7 +2,7 @@ import { Flex } from "@/components/common/Flex";
 import { Tag } from "@/components/common/Tag";
 import { Typography } from "@/components/common/Typography";
 import { getPostBySlug, getPostSlugs } from "@/lib/posts";
-import type { Post } from "@/pages/type/post";
+import type { Post } from "@/types/post";
 
 export async function getStaticPaths() {
   const slugs = getPostSlugs();

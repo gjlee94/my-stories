@@ -1,6 +1,6 @@
 import { Flex } from "@/components/common/Flex";
 import { getAllPosts } from "@/lib/posts";
-import type { Post } from "@/pages/type/post";
+import type { Post } from "@/types/post";
 import { PreviewContent } from "@/components/PreviewContent";
 import Link from "next/link";
 
