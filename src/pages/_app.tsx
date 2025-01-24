@@ -1,16 +1,44 @@
 import "../styles/globals.css";
 import { CacheProvider } from "@emotion/react";
 import { cache } from "@emotion/css";
-import { PageLayout } from "@/components/PageLayout";
+import { Layout } from "@/components/Layout";
+import { getAllPosts } from "@/lib/posts";
+import type { AppProps, AppContext } from "next/app";
 
-function MyApp({ Component, pageProps }) {
+interface MyAppProps extends AppProps {
+  categories: string[];
+}
+
+function MyApp({ Component, pageProps, categories }: MyAppProps) {
   return (
     <CacheProvider value={cache}>
-      <PageLayout>
+      <Layout categories={categories}>
         <Component {...pageProps} />
-      </PageLayout>
+      </Layout>
     </CacheProvider>
   );
 }
+
+MyApp.getInitialProps = async (appContext: AppContext) => {
+  // appContext.ctx.req가 있다면 서버사이드
+  if (appContext.ctx.req) {
+    const posts = getAllPosts();
+    const categories = [...new Set(posts.flatMap((post) => post.tags))];
+
+    // 기존의 getInitialProps 결과와 병합
+    const appProps = await appContext.Component.getInitialProps?.(
+      appContext.ctx
+    );
+
+    return {
+      pageProps: {
+        ...appProps,
+      },
+      categories,
+    };
+  }
+
+  return { pageProps: {}, categories: [] };
+};
 
 export default MyApp;
