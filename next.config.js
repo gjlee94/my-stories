@@ -25,4 +25,8 @@ module.exports = {
       },
     ];
   },
+  output: "export",
+  images: {
+    unoptimized: true, // ssg(output: export)에서는 이미지 최적화 불가능
+  },
 };
