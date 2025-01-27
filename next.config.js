@@ -29,4 +29,5 @@ module.exports = {
   images: {
     unoptimized: true, // ssg(output: export)에서는 이미지 최적화 불가능
   },
+  trailingSlash: true, // URL 경로에 슬래시 추가
 };
