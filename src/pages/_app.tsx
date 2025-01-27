@@ -1,9 +1,11 @@
 import "../styles/globals.css";
 import { CacheProvider } from "@emotion/react";
-import { cache } from "@emotion/css";
+import createCache from "@emotion/cache";
 import { Layout } from "@/components/Layout";
 import { getAllPosts } from "@/lib/posts";
 import type { AppProps, AppContext } from "next/app";
+
+const cache = createCache({ key: "css", prepend: true });
 
 interface MyAppProps extends AppProps {
   categories: string[];
