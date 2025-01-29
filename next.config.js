@@ -1,18 +1,14 @@
-const path = require("path");
+import path from "path";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compiler: {
     emotion: true,
   },
-};
-
-module.exports = {
-  ...nextConfig,
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@": path.resolve(__dirname, "src"),
+      "@": path.resolve(process.cwd(), "src"),
     };
     return config;
   },
@@ -27,7 +23,9 @@ module.exports = {
   },
   output: "export",
   images: {
-    unoptimized: true, // ssg(output: export)에서는 이미지 최적화 불가능
+    unoptimized: true, // SSG (output: export)에서는 이미지 최적화 불가능
   },
   trailingSlash: true, // URL 경로에 슬래시 추가
 };
+
+export default nextConfig;
