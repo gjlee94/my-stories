@@ -9,10 +9,6 @@ jobs:
   deploy:
     name: Build & Deploy
     runs-on: ubuntu-latest
-    env:
-      AWS_REGION: ${{ env.AWS_REGION }}
-      AWS_S3_BUCKET_NAME: ${{ env.AWS_S3_BUCKET_NAME }}
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ env.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
 
     steps:
       - name: Checkout Repository
