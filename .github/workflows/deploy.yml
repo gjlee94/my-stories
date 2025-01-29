@@ -22,7 +22,6 @@ jobs:
       - name: Build Next.js & Export Static Files
         run: |
           pnpm run build
-          npx next export
 
       - name: Sync Static Files to S3
         run: |
