@@ -3,7 +3,7 @@ import { Flex } from "../common/Flex";
 import { Typography } from "../common/Typography";
 import { Profile } from "../Profile";
 import { Categories } from "../Categories";
-import { Header, Wrapper } from "./styles";
+import { Aside, Header, Main, Wrapper } from "./styles";
 import ExternalLink from "@/assets/icons/external_link.svg";
 
 const portfolioLink =
@@ -16,46 +16,31 @@ export const Layout = ({
   children: React.ReactNode;
   categories: string[];
 }) => {
-  console.log(ExternalLink);
   return (
     <Wrapper direction="column" align="center">
-      <Header as="header" justify="space-between" align="center">
-        <Link href="/posts">
-          <Typography as="h1" variant="title1">
-            딸 아빠 개발자
-          </Typography>
-        </Link>
-        <a href={portfolioLink} target="_blank">
-          <Flex justify="flex-end" align="center" gap="4px">
-            <Typography as="p" variant="body2">
-              포트폴리오
+      <div style={{ width: "100%", borderBottom: "1px solid #e0e0e0" }}>
+        <Header justify="space-between" align="center">
+          <Link href="/posts">
+            <Typography as="h1" variant="title4">
+              딸 아빠 개발자
             </Typography>
-            <ExternalLink width={20} height={20} />
-          </Flex>
-        </a>
-      </Header>
-      <Flex css={{ width: "100%" }}>
-        <Flex
-          as="aside"
-          direction="column"
-          css={{ padding: "20px", flex: "1 0 250px" }}
-        >
-          <Categories categories={categories} />
-        </Flex>
-        <Flex as="main">{children}</Flex>
-        <Flex
-          as="aside"
-          direction="column"
-          css={{ padding: "20px", flex: "1 0 250px" }}
-        >
+          </Link>
+          <a href={portfolioLink} target="_blank">
+            <Flex justify="flex-end" align="center" gap="4px">
+              <Typography as="p" variant="body2">
+                포트폴리오
+              </Typography>
+              <ExternalLink width={20} height={20} />
+            </Flex>
+          </a>
+        </Header>
+      </div>
+
+      <Flex justify="center" css={{ maxWidth: "1200px" }}>
+        <Main as="main">{children}</Main>
+        <Aside as="aside" direction="column">
           <Profile />
-        </Flex>
-      </Flex>
-      <Flex
-        as="footer"
-        css={{ position: "fixed", bottom: "0px", padding: "32px 200px" }}
-      >
-        Contacts
+        </Aside>
       </Flex>
     </Wrapper>
   );

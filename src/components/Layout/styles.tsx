@@ -7,6 +7,20 @@ export const Wrapper = styled(Flex)`
 `;
 
 export const Header = styled(Flex)`
-  width: 92%;
-  border-bottom: 1px solid #e0e0e0;
+  height: 60px;
+  padding: 0 32px;
+`;
+
+export const Main = styled(Flex)`
+  max-width: 800px;
+  flex: 1 1 800px;
+
+  padding: 24px;
+`;
+
+export const Aside = styled(Flex)`
+  min-width: 300px;
+  flex: 1 1 300px;
+
+  padding: 24px;
 `;
