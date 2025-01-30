@@ -11,10 +11,16 @@ const nextConfig = {
         "@": path.resolve(process.cwd(), "src"),
       },
       rules: {
-        // SVG 설정
+        // SVG를 React 컴포넌트로 변환 (중복 파일명 방지)
         "*.svg": {
           loaders: ["@svgr/webpack"],
-          as: "react",
+          as: "*.js",
+          options: {
+            svgo: true,
+            svgoConfig: {
+              plugins: [{ name: "removeViewBox", active: false }],
+            },
+          },
         },
       },
     },
