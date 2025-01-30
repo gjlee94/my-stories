@@ -30,8 +30,8 @@ export const PreviewContent = ({ post }: PreviewContentType) => {
             {post.excerpt}
           </Typography>
           <Flex gap={6}>
-            {post.tags.map((tag) => (
-              <Tag>{tag}</Tag>
+            {post.tags.map((tag, idx) => (
+              <Tag key={tag + idx}>{tag}</Tag>
             ))}
           </Flex>
         </Flex>
