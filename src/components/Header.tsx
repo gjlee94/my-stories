@@ -5,7 +5,7 @@ import { Typography } from "./common/Typography";
 import MenuIcon from "@/assets/icons/menu.svg";
 import ExternalLinkIcon from "@/assets/icons/external-link.svg";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Wrapper = styled(Flex)`
   height: 60px;

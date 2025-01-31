@@ -7,6 +7,7 @@ import type { Post } from "@/types/post";
 import { PostBody } from "../../components/PostBody";
 import { format } from "date-fns";
 import styled from "@emotion/styled";
+
 export async function getStaticPaths() {
   const slugs = getPostSlugs();
   return {
@@ -55,8 +56,8 @@ export default function PostDetailPage({ post, content }: PostDetailPageProps) {
         {format(post.date, "yyyy년 MM월 dd일")}
       </Typography>
       <Flex gap={6}>
-        {post.tags.map((tag) => (
-          <Tag>{tag}</Tag>
+        {post.tags.map((tag, idx) => (
+          <Tag key={tag + idx}>{tag}</Tag>
         ))}
       </Flex>
       <PostBody content={content} />
