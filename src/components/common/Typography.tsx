@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { JSX } from "react";
+import { CSSProperties, JSX } from "react";
 
 type TypographyElementType = keyof JSX.IntrinsicElements;
 
@@ -54,6 +54,7 @@ interface TypographyProps {
   as?: TypographyElementType;
   variant: TypographyVariant;
   children: React.ReactNode;
+  css?: CSSProperties;
 }
 
 const StyledTypography = styled.p<{ variant: TypographyVariant }>`

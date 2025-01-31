@@ -7,6 +7,7 @@ export const Tag = ({ children }: { children: React.ReactNode }) => {
         borderRadius: "50px",
         backgroundColor: "rgb(232, 232, 232)",
         padding: "4px 8px",
+        width: "fit-content",
       }}
     >
       {children}
