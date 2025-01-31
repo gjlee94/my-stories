@@ -25,7 +25,7 @@ export const PreviewContent = ({ post }: PreviewContentType) => {
           <Typography as="h2" variant="title4">
             {post.title}
           </Typography>
-          <Typography as="p" variant="body6" css={{ paddingBottom: "10px" }}>
+          <Typography as="p" variant="body3" css={{ paddingBottom: "10px" }}>
             {post.excerpt}
           </Typography>
           <Typography as="p" variant="body6">

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { Flex } from "../common/Flex";
+import { Flex } from "./common/Flex";
 import Link from "next/link";
-import { Typography } from "../common/Typography";
+import { Typography } from "./common/Typography";
 import MenuIcon from "@/assets/icons/menu.svg";
 import ExternalLinkIcon from "@/assets/icons/external-link.svg";
 import { useBreakpoints } from "@/hooks/useBreakpoints";

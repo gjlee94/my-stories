@@ -3,9 +3,6 @@ import { getAllPosts } from "@/lib/posts";
 import type { Post } from "@/types/post";
 import { PreviewContent } from "@/components/PreviewContent";
 import Link from "next/link";
-import styled from "@emotion/styled";
-import { Typography } from "@/components/common/Typography";
-import { css } from "@emotion/react";
 import { useState } from "react";
 import { TabList } from "@/components/TabList";
 
@@ -26,12 +23,7 @@ export default function PostsPage({ posts }: PostsPageProps) {
   const tabs = ["전체", ...new Set(posts.map((post) => post.category))];
   const [selectedTab, setSelectedTab] = useState("전체");
   return (
-    <Flex
-      direction="column"
-      justify="center"
-      gap={20}
-      css={{ padding: "20px 0" }}
-    >
+    <Flex direction="column" gap={20}>
       <TabList
         tabs={tabs}
         selectedTab={selectedTab}
