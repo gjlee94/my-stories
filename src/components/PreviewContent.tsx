@@ -2,7 +2,7 @@ import type { Post } from "@/types/post";
 import { Flex } from "./common/Flex";
 import { Typography } from "./common/Typography";
 import { Tag } from "./common/Tag";
-import Image from "next/image";
+import { format } from "date-fns";
 
 interface PreviewContentType {
   post: Post;
@@ -18,30 +18,22 @@ export const PreviewContent = ({ post }: PreviewContentType) => {
           borderRadius: "16px",
           backgroundColor: "#fff",
           maxWidth: "1300px",
+          padding: "16px",
         }}
       >
-        <Image
-          src="/assets/dynamic-routing/cover.jpg"
-          alt={`${post.slug}_cover_image`}
-          layout="responsive" // 비율을 유지하며 부모의 maxWidth에 맞춤
-          width={1300} // maxWidth에 맞는 너비 설정
-          height={800} // 비율을 유지하기 위한 높이 설정 (적절한 값으로 설정)
-          objectFit="cover" // 부모에 맞추되 이미지를 잘라 채움
-        />
-
-        <Flex direction="column" gap={10} css={{ padding: "16px" }}>
-          <Typography as="h2" variant="title2">
+        <Flex direction="column" gap="6px">
+          <Typography as="h2" variant="title4">
             {post.title}
           </Typography>
-          <Typography as="p" variant="body6">
-            {post.date}
-          </Typography>
-          <Typography as="p" variant="body6">
+          <Typography as="p" variant="body3" css={{ paddingBottom: "10px" }}>
             {post.excerpt}
           </Typography>
+          <Typography as="p" variant="body6">
+            {format(new Date(post.date), "yyyy년 MM월 dd일")}
+          </Typography>
           <Flex gap={6}>
-            {post.tags.map((tag) => (
-              <Tag>{tag}</Tag>
+            {post.tags.map((tag, idx) => (
+              <Tag key={tag + idx}>{tag}</Tag>
             ))}
           </Flex>
         </Flex>

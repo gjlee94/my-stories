@@ -5,27 +5,40 @@ const nextConfig = {
   compiler: {
     emotion: true,
   },
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@": path.resolve(process.cwd(), "src"),
-    };
-    return config;
+  experimental: {
+    turbo: {
+      resolveAlias: {
+        "@": path.resolve(process.cwd(), "src"),
+      },
+      rules: {
+        // SVG를 React 컴포넌트로 변환 (중복 파일명 방지)
+        "*.svg": {
+          loaders: ["@svgr/webpack"],
+          as: "*.js",
+          options: {
+            svgo: true,
+            svgoConfig: {
+              plugins: [{ name: "removeViewBox", active: false }],
+            },
+          },
+        },
+      },
+    },
   },
   async redirects() {
     return [
       {
         source: "/",
         destination: "/posts",
-        permanent: true, // 영구 리디렉션 (301)
+        permanent: true,
       },
     ];
   },
   output: "export",
   images: {
-    unoptimized: true, // SSG (output: export)에서는 이미지 최적화 불가능
+    unoptimized: true,
   },
-  trailingSlash: true, // URL 경로에 슬래시 추가
+  trailingSlash: true,
 };
 
 export default nextConfig;

@@ -1,46 +1,33 @@
 import "../styles/globals.css";
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
-import { Layout } from "@/components/Layout";
-import { getAllPosts } from "@/lib/posts";
+import styled from "@emotion/styled";
+import { Flex } from "@/components/common/Flex";
 import type { AppProps, AppContext } from "next/app";
+import { Header } from "@/components/Header";
 
 const cache = createCache({ key: "css", prepend: true });
 
 interface MyAppProps extends AppProps {
-  categories: string[];
+  tags: string[];
 }
 
-function MyApp({ Component, pageProps, categories }: MyAppProps) {
+export const Wrapper = styled(Flex)`
+  height: 100vh;
+  background-color: rgb(248, 248, 248);
+`;
+
+function MyApp({ Component, pageProps }: MyAppProps) {
   return (
     <CacheProvider value={cache}>
-      <Layout categories={categories}>
+      <Wrapper direction="column" align="center">
+        <div style={{ width: "100%", borderBottom: "1px solid #e0e0e0" }}>
+          <Header />
+        </div>
         <Component {...pageProps} />
-      </Layout>
+      </Wrapper>
     </CacheProvider>
   );
 }
-
-MyApp.getInitialProps = async (appContext: AppContext) => {
-  // appContext.ctx.req가 있다면 서버사이드
-  if (appContext.ctx.req) {
-    const posts = getAllPosts();
-    const categories = [...new Set(posts.flatMap((post) => post.tags))];
-
-    // 기존의 getInitialProps 결과와 병합
-    const appProps = await appContext.Component.getInitialProps?.(
-      appContext.ctx
-    );
-
-    return {
-      pageProps: {
-        ...appProps,
-      },
-      categories,
-    };
-  }
-
-  return { pageProps: {}, categories: [] };
-};
 
 export default MyApp;

@@ -1,5 +1,7 @@
 import { Flex } from "./common/Flex";
 import { Typography } from "./common/Typography";
+import Image from "next/image";
+import ProfileImage from "../assets/images/profile.png";
 
 export const Profile = () => {
   return (
@@ -10,9 +12,15 @@ export const Profile = () => {
       <Flex
         direction="column"
         align="center"
-        css={{ width: "100%", backgroundColor: "#fff" }}
+        css={{ width: "100%", borderRadius: "16px", backgroundColor: "#fff" }}
       >
-        
+        <Image
+          src={ProfileImage}
+          alt="profile"
+          priority
+          width={200}
+          height={210}
+        />
         <Typography variant="title6">이경준</Typography>
         <Typography variant="body4">프론트엔드 개발자</Typography>
       </Flex>
