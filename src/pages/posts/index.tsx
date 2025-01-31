@@ -26,7 +26,7 @@ export default function PostsPage({ posts }: PostsPageProps) {
       css={{ padding: "20px 0" }}
     >
       {posts.map((post) => (
-        <Link href={`/posts/${post.slug}`}>
+        <Link key={post.slug} href={`/posts/${post.slug}`}>
           <PreviewContent post={post} />
         </Link>
       ))}
