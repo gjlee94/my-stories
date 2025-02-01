@@ -3,7 +3,7 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import styled from "@emotion/styled";
 import { Flex } from "@/components/common/Flex";
-import type { AppProps, AppContext } from "next/app";
+import type { AppProps } from "next/app";
 import { Header } from "@/components/Header";
 
 const cache = createCache({ key: "css", prepend: true });
