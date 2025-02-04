@@ -13,8 +13,8 @@ interface MyAppProps extends AppProps {
 }
 
 export const Wrapper = styled(Flex)`
-  height: 100vh;
   background-color: rgb(248, 248, 248);
+  min-height: 100vh;
 `;
 
 function MyApp({ Component, pageProps }: MyAppProps) {
