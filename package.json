@@ -23,8 +23,12 @@
     "gray-matter": "^4.0.3",
     "next": "^15.1.6",
     "nodemon": "^3.1.9",
+    "notion-client": "^7.1.6",
+    "notion-utils": "^7.1.6",
+    "prismjs": "^1.29.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-notion-x": "^7.2.6",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
@@ -33,6 +37,7 @@
     "@types/node": "^20.14.8",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "notion-types": "^7.1.6",
     "typescript": "^5.5.2"
   }
 }
