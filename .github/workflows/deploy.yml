@@ -20,6 +20,12 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Create .env.production file
+        run: |
+          echo "NEXT_PUBLIC_NOTION_PAGE_ID=${{ secrets.NOTION_PAGE_ID }}" > .env.production
+          echo "NEXT_PUBLIC_ACTIVE_NOTION_USER_ID=${{ secrets.ACTIVE_NOTION_USER_ID }}" >> .env.production
+          echo "NEXT_PUBLIC_NOTION_AUTH_TOKEN=${{ secrets.NOTION_AUTH_TOKEN }}" >> .env.production
+
       - name: Build Next.js & Export Static Files
         run: pnpm run build
 
