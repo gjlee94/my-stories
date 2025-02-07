@@ -13,6 +13,9 @@ import { queryKey } from "@/lib/queryKey";
 import { dehydrate, useQuery } from "@tanstack/react-query";
 import { getRecordMap } from "@/apis/getRecordMap";
 import { uuidToId } from "notion-utils";
+import NotionRenderer from "@/components/NotionRenderer";
+import { ExtendedRecordMap } from "notion-types";
+
 export async function getStaticPaths() {
   const posts = await getPosts();
   const slugs = posts.map((post) => post.slug);
@@ -65,7 +68,7 @@ export default function PostDetailPage({
 }: {
   params: { slug: string };
 }) {
-  const query = useQuery<Post>({
+  const query = useQuery<Post & { recordMap: ExtendedRecordMap }>({
     queryKey: queryKey.post(params.slug),
   });
 
@@ -84,6 +87,7 @@ export default function PostDetailPage({
           <Tag key={tag + idx}>{tag}</Tag>
         ))}
       </Flex>
+      <NotionRenderer posts={post.recordMap} />
     </Wrapper>
   );
 }
