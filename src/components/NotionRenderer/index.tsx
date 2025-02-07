@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import styled from "@emotion/styled";
 
 // core styles shared by all of react-notion-x (required)
 import "react-notion-x/src/styles.css";
@@ -42,19 +43,30 @@ interface NotionRendererProps {
   posts: any;
 }
 
+const StyledWrapper = styled.div`
+  .notion-collection-page-properties {
+    display: none !important;
+  }
+  .notion-page {
+    padding: 0;
+  }
+`;
+
 export default function NotionRenderer({ posts }: NotionRendererProps) {
   return (
-    <_NotionRenderer
-      recordMap={posts}
-      components={{
-        Code,
-        Collection,
-        Equation,
-        Modal,
-        Pdf,
-        nextImage: Image,
-        nextLink: Link,
-      }}
-    />
+    <StyledWrapper>
+      <_NotionRenderer
+        recordMap={posts}
+        components={{
+          Code,
+          Collection,
+          Equation,
+          Modal,
+          Pdf,
+          nextImage: Image,
+          nextLink: Link,
+        }}
+      />
+    </StyledWrapper>
   );
 }

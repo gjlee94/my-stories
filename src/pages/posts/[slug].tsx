@@ -1,32 +1,51 @@
 import { Flex } from "@/components/common/Flex";
 import { Tag } from "@/components/common/Tag";
 import { Typography } from "@/components/common/Typography";
-import markdownToHtml from "@/lib/markdownToHtml";
-import { getPostBySlug, getPostSlugs } from "@/lib/posts";
 import type { Post } from "@/types/post";
-import { PostBody } from "../../components/PostBody";
 import { format } from "date-fns";
 import styled from "@emotion/styled";
+import { getPosts } from "@/apis/getPosts";
+import { queryClient } from "@/lib/queryClient";
+import { queryKey } from "@/lib/queryKey";
+import { dehydrate, useQuery } from "@tanstack/react-query";
+import { getRecordMap } from "@/apis/getRecordMap";
+import { uuidToId } from "notion-utils";
+import NotionRenderer from "@/components/NotionRenderer";
+import { ExtendedRecordMap } from "notion-types";
 
 export async function getStaticPaths() {
-  const slugs = getPostSlugs();
+  const posts = await getPosts();
+  const slugs = posts.map((post) => post.slug);
   return {
-    paths: slugs.map((slug) => ({
-      params: { slug: slug.replace(/\.md$/, "") },
-    })),
+    paths: slugs.map((slug) => `/posts/${slug}`),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
-  const content = await markdownToHtml(post.content || "");
+  const posts = await getPosts();
+
+  await queryClient.prefetchQuery({
+    queryKey: queryKey.posts(),
+    queryFn: () => posts,
+  });
+
+  const detailPost = posts.find((post) => post.slug === params.slug);
+  console.log("detailPost", detailPost);
+  const recordMap = await getRecordMap(uuidToId(detailPost.id));
+
+  await queryClient.prefetchQuery({
+    queryKey: queryKey.post(params.slug),
+    queryFn: () => ({ ...detailPost, recordMap }),
+  });
 
   return {
-    props: { post, content },
+    props: {
+      dehydratedState: dehydrate(queryClient),
+      params: { slug: params.slug },
+    },
   };
 }
-
 const Wrapper = styled(Flex)`
   max-width: 800px;
   flex: 1 1 800px;
@@ -41,26 +60,31 @@ const Wrapper = styled(Flex)`
   background-color: white;
 `;
 
-interface PostDetailPageProps {
-  post: Post;
-  content: string;
-}
+export default function PostDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const query = useQuery<Post & { recordMap: ExtendedRecordMap }>({
+    queryKey: queryKey.post(params.slug),
+  });
 
-export default function PostDetailPage({ post, content }: PostDetailPageProps) {
+  const post = query.data;
+
   return (
     <Wrapper direction="column" gap={20}>
       <Typography as="h1" variant="title3">
         {post.title}
       </Typography>
       <Typography as="p" variant="body3">
-        {format(post.date, "yyyy년 MM월 dd일")}
+        {format(post.createdTime, "yyyy년 MM월 dd일")}
       </Typography>
       <Flex gap={6}>
         {post.tags.map((tag, idx) => (
           <Tag key={tag + idx}>{tag}</Tag>
         ))}
       </Flex>
-      <PostBody content={content} />
+      <NotionRenderer posts={post.recordMap} />
     </Wrapper>
   );
 }
