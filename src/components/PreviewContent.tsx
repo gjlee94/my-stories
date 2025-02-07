@@ -26,10 +26,10 @@ export const PreviewContent = ({ post }: PreviewContentType) => {
             {post.title}
           </Typography>
           <Typography as="p" variant="body3" css={{ paddingBottom: "10px" }}>
-            {post.excerpt}
+            {post.summary}
           </Typography>
           <Typography as="p" variant="body6">
-            {format(new Date(post.date), "yyyy년 MM월 dd일")}
+            {format(new Date(post.createdTime), "yyyy년 MM월 dd일")}
           </Typography>
           <Flex gap={6}>
             {post.tags.map((tag, idx) => (
