@@ -1,14 +1,19 @@
 import { getTextContent, getDateValue } from "notion-utils";
 import { NotionAPI } from "notion-client";
 import { BlockMap, CollectionPropertySchemaMap } from "notion-types";
+import { customMapImageUrl } from "./customMapImageUrl";
 
 async function getPageProperties(
   id: string,
   block: BlockMap,
   schema: CollectionPropertySchemaMap
 ) {
-  const api = new NotionAPI();
+  const api = new NotionAPI({
+    activeUser: process.env.NEXT_PUBLIC_ACTIVE_NOTION_USER_ID,
+    authToken: process.env.NEXT_PUBLIC_NOTION_AUTH_TOKEN,
+  });
   const rawProperties = Object.entries(block?.[id]?.value?.properties || []);
+
   const excludeProperties = [
     "date",
     "select",
@@ -20,10 +25,22 @@ async function getPageProperties(
   for (let i = 0; i < rawProperties.length; i++) {
     const [key, val]: any = rawProperties[i];
     properties.id = id;
+
     if (schema[key]?.type && !excludeProperties.includes(schema[key].type)) {
       properties[schema[key].name] = getTextContent(val);
     } else {
       switch (schema[key]?.type) {
+        case "file": {
+          try {
+            const Block = block?.[id].value;
+            const url: string = val[0][1][0][1];
+            const newurl = customMapImageUrl(url, Block);
+            properties[schema[key].name] = newurl;
+          } catch (error) {
+            properties[schema[key].name] = undefined;
+          }
+          break;
+        }
         case "date": {
           const dateProperty: any = getDateValue(val);
           delete dateProperty.type;
