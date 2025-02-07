@@ -1,10 +1,7 @@
 import { Flex } from "@/components/common/Flex";
 import { Tag } from "@/components/common/Tag";
 import { Typography } from "@/components/common/Typography";
-import markdownToHtml from "@/lib/markdownToHtml";
-import { getPostBySlug, getPostSlugs } from "@/lib/posts";
 import type { Post } from "@/types/post";
-import { PostBody } from "../../components/PostBody";
 import { format } from "date-fns";
 import styled from "@emotion/styled";
 import { getPosts } from "@/apis/getPosts";
