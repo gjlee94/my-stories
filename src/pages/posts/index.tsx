@@ -14,8 +14,8 @@ import { queryKey } from "@/lib/queryKey";
 import { TabList } from "@/components/TabList";
 
 const Main = styled(Flex)`
-  max-width: 800px;
-  flex: 1 1 800px;
+  max-width: 1000px;
+  flex: 1 1 1000px;
 
   padding: 24px;
 `;
@@ -85,9 +85,9 @@ export default function PostsPage() {
   const tags = [...new Set(posts.flatMap((post) => post.tags))];
 
   return (
-    <Flex justify="center">
+    <Flex justify="center" css={{ width: "100%", maxWidth: "1300px" }}>
       <Main as="main">
-        <Flex direction="column" gap={20}>
+        <Flex direction="column" gap={20} css={{ width: "100%" }}>
           <TabList
             tabs={tabs}
             selectedTab={selectedTab}
@@ -100,7 +100,13 @@ export default function PostsPage() {
               </Link>
             ))
           ) : (
-            <Flex css={{ width: "100%" }}>데이터 없음</Flex>
+            <Flex
+              justify="center"
+              align="center"
+              css={{ width: "100%", height: "148px", backgroundColor: "white" }}
+            >
+              데이터 없음
+            </Flex>
           )}
         </Flex>
       </Main>

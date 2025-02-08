@@ -18,7 +18,10 @@ export const TagList = ({
     <Wrapper direction="column" gap={10}>
       <Typography variant="title6">🏷️ Tags</Typography>
 
-      <Flex align="center" css={{ width: "100%", gap: "6px" }}>
+      <Flex
+        align="center"
+        css={{ width: "100%", gap: "6px", flexWrap: "wrap" }}
+      >
         {tags.map((tag) => {
           return (
             <Tag
