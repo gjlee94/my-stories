@@ -60,8 +60,9 @@ const filterPosts = ({
     const matchTab = selectedTab === "전체" || post.category[0] === selectedTab;
     const matchTag =
       selectedTag === undefined || post.tags.includes(selectedTag);
+    const isPublished = post.status.includes("Published");
 
-    return matchTab && matchTag;
+    return matchTab && matchTag && isPublished;
   });
 };
 
