@@ -17,7 +17,7 @@ export async function getStaticPaths() {
   const posts = await getPosts();
   const slugs = posts.map((post) => post.slug);
   return {
-    paths: slugs.map((slug) => `/posts/${slug}`),
+    paths: slugs.map((slug) => `/${slug}`),
     fallback: false,
   };
 }
@@ -31,7 +31,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   });
 
   const detailPost = posts.find((post) => post.slug === params.slug);
-  console.log("detailPost", detailPost);
   const recordMap = await getRecordMap(uuidToId(detailPost.id));
 
   await queryClient.prefetchQuery({
@@ -47,9 +46,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   };
 }
 const Wrapper = styled(Flex)`
-  max-width: 800px;
-  flex: 1 1 800px;
-
+  max-width: 1200px;
+  width: calc(100% - 60px);
   padding: 24px;
   margin: 24px 12px;
   max-height: fit-content;

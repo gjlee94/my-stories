@@ -17,7 +17,6 @@ export const PreviewContent = ({ post }: PreviewContentType) => {
           overflow: "hidden",
           borderRadius: "16px",
           backgroundColor: "#fff",
-          maxWidth: "1300px",
           padding: "16px",
         }}
       >
