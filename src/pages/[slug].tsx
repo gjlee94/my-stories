@@ -80,7 +80,12 @@ export default function PostDetailPage({
 
   return (
     <>
-      <HeadConfig title={post.title} summary={post.summary} tags={post.tags} />
+      <HeadConfig
+        title={post.title}
+        summary={post.summary}
+        tags={post.tags}
+        slug={params.slug}
+      />
       <Wrapper direction="column" gap={20}>
         <Typography as="h1" variant="title3">
           {post.title}
