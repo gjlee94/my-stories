@@ -17,7 +17,7 @@ export async function getStaticPaths() {
   const posts = await getPosts();
   const slugs = posts.map((post) => post.slug);
   return {
-    paths: slugs.map((slug) => `/posts/${slug}`),
+    paths: slugs.map((slug) => `/${slug}`),
     fallback: false,
   };
 }

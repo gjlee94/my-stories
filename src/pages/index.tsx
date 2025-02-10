@@ -96,7 +96,7 @@ export default function PostsPage() {
           />
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post) => (
-              <Link key={post.slug} href={`/posts/${post.slug}`}>
+              <Link key={post.slug} href={`/${post.slug}`}>
                 <PreviewContent post={post} />
               </Link>
             ))
