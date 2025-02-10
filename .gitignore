@@ -1,5 +1,7 @@
 node_modules
 
+public/debug-*.json
+
 # dependencies
 /node_modules
 /.pnp

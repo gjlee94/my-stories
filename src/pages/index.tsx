@@ -13,6 +13,9 @@ import { getPosts } from "@/apis/getPosts";
 import { queryKey } from "@/lib/queryKey";
 import { TabList } from "@/components/TabList";
 
+import fs from "fs";
+import path from "path";
+
 const Main = styled(Flex)`
   max-width: 1000px;
   flex: 1 1 1000px;
@@ -35,6 +38,12 @@ export const getStaticProps = async () => {
     queryKey: queryKey.posts(),
     queryFn: () => posts,
   });
+
+  // ✅ 디버깅 데이터 JSON 파일로 저장
+  fs.writeFileSync(
+    path.join(process.cwd(), "public", `debug.json`),
+    JSON.stringify({ posts }, null, 2)
+  );
 
   return {
     props: {
