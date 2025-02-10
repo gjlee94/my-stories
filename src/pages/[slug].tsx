@@ -13,6 +13,9 @@ import { uuidToId } from "notion-utils";
 import NotionRenderer from "@/components/NotionRenderer";
 import { ExtendedRecordMap } from "notion-types";
 
+import fs from "fs";
+import path from "path";
+
 export async function getStaticPaths() {
   const posts = await getPosts();
   const slugs = posts.map((post) => post.slug);
@@ -37,6 +40,12 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     queryKey: queryKey.post(params.slug),
     queryFn: () => ({ ...detailPost, recordMap }),
   });
+
+  // ✅ 디버깅 데이터 JSON 파일로 저장
+  fs.writeFileSync(
+    path.join(process.cwd(), "public", `debug-${params.slug}.json`),
+    JSON.stringify({ posts, recordMap }, null, 2)
+  );
 
   return {
     props: {
