@@ -12,7 +12,7 @@
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["nextjs", "react", "ssg", "static-site", "aws", "s3", "notion", "blog"],
   "author": "",
   "license": "ISC",
   "dependencies": {
