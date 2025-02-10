@@ -76,6 +76,9 @@ devDependencies:
   notion-types:
     specifier: ^7.1.6
     version: 7.1.6
+  only-allow:
+    specifier: ^1.2.1
+    version: 1.2.1
   typescript:
     specifier: ^5.5.2
     version: 5.7.3
@@ -3241,6 +3244,13 @@ packages:
     dev: false
     optional: true
 
+  /only-allow@1.2.1:
+    resolution: {integrity: sha512-M7CJbmv7UCopc0neRKdzfoGWaVZC+xC1925GitKH9EAqYFzX9//25Q7oX4+jw0tiCCj+t5l6VZh8UPH23NZkMA==}
+    hasBin: true
+    dependencies:
+      which-pm-runs: 1.1.0
+    dev: true
+
   /p-defer@1.0.0:
     resolution: {integrity: sha512-wB3wfAxZpk2AzOfUMJNL+d36xothRSyj8EXOa4f6GMqYDN9BJaaSISbsk+wS9abmnebVw95C2Kb5t85UmpCxuw==}
     engines: {node: '>=4'}
@@ -4057,6 +4067,11 @@ packages:
     dependencies:
       loose-envify: 1.4.0
     dev: false
+
+  /which-pm-runs@1.1.0:
+    resolution: {integrity: sha512-n1brCuqClxfFfq/Rb0ICg9giSZqCS+pLtccdag6C2HyufBrh3fBOiy9nb6ggRMvWOVH5GrdJskj5iGTZNxd7SA==}
+    engines: {node: '>=4'}
+    dev: true
 
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
