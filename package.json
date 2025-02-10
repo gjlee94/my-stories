@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "packageManager": "pnpm@8.15.5",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
@@ -39,6 +41,7 @@
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "notion-types": "^7.1.6",
+    "only-allow": "^1.2.1",
     "typescript": "^5.5.2"
   }
 }
