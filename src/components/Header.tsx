@@ -24,7 +24,7 @@ export const Header = () => {
     return (
       <>
         <Wrapper justify="space-between" align="center">
-          <Link href="/posts">
+          <Link href="/">
             <Typography as="h1" variant="title4">
               딸 아빠 개발자
             </Typography>
@@ -53,7 +53,7 @@ export const Header = () => {
 
   return (
     <Wrapper justify="space-between" align="center">
-      <Link href="/posts">
+      <Link href="/">
         <Typography as="h1" variant="title4">
           딸 아빠 개발자
         </Typography>
