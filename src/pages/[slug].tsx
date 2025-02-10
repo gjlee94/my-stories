@@ -12,10 +12,10 @@ import { getRecordMap } from "@/apis/getRecordMap";
 import { uuidToId } from "notion-utils";
 import NotionRenderer from "@/components/NotionRenderer";
 import { ExtendedRecordMap } from "notion-types";
+import { HeadConfig } from "@/components/HeadConfig";
 
 import fs from "fs";
 import path from "path";
-
 export async function getStaticPaths() {
   const posts = await getPosts();
   const slugs = posts.map((post) => post.slug);
@@ -79,19 +79,22 @@ export default function PostDetailPage({
   const post = query.data;
 
   return (
-    <Wrapper direction="column" gap={20}>
-      <Typography as="h1" variant="title3">
-        {post.title}
-      </Typography>
-      <Typography as="p" variant="body3">
-        {format(post.createdTime, "yyyy년 MM월 dd일")}
-      </Typography>
-      <Flex gap={6}>
-        {post.tags.map((tag, idx) => (
-          <Tag key={tag + idx}>{tag}</Tag>
-        ))}
-      </Flex>
-      <NotionRenderer posts={post.recordMap} />
-    </Wrapper>
+    <>
+      <HeadConfig title={post.title} excerpt={post.summary} tags={post.tags} />
+      <Wrapper direction="column" gap={20}>
+        <Typography as="h1" variant="title3">
+          {post.title}
+        </Typography>
+        <Typography as="p" variant="body3">
+          {format(post.createdTime, "yyyy년 MM월 dd일")}
+        </Typography>
+        <Flex gap={6}>
+          {post.tags.map((tag, idx) => (
+            <Tag key={tag + idx}>{tag}</Tag>
+          ))}
+        </Flex>
+        <NotionRenderer posts={post.recordMap} />
+      </Wrapper>
+    </>
   );
 }
