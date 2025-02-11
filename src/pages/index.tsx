@@ -97,7 +97,7 @@ export default function PostsPage() {
 
   const posts = query.data;
 
-  const filteredPosts = filterPosts({
+  const filteredPosts = useFilterPosts({
     selectedTab,
     selectedTag,
   });
