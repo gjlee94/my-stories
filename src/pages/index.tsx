@@ -63,7 +63,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const filterPosts = ({
+const useFilterPosts = ({
   selectedTab,
   selectedTag,
 }: {
@@ -97,7 +97,7 @@ export default function PostsPage() {
 
   const posts = query.data;
 
-  const filteredPosts = filterPosts({
+  const filteredPosts = useFilterPosts({
     selectedTab,
     selectedTag,
   });
