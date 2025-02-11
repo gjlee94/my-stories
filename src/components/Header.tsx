@@ -2,10 +2,9 @@ import styled from "@emotion/styled";
 import { Flex } from "./common/Flex";
 import Link from "next/link";
 import { Typography } from "./common/Typography";
-import MenuIcon from "@/assets/icons/menu.svg";
-import ExternalLinkIcon from "@/assets/icons/external-link.svg";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { useState } from "react";
+import Image from "next/image";
 
 const Wrapper = styled(Flex)`
   height: 60px;
@@ -30,7 +29,12 @@ export const Header = () => {
             </Typography>
           </Link>
           <button onClick={() => setIsOpen(!isOpen)}>
-            <MenuIcon width={24} height={24} />
+            <Image
+              src="/assets/icons/menu.svg"
+              alt="menu"
+              width={24}
+              height={24}
+            />
           </button>
         </Wrapper>
         {isOpen && (
@@ -43,7 +47,12 @@ export const Header = () => {
               <Typography as="span" variant="body2">
                 포트폴리오
               </Typography>
-              <ExternalLinkIcon width={20} height={20} />
+              <Image
+                src="/assets/icons/external-link.svg"
+                alt="external-link"
+                width={20}
+                height={20}
+              />
             </Flex>
           </a>
         )}
@@ -63,7 +72,12 @@ export const Header = () => {
           <Typography as="p" variant="body2">
             포트폴리오
           </Typography>
-          <ExternalLinkIcon width={20} height={20} />
+          <Image
+            src="/assets/icons/external-link.svg"
+            alt="external-link"
+            width={20}
+            height={20}
+          />
         </Flex>
       </a>
     </Wrapper>

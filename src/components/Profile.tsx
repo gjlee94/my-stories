@@ -1,7 +1,6 @@
 import { Flex } from "./common/Flex";
 import { Typography } from "./common/Typography";
 import Image from "next/image";
-import ProfileImage from "../assets/images/profile.png";
 
 export const Profile = () => {
   return (
@@ -15,7 +14,7 @@ export const Profile = () => {
         css={{ width: "100%", borderRadius: "16px", backgroundColor: "#fff" }}
       >
         <Image
-          src={ProfileImage}
+          src="/assets/profile.png"
           alt="profile"
           priority
           width={200}

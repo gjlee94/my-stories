@@ -18,7 +18,7 @@ export const HeadConfig = ({ title, summary, tags, slug }: HeadConfigProps) => {
       <meta property="og:description" content={summary} />
       <meta
         property="og:image"
-        content={`${process.env.NEXT_PUBLIC_SITE_URL}/assets/images/profile.png`}
+        content={`${process.env.NEXT_PUBLIC_SITE_URL}/assets/profile.png`}
       />
       <meta
         property="og:url"

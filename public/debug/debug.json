@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": "1950dfea-15a2-8025-8f32-c6cdbc853b69",
+      "createdAt": "",
+      "status": "Published",
+      "slug": "blog-side-project-1",
+      "category": [
+        "💻 프론트엔드"
+      ],
+      "tags": [
+        "사이드프로젝트"
+      ],
+      "updatedAt": "",
+      "title": "Notion API를 활용한 Next.js 블로그 개발기 (1) - 첫 사이드 프로젝트를 시작하며 고민했던 것들…",
+      "createdTime": "Sun Feb 09 2025 17:27:35 GMT+0900 (대한민국 표준시)",
+      "fullWidth": false
+    },
+    {
+      "id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+      "createdAt": "",
+      "status": "Published",
+      "slug": "project-manager-managing-with-corepack",
+      "category": [
+        "💻 프론트엔드"
+      ],
+      "tags": [
+        "Next.js",
+        "corepack"
+      ],
+      "updatedAt": "",
+      "title": "Corepack: 프로젝트 환경에서 패키지 관리자 관리하기",
+      "createdTime": "Fri Feb 07 2025 22:23:11 GMT+0900 (대한민국 표준시)",
+      "fullWidth": false
+    },
+    {
+      "id": "1900dfea-15a2-80a5-a5af-eb213bea8e79",
+      "createdAt": "",
+      "status": "Published",
+      "slug": "using-svg-in-nextjs",
+      "category": [
+        "💻 프론트엔드"
+      ],
+      "tags": [
+        "트러블슈팅",
+        "SVGR",
+        "svg",
+        "Next.js"
+      ],
+      "updatedAt": "",
+      "title": "Next.js에서 SVG를 컴포넌트로 사용하기 (SVGR)",
+      "createdTime": "Tue Feb 04 2025 16:57:59 GMT+0900 (대한민국 표준시)",
+      "fullWidth": false
+    }
+  ]
+}
