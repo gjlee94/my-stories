@@ -2,9 +2,9 @@ import Head from "next/head";
 
 interface HeadConfigProps {
   title: string;
-  summary: string;
-  tags: string[];
-  slug: string;
+  summary?: string;
+  tags?: string[];
+  slug?: string;
 }
 
 export const HeadConfig = ({ title, summary, tags, slug }: HeadConfigProps) => {
@@ -12,6 +12,8 @@ export const HeadConfig = ({ title, summary, tags, slug }: HeadConfigProps) => {
     <Head>
       <title>{title}</title>
       <meta name="description" content={summary} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow"></meta>
       <meta name="keywords" content={tags.join(", ")} />
 
       <meta property="og:title" content={title} />
@@ -22,7 +24,11 @@ export const HeadConfig = ({ title, summary, tags, slug }: HeadConfigProps) => {
       />
       <meta
         property="og:url"
-        content={`${process.env.NEXT_PUBLIC_SITE_URL}/${slug}`}
+        content={
+          slug
+            ? `${process.env.NEXT_PUBLIC_SITE_URL}/${slug}`
+            : `${process.env.NEXT_PUBLIC_SITE_URL}`
+        }
       />
       <meta property="og:type" content="website" />
     </Head>
