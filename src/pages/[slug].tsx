@@ -42,8 +42,15 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   });
 
   // ✅ 디버깅 데이터 JSON 파일로 저장
+  const debugFilePath = path.join(
+    process.cwd(),
+    "public",
+    "debug",
+    `debug-${params.slug}.json`
+  );
+
   fs.writeFileSync(
-    path.join(process.cwd(), "public", `debug-${params.slug}.json`),
+    debugFilePath,
     JSON.stringify({ posts, recordMap }, null, 2)
   );
 

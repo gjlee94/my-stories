@@ -39,10 +39,16 @@ export const getStaticProps = async () => {
     queryFn: () => posts,
   });
 
-  const debugFilePath = path.join(process.cwd(), "public", "debug.json");
+  // ✅ 디버깅 데이터 JSON 파일로 저장
+  const debugFilePath = path.join(
+    process.cwd(),
+    "public",
+    "debug",
+    "debug.json"
+  );
 
-  // ✅ public/ 폴더가 없으면 생성
   const debugDir = path.dirname(debugFilePath);
+
   if (!fs.existsSync(debugDir)) {
     fs.mkdirSync(debugDir, { recursive: true });
   }

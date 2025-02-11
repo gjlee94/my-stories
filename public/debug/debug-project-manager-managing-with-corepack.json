@@ -1,0 +1,4005 @@
+{
+  "posts": [
+    {
+      "id": "1950dfea-15a2-8025-8f32-c6cdbc853b69",
+      "createdAt": "",
+      "status": "Published",
+      "slug": "blog-side-project-1",
+      "category": [
+        "💻 프론트엔드"
+      ],
+      "tags": [
+        "사이드프로젝트"
+      ],
+      "updatedAt": "",
+      "title": "Notion API를 활용한 Next.js 블로그 개발기 (1) - 첫 사이드 프로젝트를 시작하며 고민했던 것들…",
+      "createdTime": "Sun Feb 09 2025 17:27:35 GMT+0900 (대한민국 표준시)",
+      "fullWidth": false
+    },
+    {
+      "id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+      "createdAt": "",
+      "status": "Published",
+      "slug": "project-manager-managing-with-corepack",
+      "category": [
+        "💻 프론트엔드"
+      ],
+      "tags": [
+        "Next.js",
+        "corepack"
+      ],
+      "updatedAt": "",
+      "title": "Corepack: 프로젝트 환경에서 패키지 관리자 관리하기",
+      "createdTime": "Fri Feb 07 2025 22:23:11 GMT+0900 (대한민국 표준시)",
+      "fullWidth": false
+    },
+    {
+      "id": "1900dfea-15a2-80a5-a5af-eb213bea8e79",
+      "createdAt": "",
+      "status": "Published",
+      "slug": "using-svg-in-nextjs",
+      "category": [
+        "💻 프론트엔드"
+      ],
+      "tags": [
+        "트러블슈팅",
+        "SVGR",
+        "svg",
+        "Next.js"
+      ],
+      "updatedAt": "",
+      "title": "Next.js에서 SVG를 컴포넌트로 사용하기 (SVGR)",
+      "createdTime": "Tue Feb 04 2025 16:57:59 GMT+0900 (대한민국 표준시)",
+      "fullWidth": false
+    }
+  ],
+  "recordMap": {
+    "block": {
+      "1930dfea-15a2-80a6-b79d-e6153ee99bc5": {
+        "value": {
+          "id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "version": 180,
+          "type": "page",
+          "properties": {
+            "A\\Sy": [
+              [
+                "‣",
+                [
+                  [
+                    "d",
+                    {
+                      "type": "date",
+                      "start_date": "2025-01-16"
+                    }
+                  ]
+                ]
+              ]
+            ],
+            "DmGq": [
+              [
+                "Published"
+              ]
+            ],
+            "LlVU": [
+              [
+                "project-manager-managing-with-corepack"
+              ]
+            ],
+            "PkE`": [
+              [
+                "💻 프론트엔드"
+              ]
+            ],
+            "vwIt": [
+              [
+                "Next.js,corepack"
+              ]
+            ],
+            "wecG": [
+              [
+                "‣",
+                [
+                  [
+                    "d",
+                    {
+                      "type": "date",
+                      "start_date": "2025-02-07"
+                    }
+                  ]
+                ]
+              ]
+            ],
+            "title": [
+              [
+                "Corepack: 프로젝트 환경에서 패키지 관리자 관리하기"
+              ]
+            ]
+          },
+          "content": [
+            "1930dfea-15a2-80bc-bf69-f303ccdb1006",
+            "1930dfea-15a2-80ee-a5c5-e852b639f0f9",
+            "1930dfea-15a2-8021-8e77-d29102f83dfc",
+            "1930dfea-15a2-8082-a657-dd4d3b65bace",
+            "1930dfea-15a2-8025-8aaf-ec8cce417ad7",
+            "1930dfea-15a2-80d7-8ff6-ee2b3cab2eba",
+            "1930dfea-15a2-809a-8a0a-c305c2dd8f72",
+            "1930dfea-15a2-8057-810e-e0da10ee306f",
+            "1930dfea-15a2-8065-8d79-c1adf8850adc",
+            "1930dfea-15a2-807d-953b-d147fd20372b",
+            "1930dfea-15a2-80ea-b67a-e13695139d5b",
+            "1930dfea-15a2-8076-836a-ec28102540d6",
+            "1930dfea-15a2-80ae-afd3-d806d74b4d52",
+            "1930dfea-15a2-802a-9ebd-cbb917c6f46e",
+            "1930dfea-15a2-80fa-8603-f73f6a8d7db6",
+            "1930dfea-15a2-80a5-8363-c252a420c405",
+            "1930dfea-15a2-806f-b5d5-e9157b9fbda3",
+            "1930dfea-15a2-80be-b364-c0cbdc88d88a",
+            "1930dfea-15a2-8054-a232-cac73be70138",
+            "1930dfea-15a2-800b-a3c4-fe6a09635e4e",
+            "1930dfea-15a2-80ae-adac-f4d0ab3672c4",
+            "1930dfea-15a2-8007-a0e3-c0348f945a4f",
+            "1930dfea-15a2-80b6-aaef-d60faec84d03",
+            "1930dfea-15a2-801f-a954-ffe302b7f709",
+            "1930dfea-15a2-8052-8e50-cb9ed62fb522",
+            "1930dfea-15a2-80a8-87a4-c9c664b2911f",
+            "1930dfea-15a2-80b9-8a76-eb20a6c525c9",
+            "1930dfea-15a2-804e-a831-db61eb43a8a9",
+            "1930dfea-15a2-80d1-9195-f65d1baec6e3",
+            "1930dfea-15a2-80b1-a78f-e1732974f4e8",
+            "1930dfea-15a2-80ee-b70c-d67aa410f768",
+            "1930dfea-15a2-801d-9c45-d1dd9ef5f675",
+            "1930dfea-15a2-80ee-8473-f8c8e76fd87c",
+            "1930dfea-15a2-8076-ac56-ed4165a5c821",
+            "1930dfea-15a2-80c0-bc15-e9889ee3efd9",
+            "1930dfea-15a2-801f-8bb4-d81d31a4d845",
+            "1930dfea-15a2-8015-8904-dbd6d92eb661",
+            "1930dfea-15a2-8085-b50e-f5097749055f",
+            "1930dfea-15a2-80a2-8d1c-c414e3782335",
+            "1930dfea-15a2-80e0-817a-e8fe60865a67",
+            "1930dfea-15a2-8013-b8f4-fb02593baf86",
+            "1960dfea-15a2-80ee-a053-ddbf1f6f1498",
+            "1960dfea-15a2-8006-a110-ec658c61dd23",
+            "1960dfea-15a2-808e-b720-e5aab57ec7f2",
+            "1960dfea-15a2-806d-b98e-cadcd15fd828",
+            "1960dfea-15a2-8014-9a77-e6778fc6acde",
+            "1960dfea-15a2-804f-b6ba-d9414d2f9ad2",
+            "1960dfea-15a2-80d7-bafa-d6266cc1b07e",
+            "1960dfea-15a2-80e6-8757-d4e393426022",
+            "1960dfea-15a2-8066-8a4c-faced7d811b6",
+            "1960dfea-15a2-80af-8ea1-c1d86de87a92",
+            "1960dfea-15a2-80c1-917e-c2d766c8b817",
+            "1960dfea-15a2-804e-9b66-d515ed614827"
+          ],
+          "created_time": 1738934591382,
+          "last_edited_time": 1739193069810,
+          "parent_id": "1900dfea-15a2-80cb-a7cc-000bcce8863a",
+          "parent_table": "collection",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1900dfea-15a2-807b-84fa-dad2d02523a1": {
+        "value": {
+          "id": "1900dfea-15a2-807b-84fa-dad2d02523a1",
+          "version": 101,
+          "type": "collection_view",
+          "view_ids": [
+            "1900dfea-15a2-80e7-adbb-000c7e7920ed"
+          ],
+          "format": {
+            "collection_pointer": {
+              "id": "1900dfea-15a2-80cb-a7cc-000bcce8863a",
+              "table": "collection",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            },
+            "social_media_image_preview_url": "attachment:c3a80543-2cc6-4644-b2a8-63cf3b5b7030:SocialMediaPreviewImage.png"
+          },
+          "permissions": [
+            {
+              "role": "editor",
+              "type": "space_permission"
+            }
+          ],
+          "created_time": 1738653470423,
+          "last_edited_time": 1739194198306,
+          "parent_id": "1900dfea-15a2-8016-8a99-ee2ca85718a0",
+          "parent_table": "block",
+          "alive": true,
+          "file_ids": [
+            "c3a80543-2cc6-4644-b2a8-63cf3b5b7030"
+          ],
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1900dfea-15a2-8016-8a99-ee2ca85718a0": {
+        "value": {
+          "id": "1900dfea-15a2-8016-8a99-ee2ca85718a0",
+          "version": 77,
+          "type": "page",
+          "properties": {
+            "title": [
+              [
+                "템플릿 Notion Page"
+              ]
+            ]
+          },
+          "content": [
+            "1960dfea-15a2-80a6-aa7c-db77972f9c7d",
+            "1900dfea-15a2-8016-afb0-db5bcd847048",
+            "1900dfea-15a2-807b-84fa-dad2d02523a1",
+            "1900dfea-15a2-80ca-8e9e-e9e852e0832d"
+          ],
+          "permissions": [
+            {
+              "role": "reader",
+              "type": "space_permission"
+            }
+          ],
+          "created_time": 1738653024267,
+          "last_edited_time": 1739193547481,
+          "parent_id": "1840dfea-15a2-80a8-9d0d-f0fa3bc0c3d2",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1840dfea-15a2-80a8-9d0d-f0fa3bc0c3d2": {
+        "value": {
+          "id": "1840dfea-15a2-80a8-9d0d-f0fa3bc0c3d2",
+          "version": 189,
+          "type": "page",
+          "properties": {
+            "FO<V": [
+              [
+                "‣",
+                [
+                  [
+                    "d",
+                    {
+                      "type": "date",
+                      "start_date": "2025-02-28"
+                    }
+                  ]
+                ]
+              ]
+            ],
+            "Jw~F": [
+              [
+                "‣",
+                [
+                  [
+                    "p",
+                    "17c0dfea-15a2-8125-abda-e3d6f106c2e9",
+                    "98e77847-0559-45b8-871e-b8706cb1740d"
+                  ]
+                ]
+              ]
+            ],
+            "nr:X": [
+              [
+                "‣",
+                [
+                  [
+                    "p",
+                    "1880dfea-15a2-80ad-812c-ce98dde57b8f",
+                    "98e77847-0559-45b8-871e-b8706cb1740d"
+                  ]
+                ]
+              ],
+              [
+                ","
+              ],
+              [
+                "‣",
+                [
+                  [
+                    "p",
+                    "1880dfea-15a2-8073-98a0-dcd1e4faf4ef",
+                    "98e77847-0559-45b8-871e-b8706cb1740d"
+                  ]
+                ]
+              ],
+              [
+                ","
+              ],
+              [
+                "‣",
+                [
+                  [
+                    "p",
+                    "18a0dfea-15a2-80a3-bfc1-ffbcbc502a55",
+                    "98e77847-0559-45b8-871e-b8706cb1740d"
+                  ]
+                ]
+              ],
+              [
+                ","
+              ],
+              [
+                "‣",
+                [
+                  [
+                    "p",
+                    "18b0dfea-15a2-80a9-b0cc-dc134016b2d1",
+                    "98e77847-0559-45b8-871e-b8706cb1740d"
+                  ]
+                ]
+              ]
+            ],
+            "sRDk": [
+              [
+                "Active 🔥"
+              ]
+            ],
+            "title": [
+              [
+                "나만의 블로그 만들기"
+              ]
+            ]
+          },
+          "content": [
+            "1900dfea-15a2-8016-8a99-ee2ca85718a0",
+            "1900dfea-15a2-8026-a5dc-dbb32114bbe4",
+            "18d0dfea-15a2-80db-839e-ce4699235793",
+            "1960dfea-15a2-80cb-9993-c2a91844ff36",
+            "1900dfea-15a2-8079-bb00-f3ddd54e5ec2",
+            "1900dfea-15a2-8009-884b-cff29bcc338d",
+            "1900dfea-15a2-80a6-95f2-d2acd5123f08",
+            "1900dfea-15a2-8076-91a6-eb7f9b96c6f6",
+            "1900dfea-15a2-8021-b70f-cca4321372af",
+            "1900dfea-15a2-80e3-bcaa-f9a5d7a7752a",
+            "1840dfea-15a2-80f5-9cc6-fe9d3fcb1b70",
+            "1840dfea-15a2-8098-8fc3-cd6ce6186cc4",
+            "1840dfea-15a2-806f-a7f4-d3a449d86e36",
+            "1840dfea-15a2-807e-96e6-eb44cbc7a2d2",
+            "1840dfea-15a2-80fc-8d88-d5a216c56adc",
+            "1840dfea-15a2-80e5-91d4-f2a32de8d93d",
+            "1840dfea-15a2-807e-806f-d721ef442136",
+            "1840dfea-15a2-80c9-a653-cc4b32eda4c0",
+            "1850dfea-15a2-8059-ae25-f630d5fcb198",
+            "1870dfea-15a2-80e4-9573-c729792931e9",
+            "1870dfea-15a2-8002-bab3-cd44b7b4b5b9",
+            "1870dfea-15a2-8096-aed5-e4384c5792bf",
+            "18a0dfea-15a2-804e-bf32-dd3350b00fb1",
+            "1850dfea-15a2-800a-8cf7-ea1137e89a23",
+            "1850dfea-15a2-80b3-a68f-cefe79c73c78",
+            "1850dfea-15a2-80b4-a54b-fcb2be1b3de4",
+            "1850dfea-15a2-80ff-ba09-d33628c499d2",
+            "18b0dfea-15a2-80b1-9961-ff7816fcfde2"
+          ],
+          "format": {
+            "page_full_width": true
+          },
+          "created_time": 1737608977435,
+          "last_edited_time": 1739246236107,
+          "parent_id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+          "parent_table": "collection",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "17c0dfea-15a2-814c-aac5-efc5deb1a8f1": {
+        "value": {
+          "id": "17c0dfea-15a2-814c-aac5-efc5deb1a8f1",
+          "version": 40,
+          "type": "collection_view",
+          "view_ids": [
+            "17c0dfea-15a2-8169-895c-000c6a18ac28",
+            "17c0dfea-15a2-81cf-9d62-000c5555f399"
+          ],
+          "collection_id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+          "format": {
+            "collection_pointer": {
+              "id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+              "table": "collection",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            },
+            "copied_from_pointer": {
+              "id": "116d1367-4425-4f2b-ab9c-5733a2011e60",
+              "table": "block",
+              "spaceId": "2f70c034-4f8c-4532-8ae9-e5ef14e7e787"
+            }
+          },
+          "created_time": 1736927384463,
+          "last_edited_time": 1738634192013,
+          "parent_id": "17c0dfea-15a2-815f-92e3-fccab4c74eab",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "116d1367-4425-4f2b-ab9c-5733a2011e60",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "17c0dfea-15a2-815f-92e3-fccab4c74eab": {
+        "value": {
+          "id": "17c0dfea-15a2-815f-92e3-fccab4c74eab",
+          "version": 10,
+          "type": "column",
+          "content": [
+            "17c0dfea-15a2-814c-aac5-efc5deb1a8f1",
+            "17c0dfea-15a2-8113-94a3-c33f0a477e72"
+          ],
+          "format": {
+            "column_ratio": 0.875,
+            "copied_from_pointer": {
+              "id": "170dcf37-9b72-41ca-958f-97ee524df3cf",
+              "table": "block",
+              "spaceId": "2f70c034-4f8c-4532-8ae9-e5ef14e7e787"
+            }
+          },
+          "created_time": 1736927384462,
+          "last_edited_time": 1736950125211,
+          "parent_id": "17c0dfea-15a2-814f-87ec-d64536841739",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "170dcf37-9b72-41ca-958f-97ee524df3cf",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "17c0dfea-15a2-814f-87ec-d64536841739": {
+        "value": {
+          "id": "17c0dfea-15a2-814f-87ec-d64536841739",
+          "version": 6,
+          "type": "column_list",
+          "content": [
+            "17c0dfea-15a2-8163-8a06-f48ca67546f3",
+            "17c0dfea-15a2-815f-92e3-fccab4c74eab"
+          ],
+          "format": {
+            "copied_from_pointer": {
+              "id": "ba851ffa-50ce-4895-9b5f-37bc1d3b7fd7",
+              "table": "block",
+              "spaceId": "2f70c034-4f8c-4532-8ae9-e5ef14e7e787"
+            }
+          },
+          "created_time": 1736927384461,
+          "last_edited_time": 1736949445108,
+          "parent_id": "17c0dfea-15a2-80d2-8555-dfd993e2ebba",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "ba851ffa-50ce-4895-9b5f-37bc1d3b7fd7",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "17c0dfea-15a2-80d2-8555-dfd993e2ebba": {
+        "value": {
+          "id": "17c0dfea-15a2-80d2-8555-dfd993e2ebba",
+          "version": 88,
+          "type": "page",
+          "properties": {
+            "title": [
+              [
+                "PLANNING"
+              ]
+            ]
+          },
+          "content": [
+            "17c0dfea-15a2-81fe-8f5c-c9f2515d3406",
+            "17c0dfea-15a2-814f-87ec-d64536841739",
+            "17c0dfea-15a2-80aa-8b09-c89ad2d4461c",
+            "17c0dfea-15a2-8039-8306-eebb3b6f315c",
+            "17c0dfea-15a2-80e2-893c-c4cdf368e5ca",
+            "17c0dfea-15a2-819e-929c-c71e0840c9fc",
+            "1810dfea-15a2-80d1-86f1-ebe46b01857f",
+            "1810dfea-15a2-80b9-aa31-e4fc18ccc132",
+            "1810dfea-15a2-80e4-9c39-f8880adf253f",
+            "1810dfea-15a2-80da-a624-c9e50d1b4072"
+          ],
+          "format": {
+            "page_icon": "https://prod-files-secure.s3.us-west-2.amazonaws.com/98e77847-0559-45b8-871e-b8706cb1740d/eb2a502a-9be3-478a-8ba4-805623a2b72c/Element-Flame-Yellow.svg",
+            "page_full_width": true,
+            "copied_from_pointer": {
+              "id": "e677938c-d9c5-4bc7-a6d7-a136350bf355",
+              "table": "block",
+              "spaceId": "2f70c034-4f8c-4532-8ae9-e5ef14e7e787"
+            }
+          },
+          "permissions": [
+            {
+              "role": "editor",
+              "type": "user_permission",
+              "user_id": "12bd872b-594c-81a0-9042-00023b31b094"
+            }
+          ],
+          "created_time": 1736927384475,
+          "last_edited_time": 1738678417360,
+          "parent_id": "98e77847-0559-45b8-871e-b8706cb1740d",
+          "parent_table": "space",
+          "alive": true,
+          "copied_from": "e677938c-d9c5-4bc7-a6d7-a136350bf355",
+          "file_ids": [
+            "eb2a502a-9be3-478a-8ba4-805623a2b72c"
+          ],
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80bc-bf69-f303ccdb1006": {
+        "value": {
+          "id": "1930dfea-15a2-80bc-bf69-f303ccdb1006",
+          "version": 7,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                ": Node.js 프로젝트를 진행하다 보면 팀이나 프로젝트마다 다른 패키지 관리 도구를 사용하는 경우가 종종 있습니다. 한 프로젝트에서는 "
+              ],
+              [
+                "yarn",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "을, 다른 프로젝트에서는 "
+              ],
+              [
+                "pnpm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "을 사용할 수도 있습니다. 이 경우, 프로젝트마다 패키지 관리자 버전을 수동으로 맞추거나 설정해야 하는 불편함이 생기곤 합니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-803d-afe4-fc10b68e8499",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677615,
+          "last_edited_time": 1738934681951,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-803d-afe4-fc10b68e8499",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80ee-a5c5-e852b639f0f9": {
+        "value": {
+          "id": "1930dfea-15a2-80ee-a5c5-e852b639f0f9",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Corepack",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "은 이러한 문제를 해결하기 위해 등장한 도구입니다. Node.js에서 기본 제공하는 Corepack은 여러 프로젝트에서 패키지 관리자의 버전을 지정하고, 일관된 환경을 유지하는 데 도움을 줍니다. 이번 글에서는 Corepack의 주요 기능과 장점, 그리고 실제 활용 사례를 알아보겠습니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80ba-b8a9-e746215453b0",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677617,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80ba-b8a9-e746215453b0",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8021-8e77-d29102f83dfc": {
+        "value": {
+          "id": "1930dfea-15a2-8021-8e77-d29102f83dfc",
+          "version": 3,
+          "type": "divider",
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80ce-8c44-ca4210975e58",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677618,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80ce-8c44-ca4210975e58",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8082-a657-dd4d3b65bace": {
+        "value": {
+          "id": "1930dfea-15a2-8082-a657-dd4d3b65bace",
+          "version": 3,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "Corepack이란?"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-806c-a748-d88fc963c3b5",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677618,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-806c-a748-d88fc963c3b5",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8025-8aaf-ec8cce417ad7": {
+        "value": {
+          "id": "1930dfea-15a2-8025-8aaf-ec8cce417ad7",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Corepack",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ],
+              [
+                "은 Node.js의 패키지 관리자 도구("
+              ],
+              [
+                "npm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                ", "
+              ],
+              [
+                "yarn",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                ", "
+              ],
+              [
+                "pnpm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                " 등)를 관리하는 유틸리티로, 프로젝트에서 사용할 패키지 관리자의 버전을 지정하고, 일관된 개발 환경을 유지하도록 도와줍니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80ac-b0f4-ca3f996383c6",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677619,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80ac-b0f4-ca3f996383c6",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80d7-8ff6-ee2b3cab2eba": {
+        "value": {
+          "id": "1930dfea-15a2-80d7-8ff6-ee2b3cab2eba",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Node.js 16.10.0 버전 이후부터 Corepack이 기본적으로 포함되어 있으며, 이를 활성화하여 사용할 수 있습니다. Corepack은 특히 여러 프로젝트에서 다양한 패키지 관리자를 사용하는 경우 유용하며, 특정 프로젝트에서 원하는 패키지 관리자 버전을 자동으로 처리해주는 기능을 제공합니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-8002-bd60-d382e8c02474",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677620,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-8002-bd60-d382e8c02474",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-809a-8a0a-c305c2dd8f72": {
+        "value": {
+          "id": "1930dfea-15a2-809a-8a0a-c305c2dd8f72",
+          "version": 3,
+          "type": "divider",
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-8075-b953-fda322536ea3",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677620,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-8075-b953-fda322536ea3",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8057-810e-e0da10ee306f": {
+        "value": {
+          "id": "1930dfea-15a2-8057-810e-e0da10ee306f",
+          "version": 3,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "Corepack의 주요 기능"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-8068-86a1-d5b7edecbd2f",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677621,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-8068-86a1-d5b7edecbd2f",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8065-8d79-c1adf8850adc": {
+        "value": {
+          "id": "1930dfea-15a2-8065-8d79-c1adf8850adc",
+          "version": 3,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "1. "
+              ],
+              [
+                "패키지 매니저 관리",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-8049-a26c-fc1358951376",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677624,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-8049-a26c-fc1358951376",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-807d-953b-d147fd20372b": {
+        "value": {
+          "id": "1930dfea-15a2-807d-953b-d147fd20372b",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Corepack은 프로젝트별로 사용할 패키지 관리자를 쉽게 설정하고 관리할 수 있습니다. 예를 들어, 한 프로젝트에서는 "
+              ],
+              [
+                "yarn",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "을 사용하고, 다른 프로젝트에서는 "
+              ],
+              [
+                "pnpm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "을 사용하는 환경에서도 Corepack이 이를 자동으로 처리해 줍니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80d5-adaf-e846cd924f39",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677625,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80d5-adaf-e846cd924f39",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80ea-b67a-e13695139d5b": {
+        "value": {
+          "id": "1930dfea-15a2-80ea-b67a-e13695139d5b",
+          "version": 3,
+          "type": "code",
+          "properties": {
+            "title": [
+              [
+                "corepack enable"
+              ]
+            ],
+            "language": [
+              [
+                "Shell"
+              ]
+            ]
+          },
+          "format": {
+            "code_wrap": true,
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80db-a8c1-fdf3a25f40fe",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677625,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80db-a8c1-fdf3a25f40fe",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8076-836a-ec28102540d6": {
+        "value": {
+          "id": "1930dfea-15a2-8076-836a-ec28102540d6",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "이 명령어를 실행하면 Corepack이 활성화되어, "
+              ],
+              [
+                "yarn",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                ", "
+              ],
+              [
+                "pnpm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                " 같은 패키지 관리자를 사용할 수 있게 됩니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80a2-8b43-ca616b0097d1",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677626,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80a2-8b43-ca616b0097d1",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80ae-afd3-d806d74b4d52": {
+        "value": {
+          "id": "1930dfea-15a2-80ae-afd3-d806d74b4d52",
+          "version": 3,
+          "type": "divider",
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-803b-bf03-d690a3eb39bd",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677626,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-803b-bf03-d690a3eb39bd",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-802a-9ebd-cbb917c6f46e": {
+        "value": {
+          "id": "1930dfea-15a2-802a-9ebd-cbb917c6f46e",
+          "version": 3,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "2. "
+              ],
+              [
+                "패키지 매니저 버전 지정",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80b6-80c2-cceaa41ece27",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677626,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80b6-80c2-cceaa41ece27",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80fa-8603-f73f6a8d7db6": {
+        "value": {
+          "id": "1930dfea-15a2-80fa-8603-f73f6a8d7db6",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Corepack은 프로젝트에서 사용할 패키지 관리자의 특정 버전을 지정할 수 있습니다. 이는 프로젝트 내에서 항상 동일한 패키지 관리자 버전을 사용하도록 보장하여, 팀 내 개발 환경의 일관성을 유지할 수 있게 합니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80e2-8247-e2103d7cfdfd",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677627,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80e2-8247-e2103d7cfdfd",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80a5-8363-c252a420c405": {
+        "value": {
+          "id": "1930dfea-15a2-80a5-8363-c252a420c405",
+          "version": 3,
+          "type": "code",
+          "properties": {
+            "title": [
+              [
+                "# package.json\n\"packageManager\": \"pnpm@7.15.0\""
+              ]
+            ],
+            "language": [
+              [
+                "Shell"
+              ]
+            ]
+          },
+          "format": {
+            "code_wrap": true,
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80de-bed7-fafec22a9235",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677627,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80de-bed7-fafec22a9235",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-806f-b5d5-e9157b9fbda3": {
+        "value": {
+          "id": "1930dfea-15a2-806f-b5d5-e9157b9fbda3",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "위와 같이 "
+              ],
+              [
+                "package.json",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "에 패키지 관리자를 명시하면, Corepack은 해당 프로젝트에서 지정된 버전의 패키지 관리자를 자동으로 설치하고 실행합니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-808a-b674-d673affba04f",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677627,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-808a-b674-d673affba04f",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80be-b364-c0cbdc88d88a": {
+        "value": {
+          "id": "1930dfea-15a2-80be-b364-c0cbdc88d88a",
+          "version": 3,
+          "type": "divider",
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-801d-b63e-d3ae7257e7ef",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677628,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-801d-b63e-d3ae7257e7ef",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8054-a232-cac73be70138": {
+        "value": {
+          "id": "1930dfea-15a2-8054-a232-cac73be70138",
+          "version": 3,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "3. "
+              ],
+              [
+                "자동 설치 및 업데이트",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-8027-aad8-d0f45eb38fe6",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677628,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-8027-aad8-d0f45eb38fe6",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-800b-a3c4-fe6a09635e4e": {
+        "value": {
+          "id": "1930dfea-15a2-800b-a3c4-fe6a09635e4e",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Corepack은 지정된 패키지 관리자를 자동으로 설치하고 최신 버전으로 업데이트할 수 있습니다. 따라서 프로젝트를 새로 설정하거나, 패키지 관리자의 버전을 변경할 때 번거로운 작업을 줄일 수 있습니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80ff-a478-f12bf3ea9f52",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677628,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80ff-a478-f12bf3ea9f52",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80ae-adac-f4d0ab3672c4": {
+        "value": {
+          "id": "1930dfea-15a2-80ae-adac-f4d0ab3672c4",
+          "version": 3,
+          "type": "code",
+          "properties": {
+            "title": [
+              [
+                "corepack prepare pnpm@7.15.0 --activate"
+              ]
+            ],
+            "language": [
+              [
+                "Shell"
+              ]
+            ]
+          },
+          "format": {
+            "code_wrap": true,
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-8033-9f84-ff8907dae11d",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677629,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-8033-9f84-ff8907dae11d",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8007-a0e3-c0348f945a4f": {
+        "value": {
+          "id": "1930dfea-15a2-8007-a0e3-c0348f945a4f",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "이 명령어는 "
+              ],
+              [
+                "pnpm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "의 7.15.0 버전을 다운로드하고 활성화합니다. 각 프로젝트에서 지정된 패키지 관리자 버전을 Corepack이 자동으로 관리하므로, 개발자는 설치 과정을 신경 쓰지 않아도 됩니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-805e-9bbc-f00458780e51",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677629,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-805e-9bbc-f00458780e51",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80b6-aaef-d60faec84d03": {
+        "value": {
+          "id": "1930dfea-15a2-80b6-aaef-d60faec84d03",
+          "version": 3,
+          "type": "divider",
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80c8-bd35-e16b2ff17580",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677629,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80c8-bd35-e16b2ff17580",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-801f-a954-ffe302b7f709": {
+        "value": {
+          "id": "1930dfea-15a2-801f-a954-ffe302b7f709",
+          "version": 3,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "Corepack의 주요 장점"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80fc-9dd9-ca01767a6f9a",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677629,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80fc-9dd9-ca01767a6f9a",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8052-8e50-cb9ed62fb522": {
+        "value": {
+          "id": "1930dfea-15a2-8052-8e50-cb9ed62fb522",
+          "version": 3,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "1. "
+              ],
+              [
+                "팀 환경에서의 일관성 유지",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80bc-ac32-c3c42c230024",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677630,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80bc-ac32-c3c42c230024",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80a8-87a4-c9c664b2911f": {
+        "value": {
+          "id": "1930dfea-15a2-80a8-87a4-c9c664b2911f",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Corepack은 패키지 관리자의 버전을 명시적으로 설정하여 팀 내 모든 개발자가 동일한 환경에서 작업할 수 있도록 보장합니다. 이는 패키지 관리 도구 버전 차이로 인해 발생하는 오류를 방지합니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-803b-9020-e957b22ebf4b",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677630,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-803b-9020-e957b22ebf4b",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80b9-8a76-eb20a6c525c9": {
+        "value": {
+          "id": "1930dfea-15a2-80b9-8a76-eb20a6c525c9",
+          "version": 3,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "2. "
+              ],
+              [
+                "다양한 패키지 관리자 지원",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-8000-b16f-c58be1013488",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677630,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-8000-b16f-c58be1013488",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-804e-a831-db61eb43a8a9": {
+        "value": {
+          "id": "1930dfea-15a2-804e-a831-db61eb43a8a9",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Corepack은 "
+              ],
+              [
+                "npm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                ", "
+              ],
+              [
+                "yarn",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                ", "
+              ],
+              [
+                "pnpm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                " 등 다양한 패키지 관리자를 지원합니다. 팀이 어떤 패키지 관리자를 선택하든, Corepack을 통해 간편하게 설정할 수 있습니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-801d-b957-fa3a0152b4fc",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677631,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-801d-b957-fa3a0152b4fc",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80d1-9195-f65d1baec6e3": {
+        "value": {
+          "id": "1930dfea-15a2-80d1-9195-f65d1baec6e3",
+          "version": 3,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "3. "
+              ],
+              [
+                "간편한 버전 관리",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-807d-8c57-d4df18436bfb",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677631,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-807d-8c57-d4df18436bfb",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80b1-a78f-e1732974f4e8": {
+        "value": {
+          "id": "1930dfea-15a2-80b1-a78f-e1732974f4e8",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "패키지 관리자의 버전을 업데이트하거나 다운그레이드할 때, Corepack은 번거로운 과정을 자동화하여 효율적으로 처리합니다. 특정 프로젝트에서는 최신 버전을, 다른 프로젝트에서는 오래된 버전을 사용할 때도 간편하게 설정할 수 있습니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-804f-9f3f-fa83d97de66a",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677631,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-804f-9f3f-fa83d97de66a",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80ee-b70c-d67aa410f768": {
+        "value": {
+          "id": "1930dfea-15a2-80ee-b70c-d67aa410f768",
+          "version": 3,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "4. "
+              ],
+              [
+                "Node.js 기본 지원",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-8079-bdd2-d3e4987f7064",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677631,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-8079-bdd2-d3e4987f7064",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-801d-9c45-d1dd9ef5f675": {
+        "value": {
+          "id": "1930dfea-15a2-801d-9c45-d1dd9ef5f675",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Corepack은 Node.js에 기본 포함되어 있어, 별도의 설치 과정 없이 바로 사용할 수 있습니다. 이는 추가 도구를 설치할 필요가 없다는 점에서 매우 간편합니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-808a-bd2e-e10f12fd1a6a",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677632,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-808a-bd2e-e10f12fd1a6a",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80ee-8473-f8c8e76fd87c": {
+        "value": {
+          "id": "1930dfea-15a2-80ee-8473-f8c8e76fd87c",
+          "version": 3,
+          "type": "divider",
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80cb-a62d-e4fc1f322cf0",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677632,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80cb-a62d-e4fc1f322cf0",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8076-ac56-ed4165a5c821": {
+        "value": {
+          "id": "1930dfea-15a2-8076-ac56-ed4165a5c821",
+          "version": 3,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "Corepack 활용 사례"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80cd-bc0f-e80ee6470a21",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677632,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80cd-bc0f-e80ee6470a21",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80c0-bc15-e9889ee3efd9": {
+        "value": {
+          "id": "1930dfea-15a2-80c0-bc15-e9889ee3efd9",
+          "version": 3,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "1. 프로젝트 간 패키지 관리자 버전 일관성 유지",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80ac-9bf5-ee7c17706bb0",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677632,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80ac-9bf5-ee7c17706bb0",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-801f-8bb4-d81d31a4d845": {
+        "value": {
+          "id": "1930dfea-15a2-801f-8bb4-d81d31a4d845",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "팀에서 여러 Node.js 프로젝트를 운영하고 있을 때, 각 프로젝트의 패키지 관리자가 다를 경우 Corepack을 사용하여 각각의 버전을 설정할 수 있습니다. 이렇게 하면 개발 환경 설정 시간이 줄어들고, 팀원 간의 협업이 원활해집니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80f5-8c78-c6411a9ce407",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677633,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80f5-8c78-c6411a9ce407",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8015-8904-dbd6d92eb661": {
+        "value": {
+          "id": "1930dfea-15a2-8015-8904-dbd6d92eb661",
+          "version": 3,
+          "type": "sub_sub_header",
+          "properties": {
+            "title": [
+              [
+                "2. CI/CD 환경에서의 안정성 보장",
+                [
+                  [
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80d7-ac6c-cb60533b2843",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677633,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80d7-ac6c-cb60533b2843",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8085-b50e-f5097749055f": {
+        "value": {
+          "id": "1930dfea-15a2-8085-b50e-f5097749055f",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "CI/CD 파이프라인에서는 특정 버전의 패키지 관리자가 필요합니다. Corepack을 사용하면, CI/CD 환경에서도 지정된 패키지 관리자의 버전을 보장할 수 있어 빌드 실패를 방지합니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80aa-8ff6-f65233d31c92",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677633,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80aa-8ff6-f65233d31c92",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80a2-8d1c-c414e3782335": {
+        "value": {
+          "id": "1930dfea-15a2-80a2-8d1c-c414e3782335",
+          "version": 3,
+          "type": "divider",
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-800d-8cc0-cb39df248da7",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677633,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-800d-8cc0-cb39df248da7",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-80e0-817a-e8fe60865a67": {
+        "value": {
+          "id": "1930dfea-15a2-80e0-817a-e8fe60865a67",
+          "version": 3,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "결론"
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80ab-a47c-fe5388147de3",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677634,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-80ab-a47c-fe5388147de3",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1930dfea-15a2-8013-b8f4-fb02593baf86": {
+        "value": {
+          "id": "1930dfea-15a2-8013-b8f4-fb02593baf86",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "Corepack은 다양한 Node.js 프로젝트에서 패키지 관리자 도구를 효율적으로 관리할 수 있는 강력한 유틸리티입니다. 팀 협업 환경에서 일관된 패키지 관리자를 보장하고, 프로젝트마다 다른 패키지 관리자를 쉽게 설정할 수 있도록 지원합니다. Corepack을 통해 패키지 관리자 설정 문제를 해결하고, 더 효율적인 개발 환경을 구축할 수 있습니다."
+              ]
+            ]
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-8004-977c-c05c912ca345",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1738934677634,
+          "last_edited_time": 1738934677654,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1550dfea-15a2-8004-977c-c05c912ca345",
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-80ee-a053-ddbf1f6f1498": {
+        "value": {
+          "id": "1960dfea-15a2-80ee-a053-ddbf1f6f1498",
+          "version": 3,
+          "type": "text",
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80c1-a67a-dcdb9c0694ad",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1739158555158,
+          "last_edited_time": 1739158555163,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-8006-a110-ec658c61dd23": {
+        "value": {
+          "id": "1960dfea-15a2-8006-a110-ec658c61dd23",
+          "version": 3,
+          "type": "text",
+          "format": {
+            "copied_from_pointer": {
+              "id": "1550dfea-15a2-80c1-a67a-dcdb9c0694ad",
+              "table": "block",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            }
+          },
+          "created_time": 1739158555340,
+          "last_edited_time": 1739158555342,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-808e-b720-e5aab57ec7f2": {
+        "value": {
+          "id": "1960dfea-15a2-808e-b720-e5aab57ec7f2",
+          "version": 164,
+          "type": "sub_header",
+          "properties": {
+            "title": [
+              [
+                "Tip) 패키지 매니저 사용 강제하기"
+              ]
+            ]
+          },
+          "created_time": 1739158562305,
+          "last_edited_time": 1739158824467,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-806d-b98e-cadcd15fd828": {
+        "value": {
+          "id": "1960dfea-15a2-806d-b98e-cadcd15fd828",
+          "version": 593,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "추가로 많은 프로젝트를 오가며 진행하다보면 실수로 다른 패키지 매니저 명령어로 실행하는 경우가 발생하는 것 같습니다. "
+              ]
+            ]
+          },
+          "created_time": 1739158581653,
+          "last_edited_time": 1739158638686,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-8014-9a77-e6778fc6acde": {
+        "value": {
+          "id": "1960dfea-15a2-8014-9a77-e6778fc6acde",
+          "version": 3,
+          "type": "text",
+          "created_time": 1739158669883,
+          "last_edited_time": 1739158669889,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-804f-b6ba-d9414d2f9ad2": {
+        "value": {
+          "id": "1960dfea-15a2-804f-b6ba-d9414d2f9ad2",
+          "version": 77,
+          "type": "code",
+          "properties": {
+            "title": [
+              [
+                "# only-allow 패키지 설치\npnpm add -D only-allow"
+              ]
+            ],
+            "language": [
+              [
+                "Bash"
+              ]
+            ]
+          },
+          "format": {
+            "code_wrap": false
+          },
+          "created_time": 1739158671599,
+          "last_edited_time": 1739158703951,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-80d7-bafa-d6266cc1b07e": {
+        "value": {
+          "id": "1960dfea-15a2-80d7-bafa-d6266cc1b07e",
+          "version": 3,
+          "type": "text",
+          "created_time": 1739158707688,
+          "last_edited_time": 1739158707691,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-80e6-8757-d4e393426022": {
+        "value": {
+          "id": "1960dfea-15a2-80e6-8757-d4e393426022",
+          "version": 45,
+          "type": "code",
+          "properties": {
+            "title": [
+              [
+                "# package.json\n\n{\n  \"scripts\": {\n    \"preinstall\": \"npx only-allow pnpm\"\n  }\n}\n"
+              ]
+            ],
+            "language": [
+              [
+                "JSON"
+              ]
+            ]
+          },
+          "format": {
+            "code_wrap": false
+          },
+          "created_time": 1739158709577,
+          "last_edited_time": 1739158729073,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-8066-8a4c-faced7d811b6": {
+        "value": {
+          "id": "1960dfea-15a2-8066-8a4c-faced7d811b6",
+          "version": 3,
+          "type": "text",
+          "created_time": 1739158814808,
+          "last_edited_time": 1739158814811,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-80af-8ea1-c1d86de87a92": {
+        "value": {
+          "id": "1960dfea-15a2-80af-8ea1-c1d86de87a92",
+          "version": 397,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "이렇게 설정하면 "
+              ],
+              [
+                "yarn",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "이나 "
+              ],
+              [
+                "npm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                " 실행시 오류가 발생하고 "
+              ],
+              [
+                "pnpm",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "만 사용되도록 강제할 수 있습니다."
+              ]
+            ]
+          },
+          "created_time": 1739158733828,
+          "last_edited_time": 1739158772362,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-80c1-917e-c2d766c8b817": {
+        "value": {
+          "id": "1960dfea-15a2-80c1-917e-c2d766c8b817",
+          "version": 3,
+          "type": "text",
+          "created_time": 1739158812229,
+          "last_edited_time": 1739158812232,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "1960dfea-15a2-804e-9b66-d515ed614827": {
+        "value": {
+          "id": "1960dfea-15a2-804e-9b66-d515ed614827",
+          "version": 11,
+          "type": "image",
+          "properties": {
+            "size": [
+              [
+                "27.7KB"
+              ]
+            ],
+            "title": [
+              [
+                "image.png"
+              ]
+            ],
+            "source": [
+              [
+                "attachment:ba2a9103-4306-45b7-8eaf-a791f2d12e4b:image.png"
+              ]
+            ]
+          },
+          "format": {
+            "block_width": 636,
+            "block_height": 183,
+            "display_source": "attachment:ba2a9103-4306-45b7-8eaf-a791f2d12e4b:image.png",
+            "block_full_width": false,
+            "block_page_width": false,
+            "block_aspect_ratio": 0.28773584905660377,
+            "block_preserve_scale": true
+          },
+          "created_time": 1739158807733,
+          "last_edited_time": 1739158811411,
+          "parent_id": "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+          "parent_table": "block",
+          "alive": true,
+          "file_ids": [
+            "ba2a9103-4306-45b7-8eaf-a791f2d12e4b"
+          ],
+          "created_by_table": "notion_user",
+          "created_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "last_edited_by_table": "notion_user",
+          "last_edited_by_id": "12bd872b-594c-81a0-9042-00023b31b094",
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      }
+    },
+    "collection": {
+      "1900dfea-15a2-80cb-a7cc-000bcce8863a": {
+        "value": {
+          "id": "1900dfea-15a2-80cb-a7cc-000bcce8863a",
+          "version": 71,
+          "name": [
+            [
+              "GJ-Log"
+            ]
+          ],
+          "schema": {
+            "A\\Sy": {
+              "name": "createdAt",
+              "type": "created_time",
+              "date_format": "YYYY/MM/DD",
+              "time_format": " "
+            },
+            "DmGq": {
+              "name": "status",
+              "type": "status",
+              "groups": [
+                {
+                  "id": "0bfacfce-8781-4924-bcb6-331fb9ebb7d7",
+                  "name": "To-do",
+                  "color": "gray",
+                  "optionIds": [
+                    "8ddb8375-57d2-4247-822b-d5e65d7326c8"
+                  ]
+                },
+                {
+                  "id": "db809501-746f-42f4-bab4-679b67cb9a98",
+                  "name": "In progress",
+                  "color": "blue",
+                  "optionIds": [
+                    "4a114f6a-fc0c-49fb-b4ca-73805460a0ab"
+                  ]
+                },
+                {
+                  "id": "fe4fd813-874f-423f-9aa9-f4216ab80ab9",
+                  "name": "Complete",
+                  "color": "green",
+                  "optionIds": [
+                    "b0cb7b5d-b560-498c-a10b-3c0b9ee5a83e"
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "id": "8ddb8375-57d2-4247-822b-d5e65d7326c8",
+                  "value": "Planned",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                },
+                {
+                  "id": "4a114f6a-fc0c-49fb-b4ca-73805460a0ab",
+                  "color": "blue",
+                  "value": "Writing",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                },
+                {
+                  "id": "b0cb7b5d-b560-498c-a10b-3c0b9ee5a83e",
+                  "color": "green",
+                  "value": "Published",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                }
+              ],
+              "defaultOption": "Planned"
+            },
+            "LlVU": {
+              "name": "slug",
+              "type": "text"
+            },
+            "PkE`": {
+              "name": "category",
+              "type": "select",
+              "groups": [
+                {
+                  "id": "61a87560-a41e-4828-99b1-be768afac4fa",
+                  "name": "To-do",
+                  "color": "gray",
+                  "optionIds": [
+                    "7b5552d2-f774-4a8a-9425-475684a506ff"
+                  ]
+                },
+                {
+                  "id": "5af46ea1-825d-4d08-9570-6f0b05aabc50",
+                  "name": "In progress",
+                  "color": "blue",
+                  "optionIds": [
+                    "347aa068-ae12-411a-8e20-cfd154ed9264"
+                  ]
+                },
+                {
+                  "id": "05bf578f-6ec4-4468-ac0f-64a682d6f9f4",
+                  "name": "Complete",
+                  "color": "green",
+                  "optionIds": [
+                    "58da0a86-e141-4c2a-9401-1eebe890e151"
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "id": "7b5552d2-f774-4a8a-9425-475684a506ff",
+                  "color": "yellow",
+                  "value": "💻 프론트엔드",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                },
+                {
+                  "id": "347aa068-ae12-411a-8e20-cfd154ed9264",
+                  "color": "blue",
+                  "value": "Daily",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                }
+              ],
+              "defaultOption": "Dev"
+            },
+            "vwIt": {
+              "name": "tags",
+              "type": "multi_select",
+              "options": [
+                {
+                  "id": "ykcH",
+                  "color": "orange",
+                  "value": "트러블슈팅",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                },
+                {
+                  "id": "tV\\f",
+                  "color": "green",
+                  "value": "SVGR",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                },
+                {
+                  "id": "CtbQ",
+                  "color": "red",
+                  "value": "svg",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                },
+                {
+                  "id": "jtjv",
+                  "color": "brown",
+                  "value": "Next.js",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                },
+                {
+                  "id": "5a82b557-35f8-4be6-8be1-1165be05a06a",
+                  "color": "blue",
+                  "value": "corepack",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                },
+                {
+                  "id": "fba5332d-e5dd-4f94-98bd-e93da2556edc",
+                  "color": "pink",
+                  "value": "사이드프로젝트",
+                  "collectionIds": [
+                    "1900dfea-15a2-80cb-a7cc-000bcce8863a"
+                  ]
+                }
+              ]
+            },
+            "wecG": {
+              "name": "updatedAt",
+              "type": "last_edited_time",
+              "date_format": "YYYY/MM/DD",
+              "time_format": " "
+            },
+            "title": {
+              "name": "title",
+              "type": "title"
+            }
+          },
+          "format": {
+            "ai_suggested_properties": [
+              {
+                "name": "description",
+                "type": "text"
+              },
+              {
+                "name": "author",
+                "type": "person"
+              },
+              {
+                "name": "publish date",
+                "type": "date"
+              },
+              {
+                "name": "status",
+                "type": "select",
+                "options": [
+                  {
+                    "id": "q=_T",
+                    "color": "orange",
+                    "value": "draft"
+                  },
+                  {
+                    "id": "E~{I",
+                    "color": "red",
+                    "value": "published"
+                  },
+                  {
+                    "id": ":idr",
+                    "color": "yellow",
+                    "value": "archived"
+                  }
+                ]
+              },
+              {
+                "name": "read time",
+                "type": "number"
+              },
+              {
+                "name": "image URL",
+                "type": "url"
+              },
+              {
+                "name": "related links",
+                "type": "multi_select",
+                "options": [
+                  {
+                    "id": "yJk]",
+                    "color": "red",
+                    "value": "link1"
+                  },
+                  {
+                    "id": "dCYt",
+                    "color": "purple",
+                    "value": "link2"
+                  },
+                  {
+                    "id": "`f}j",
+                    "color": "yellow",
+                    "value": "link3"
+                  }
+                ]
+              },
+              {
+                "name": "contact email",
+                "type": "email"
+              },
+              {
+                "name": "contact phone",
+                "type": "phone_number"
+              },
+              {
+                "name": "visibility",
+                "type": "select",
+                "options": [
+                  {
+                    "id": "cJOc",
+                    "color": "gray",
+                    "value": "public"
+                  },
+                  {
+                    "id": ":\\v]",
+                    "color": "default",
+                    "value": "private"
+                  },
+                  {
+                    "id": "zhzC",
+                    "color": "yellow",
+                    "value": "unlisted"
+                  }
+                ]
+              }
+            ],
+            "collection_page_properties": [
+              {
+                "visible": false,
+                "property": "YeE`"
+              },
+              {
+                "visible": false,
+                "property": "LlVU"
+              },
+              {
+                "visible": false,
+                "property": "PkE`"
+              },
+              {
+                "visible": false,
+                "property": "vwIt"
+              },
+              {
+                "visible": false,
+                "property": "A\\Sy"
+              },
+              {
+                "visible": false,
+                "property": "wecG"
+              }
+            ]
+          },
+          "parent_id": "1900dfea-15a2-807b-84fa-dad2d02523a1",
+          "parent_table": "block",
+          "alive": true,
+          "migrated": true,
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d",
+          "deleted_schema": {
+            "YeE`": {
+              "name": "AI summary",
+              "type": "text",
+              "ai_inference": {
+                "type": "summarize",
+                "auto_update_on_edit": false
+              }
+            }
+          }
+        },
+        "role": "editor"
+      },
+      "17c0dfea-15a2-8188-86dc-000ba7d45ddf": {
+        "value": {
+          "id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+          "version": 28,
+          "name": [
+            [
+              "Projects"
+            ]
+          ],
+          "schema": {
+            "FO<V": {
+              "name": "Due",
+              "type": "date"
+            },
+            "GZlc": {
+              "name": "Area-T",
+              "type": "formula",
+              "formula": {
+                "id": "K^gU",
+                "name": "Area",
+                "type": "property",
+                "result_type": "text"
+              },
+              "target_property": "title",
+              "relation_property": "Jw~F",
+              "target_property_type": "title"
+            },
+            "Jw~F": {
+              "name": "Goal",
+              "type": "relation",
+              "version": "v2",
+              "property": "P^wW",
+              "autoRelate": {
+                "enabled": false
+              },
+              "collection_id": "17c0dfea-15a2-8195-852d-000b0bceb352",
+              "collection_pointer": {
+                "id": "17c0dfea-15a2-8195-852d-000b0bceb352",
+                "table": "collection",
+                "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+              }
+            },
+            "K^gU": {
+              "name": "Area",
+              "type": "rollup",
+              "target_property": "gGpZ",
+              "relation_property": "Jw~F",
+              "target_property_type": "select"
+            },
+            "`gvQ": {
+              "name": "Start Date",
+              "type": "date"
+            },
+            "catu": {
+              "name": "Done-Check",
+              "type": "formula",
+              "formula": {
+                "args": [
+                  {
+                    "id": "sRDk",
+                    "name": "Status",
+                    "type": "property",
+                    "result_type": "text"
+                  },
+                  {
+                    "type": "constant",
+                    "value": "Done",
+                    "value_type": "string",
+                    "result_type": "text"
+                  }
+                ],
+                "name": "equal",
+                "type": "operator",
+                "operator": "==",
+                "result_type": "checkbox"
+              }
+            },
+            "c}Ek": {
+              "name": "Progress",
+              "type": "formula",
+              "formula": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "id": "khOi",
+                            "name": "Percent",
+                            "type": "property",
+                            "result_type": "number"
+                          },
+                          {
+                            "type": "constant",
+                            "value": 100,
+                            "value_type": "number",
+                            "result_type": "number"
+                          }
+                        ],
+                        "name": "multiply",
+                        "type": "operator",
+                        "operator": "*",
+                        "result_type": "number"
+                      },
+                      {
+                        "type": "constant",
+                        "value": 100,
+                        "value_type": "number",
+                        "result_type": "number"
+                      }
+                    ],
+                    "name": "largerEq",
+                    "type": "operator",
+                    "operator": ">=",
+                    "result_type": "checkbox"
+                  },
+                  {
+                    "type": "constant",
+                    "value": "▓▓▓▓▓▓▓▓▓▓ 100%🏆",
+                    "value_type": "string",
+                    "result_type": "text"
+                  },
+                  {
+                    "true": {
+                      "type": "constant",
+                      "value": "░░░░░░░░░░0%",
+                      "value_type": "string",
+                      "result_type": "text"
+                    },
+                    "type": "conditional",
+                    "false": {
+                      "args": [
+                        {
+                          "args": [
+                            {
+                              "args": [
+                                {
+                                  "type": "constant",
+                                  "value": "▓▓▓▓▓▓▓▓▓▓",
+                                  "value_type": "string",
+                                  "result_type": "text"
+                                },
+                                {
+                                  "type": "constant",
+                                  "value": 0,
+                                  "value_type": "number",
+                                  "result_type": "number"
+                                },
+                                {
+                                  "args": [
+                                    {
+                                      "args": [
+                                        {
+                                          "id": "khOi",
+                                          "name": "Percent",
+                                          "type": "property",
+                                          "result_type": "number"
+                                        },
+                                        {
+                                          "type": "constant",
+                                          "value": 10,
+                                          "value_type": "number",
+                                          "result_type": "number"
+                                        }
+                                      ],
+                                      "name": "multiply",
+                                      "type": "operator",
+                                      "operator": "*",
+                                      "result_type": "number"
+                                    }
+                                  ],
+                                  "name": "floor",
+                                  "type": "function",
+                                  "result_type": "number"
+                                }
+                              ],
+                              "name": "slice",
+                              "type": "function",
+                              "result_type": "text"
+                            },
+                            {
+                              "args": [
+                                {
+                                  "args": [
+                                    {
+                                      "args": [
+                                        {
+                                          "args": [
+                                            {
+                                              "args": [
+                                                {
+                                                  "type": "constant",
+                                                  "value": "░░░░░░░░░░",
+                                                  "value_type": "string",
+                                                  "result_type": "text"
+                                                },
+                                                {
+                                                  "type": "constant",
+                                                  "value": 0,
+                                                  "value_type": "number",
+                                                  "result_type": "number"
+                                                },
+                                                {
+                                                  "args": [
+                                                    {
+                                                      "args": [
+                                                        {
+                                                          "type": "constant",
+                                                          "value": 10,
+                                                          "value_type": "number",
+                                                          "result_type": "number"
+                                                        },
+                                                        {
+                                                          "args": [
+                                                            {
+                                                              "id": "khOi",
+                                                              "name": "Percent",
+                                                              "type": "property",
+                                                              "result_type": "number"
+                                                            },
+                                                            {
+                                                              "type": "constant",
+                                                              "value": 10,
+                                                              "value_type": "number",
+                                                              "result_type": "number"
+                                                            }
+                                                          ],
+                                                          "name": "multiply",
+                                                          "type": "operator",
+                                                          "operator": "*",
+                                                          "result_type": "number"
+                                                        }
+                                                      ],
+                                                      "name": "subtract",
+                                                      "type": "operator",
+                                                      "operator": "-",
+                                                      "result_type": "number"
+                                                    }
+                                                  ],
+                                                  "name": "ceil",
+                                                  "type": "function",
+                                                  "result_type": "number"
+                                                }
+                                              ],
+                                              "name": "slice",
+                                              "type": "function",
+                                              "result_type": "text"
+                                            },
+                                            {
+                                              "type": "constant",
+                                              "value": " ",
+                                              "value_type": "string",
+                                              "result_type": "text"
+                                            }
+                                          ],
+                                          "name": "add",
+                                          "type": "operator",
+                                          "operator": "+",
+                                          "result_type": "text"
+                                        },
+                                        {
+                                          "args": [
+                                            {
+                                              "args": [
+                                                {
+                                                  "args": [
+                                                    {
+                                                      "id": "khOi",
+                                                      "name": "Percent",
+                                                      "type": "property",
+                                                      "result_type": "number"
+                                                    },
+                                                    {
+                                                      "type": "constant",
+                                                      "value": 100,
+                                                      "value_type": "number",
+                                                      "result_type": "number"
+                                                    }
+                                                  ],
+                                                  "name": "multiply",
+                                                  "type": "operator",
+                                                  "operator": "*",
+                                                  "result_type": "number"
+                                                }
+                                              ],
+                                              "name": "round",
+                                              "type": "function",
+                                              "result_type": "number"
+                                            }
+                                          ],
+                                          "name": "format",
+                                          "type": "function",
+                                          "result_type": "text"
+                                        }
+                                      ],
+                                      "name": "add",
+                                      "type": "operator",
+                                      "operator": "+",
+                                      "result_type": "text"
+                                    },
+                                    {
+                                      "type": "constant",
+                                      "value": "%",
+                                      "value_type": "string",
+                                      "result_type": "text"
+                                    }
+                                  ],
+                                  "name": "add",
+                                  "type": "operator",
+                                  "operator": "+",
+                                  "result_type": "text"
+                                }
+                              ],
+                              "name": "format",
+                              "type": "function",
+                              "result_type": "text"
+                            }
+                          ],
+                          "name": "add",
+                          "type": "operator",
+                          "operator": "+",
+                          "result_type": "text"
+                        }
+                      ],
+                      "name": "format",
+                      "type": "function",
+                      "result_type": "text"
+                    },
+                    "condition": {
+                      "args": [
+                        {
+                          "id": "khOi",
+                          "name": "Percent",
+                          "type": "property",
+                          "result_type": "number"
+                        }
+                      ],
+                      "name": "empty",
+                      "type": "function",
+                      "result_type": "checkbox"
+                    },
+                    "result_type": "text"
+                  }
+                ],
+                "name": "if",
+                "type": "function",
+                "result_type": "text"
+              },
+              "version": "v2",
+              "formula2": {
+                "code": [
+                  [
+                    "if("
+                  ],
+                  [
+                    "("
+                  ],
+                  [
+                    "‣",
+                    [
+                      [
+                        "fpp",
+                        {
+                          "name": "Percent",
+                          "property": "khOi",
+                          "collection": {
+                            "id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+                            "table": "collection",
+                            "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+                          }
+                        }
+                      ]
+                    ]
+                  ],
+                  [
+                    " * "
+                  ],
+                  [
+                    "100"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    " >= "
+                  ],
+                  [
+                    "100"
+                  ],
+                  [
+                    ", "
+                  ],
+                  [
+                    "\"▓▓▓▓▓▓▓▓▓▓ 100%🏆\""
+                  ],
+                  [
+                    ", "
+                  ],
+                  [
+                    "if("
+                  ],
+                  [
+                    "empty("
+                  ],
+                  [
+                    "‣",
+                    [
+                      [
+                        "fpp",
+                        {
+                          "name": "Percent",
+                          "property": "khOi",
+                          "collection": {
+                            "id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+                            "table": "collection",
+                            "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+                          }
+                        }
+                      ]
+                    ]
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    ", "
+                  ],
+                  [
+                    "\"░░░░░░░░░░0%\""
+                  ],
+                  [
+                    ", "
+                  ],
+                  [
+                    "format("
+                  ],
+                  [
+                    "substring("
+                  ],
+                  [
+                    "\"▓▓▓▓▓▓▓▓▓▓\""
+                  ],
+                  [
+                    ", "
+                  ],
+                  [
+                    "0"
+                  ],
+                  [
+                    ", "
+                  ],
+                  [
+                    "floor("
+                  ],
+                  [
+                    "‣",
+                    [
+                      [
+                        "fpp",
+                        {
+                          "name": "Percent",
+                          "property": "khOi",
+                          "collection": {
+                            "id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+                            "table": "collection",
+                            "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+                          }
+                        }
+                      ]
+                    ]
+                  ],
+                  [
+                    " * "
+                  ],
+                  [
+                    "10"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    " + "
+                  ],
+                  [
+                    "format("
+                  ],
+                  [
+                    "("
+                  ],
+                  [
+                    "("
+                  ],
+                  [
+                    "substring("
+                  ],
+                  [
+                    "\"░░░░░░░░░░\""
+                  ],
+                  [
+                    ", "
+                  ],
+                  [
+                    "0"
+                  ],
+                  [
+                    ", "
+                  ],
+                  [
+                    "ceil("
+                  ],
+                  [
+                    "10"
+                  ],
+                  [
+                    " - "
+                  ],
+                  [
+                    "("
+                  ],
+                  [
+                    "‣",
+                    [
+                      [
+                        "fpp",
+                        {
+                          "name": "Percent",
+                          "property": "khOi",
+                          "collection": {
+                            "id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+                            "table": "collection",
+                            "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+                          }
+                        }
+                      ]
+                    ]
+                  ],
+                  [
+                    " * "
+                  ],
+                  [
+                    "10"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    " + "
+                  ],
+                  [
+                    "\" \""
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    " + "
+                  ],
+                  [
+                    "format("
+                  ],
+                  [
+                    "round("
+                  ],
+                  [
+                    "‣",
+                    [
+                      [
+                        "fpp",
+                        {
+                          "name": "Percent",
+                          "property": "khOi",
+                          "collection": {
+                            "id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+                            "table": "collection",
+                            "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+                          }
+                        }
+                      ]
+                    ]
+                  ],
+                  [
+                    " * "
+                  ],
+                  [
+                    "100"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    " + "
+                  ],
+                  [
+                    "\"%\""
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    ")"
+                  ],
+                  [
+                    ")"
+                  ]
+                ],
+                "result_type": {
+                  "type": "text"
+                }
+              }
+            },
+            "khOi": {
+              "name": "Percent",
+              "type": "rollup",
+              "aggregation": "percent_checked",
+              "target_property": ":Chm",
+              "relation_property": "w<zB",
+              "target_property_type": "checkbox"
+            },
+            "nr:X": {
+              "name": "Actions 1",
+              "type": "relation",
+              "version": "v2",
+              "property": "_Pmq",
+              "autoRelate": {
+                "enabled": false
+              },
+              "collection_id": "2078d675-89cd-4ccc-88ad-fe8ce46f892e",
+              "collection_pointer": {
+                "id": "2078d675-89cd-4ccc-88ad-fe8ce46f892e",
+                "table": "collection",
+                "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+              }
+            },
+            "sRDk": {
+              "name": "Status",
+              "type": "status",
+              "groups": [
+                {
+                  "id": "445f33af-51a6-4339-b6fc-ffe45c45686e",
+                  "name": "To-do",
+                  "color": "gray",
+                  "optionIds": [
+                    "371f50f8-4eac-4482-9c26-f2214b02d579"
+                  ]
+                },
+                {
+                  "id": "efd0ae8a-8188-4623-a2a5-f5818d511050",
+                  "name": "In progress",
+                  "color": "blue",
+                  "optionIds": [
+                    "8df83b6a-26d5-49b6-a130-9f38e8967df3"
+                  ]
+                },
+                {
+                  "id": "4fd324af-f958-4a95-aef0-7464c74222a7",
+                  "name": "Complete",
+                  "color": "green",
+                  "optionIds": [
+                    "2f88f121-3cf5-43f9-868a-431293a0b23b"
+                  ]
+                }
+              ],
+              "options": [
+                {
+                  "id": "371f50f8-4eac-4482-9c26-f2214b02d579",
+                  "value": "Not started",
+                  "collectionIds": [
+                    "17c0dfea-15a2-8188-86dc-000ba7d45ddf"
+                  ]
+                },
+                {
+                  "id": "8df83b6a-26d5-49b6-a130-9f38e8967df3",
+                  "color": "pink",
+                  "value": "Active 🔥",
+                  "collectionIds": [
+                    "17c0dfea-15a2-8188-86dc-000ba7d45ddf"
+                  ]
+                },
+                {
+                  "id": "2f88f121-3cf5-43f9-868a-431293a0b23b",
+                  "color": "green",
+                  "value": "Done",
+                  "collectionIds": [
+                    "17c0dfea-15a2-8188-86dc-000ba7d45ddf"
+                  ]
+                }
+              ],
+              "defaultOption": "Not started"
+            },
+            "zjDm": {
+              "name": "진행횟수",
+              "type": "rollup",
+              "show_as": {
+                "type": "bar",
+                "color": "purple",
+                "maxValue": 100,
+                "showValue": true
+              },
+              "aggregation": "checked",
+              "target_property": "rKWI",
+              "relation_property": "nr:X",
+              "target_property_type": "checkbox"
+            },
+            "~KNJ": {
+              "name": "최대개수",
+              "type": "text"
+            },
+            "title": {
+              "name": "Name",
+              "type": "title"
+            }
+          },
+          "format": {
+            "copied_from_pointer": {
+              "id": "98c31702-112c-4bb7-a4ca-f8d8adc11ce7",
+              "table": "collection",
+              "spaceId": "2f70c034-4f8c-4532-8ae9-e5ef14e7e787"
+            },
+            "property_visibility": [
+              {
+                "property": "Jw~F",
+                "visibility": "show"
+              },
+              {
+                "property": "K^gU",
+                "visibility": "show"
+              },
+              {
+                "property": "FO<V",
+                "visibility": "show"
+              },
+              {
+                "property": "sRDk",
+                "visibility": "show"
+              },
+              {
+                "property": "nr:X",
+                "visibility": "show"
+              },
+              {
+                "property": "GZlc",
+                "visibility": "show"
+              },
+              {
+                "property": "catu",
+                "visibility": "show"
+              },
+              {
+                "property": "khOi",
+                "visibility": "show"
+              },
+              {
+                "property": "c}Ek",
+                "visibility": "show"
+              },
+              {
+                "property": "`gvQ",
+                "visibility": "show"
+              },
+              {
+                "property": "zjDm",
+                "visibility": "show"
+              },
+              {
+                "property": "~KNJ",
+                "visibility": "show"
+              }
+            ],
+            "ai_suggested_properties": [
+              {
+                "name": "Project Manager",
+                "type": "person"
+              },
+              {
+                "name": "Start Date",
+                "type": "date"
+              },
+              {
+                "name": "Budget",
+                "type": "number"
+              },
+              {
+                "name": "Priority",
+                "type": "select",
+                "options": [
+                  {
+                    "id": "j_^u",
+                    "color": "orange",
+                    "value": "High"
+                  },
+                  {
+                    "id": "Qx^s",
+                    "color": "gray",
+                    "value": "Medium"
+                  },
+                  {
+                    "id": "R:PK",
+                    "color": "default",
+                    "value": "Low"
+                  }
+                ]
+              },
+              {
+                "name": "Team Members",
+                "type": "multi_select",
+                "options": [
+                  {
+                    "id": "mI:q",
+                    "color": "orange",
+                    "value": "Design"
+                  },
+                  {
+                    "id": "R@y_",
+                    "color": "red",
+                    "value": "Development"
+                  },
+                  {
+                    "id": "R^O<",
+                    "color": "purple",
+                    "value": "Marketing"
+                  },
+                  {
+                    "id": "J}uq",
+                    "color": "brown",
+                    "value": "Sales"
+                  }
+                ]
+              },
+              {
+                "name": "Client Email",
+                "type": "email"
+              },
+              {
+                "name": "Project URL",
+                "type": "url"
+              },
+              {
+                "name": "Notes",
+                "type": "text"
+              },
+              {
+                "name": "Feedback Status",
+                "type": "status"
+              },
+              {
+                "name": "Estimated Completion",
+                "type": "date"
+              }
+            ],
+            "collection_page_properties": [
+              {
+                "visible": true,
+                "property": "Jw~F"
+              },
+              {
+                "visible": false,
+                "property": "K^gU"
+              },
+              {
+                "visible": false,
+                "property": "FO<V"
+              },
+              {
+                "visible": false,
+                "property": "sRDk"
+              },
+              {
+                "visible": false,
+                "property": "r=[:"
+              }
+            ]
+          },
+          "parent_id": "17c0dfea-15a2-814c-aac5-efc5deb1a8f1",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "98c31702-112c-4bb7-a4ca-f8d8adc11ce7",
+          "template_pages": [
+            "17c0dfea-15a2-813d-9fe0-f7d016f6bb46"
+          ],
+          "migrated": true,
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d",
+          "deleted_schema": {
+            "tB^F": {
+              "name": "Rollup",
+              "type": "rollup"
+            },
+            "w<zB": {
+              "name": "Actions",
+              "type": "relation",
+              "version": "v2",
+              "property": "h]Hq",
+              "autoRelate": {
+                "enabled": false
+              },
+              "collection_id": "17c0dfea-15a2-81de-8458-000b4ce884a0",
+              "collection_pointer": {
+                "id": "17c0dfea-15a2-81de-8458-000b4ce884a0",
+                "table": "collection",
+                "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+              }
+            }
+          }
+        },
+        "role": "editor"
+      }
+    },
+    "collection_view": {
+      "1900dfea-15a2-80e7-adbb-000c7e7920ed": {
+        "value": {
+          "id": "1900dfea-15a2-80e7-adbb-000c7e7920ed",
+          "version": 22,
+          "type": "table",
+          "name": "Table",
+          "format": {
+            "table_wrap": true,
+            "table_properties": [
+              {
+                "width": 276,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "DmGq"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "PkE`"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "vwIt"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "LlVU"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "wecG"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "A\\Sy"
+              }
+            ],
+            "collection_pointer": {
+              "id": "1900dfea-15a2-80cb-a7cc-000bcce8863a",
+              "table": "collection",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            },
+            "table_frozen_column_index": -1
+          },
+          "parent_id": "1900dfea-15a2-807b-84fa-dad2d02523a1",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "1900dfea-15a2-80a5-a5af-eb213bea8e79",
+            "1930dfea-15a2-80a6-b79d-e6153ee99bc5",
+            "1950dfea-15a2-8025-8f32-c6cdbc853b69",
+            "1960dfea-15a2-8070-b1e0-df790e4b5566",
+            "1900dfea-15a2-8005-bbea-d51f23deb360"
+          ],
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "17c0dfea-15a2-8169-895c-000c6a18ac28": {
+        "value": {
+          "id": "17c0dfea-15a2-8169-895c-000c6a18ac28",
+          "version": 9,
+          "type": "table",
+          "name": "@active",
+          "format": {
+            "table_wrap": true,
+            "property_filters": [
+              {
+                "id": "ae69b548-8423-402c-bedf-46b2bce26f8e",
+                "filter": {
+                  "filter": {
+                    "value": {
+                      "type": "is_group",
+                      "value": "In progress"
+                    },
+                    "operator": "status_is"
+                  },
+                  "property": "sRDk"
+                }
+              }
+            ],
+            "table_properties": [
+              {
+                "width": 109,
+                "visible": true,
+                "property": "sRDk"
+              },
+              {
+                "width": 217,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 145,
+                "visible": true,
+                "property": "FO<V"
+              },
+              {
+                "width": 149,
+                "visible": true,
+                "property": "Jw~F"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "K^gU"
+              },
+              {
+                "width": 200,
+                "visible": false,
+                "property": "w<zB"
+              },
+              {
+                "width": 100,
+                "visible": false,
+                "property": "khOi"
+              },
+              {
+                "width": 200,
+                "visible": false,
+                "property": "GZlc"
+              },
+              {
+                "width": 154,
+                "visible": false,
+                "property": "c}Ek"
+              },
+              {
+                "width": 200,
+                "visible": false,
+                "property": "catu"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "zjDm"
+              },
+              {
+                "visible": true,
+                "property": "~KNJ"
+              },
+              {
+                "visible": true,
+                "property": "tB^F"
+              }
+            ],
+            "collection_pointer": {
+              "id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+              "table": "collection",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            },
+            "table_frozen_column_index": -1,
+            "hide_linked_collection_name": true
+          },
+          "parent_id": "17c0dfea-15a2-814c-aac5-efc5deb1a8f1",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "17c0dfea-15a2-81bb-b921-f6feddcc1b62",
+            "17c0dfea-15a2-80c6-84e2-fbfdb5270b74",
+            "17c0dfea-15a2-8088-bfcf-d04283fe60f1",
+            "17c0dfea-15a2-81a6-8bef-caae27444dbf",
+            "17c0dfea-15a2-806a-9c82-cc4c88de8889",
+            "278a9eb9-3a5a-4222-9ae0-d899cc3010d0",
+            "ac818e88-4b04-46d4-a6e9-e05e7d7e6005"
+          ],
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      },
+      "17c0dfea-15a2-81cf-9d62-000c5555f399": {
+        "value": {
+          "id": "17c0dfea-15a2-81cf-9d62-000c5555f399",
+          "version": 13,
+          "type": "table",
+          "name": "@all",
+          "format": {
+            "table_wrap": true,
+            "table_properties": [
+              {
+                "width": 109,
+                "visible": true,
+                "property": "sRDk"
+              },
+              {
+                "width": 249,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 168,
+                "visible": true,
+                "property": "FO<V"
+              },
+              {
+                "width": 149,
+                "visible": true,
+                "property": "Jw~F"
+              },
+              {
+                "width": 100,
+                "visible": true,
+                "property": "K^gU"
+              },
+              {
+                "width": 200,
+                "visible": false,
+                "property": "w<zB"
+              },
+              {
+                "width": 100,
+                "visible": false,
+                "property": "khOi"
+              },
+              {
+                "width": 200,
+                "visible": false,
+                "property": "GZlc"
+              },
+              {
+                "width": 154,
+                "visible": true,
+                "property": "c}Ek"
+              },
+              {
+                "width": 200,
+                "visible": false,
+                "property": "nr:X"
+              },
+              {
+                "width": 200,
+                "visible": false,
+                "property": "catu"
+              },
+              {
+                "width": 200,
+                "visible": false,
+                "property": "zjDm"
+              },
+              {
+                "width": 200,
+                "visible": false,
+                "property": "~KNJ"
+              }
+            ],
+            "collection_pointer": {
+              "id": "17c0dfea-15a2-8188-86dc-000ba7d45ddf",
+              "table": "collection",
+              "spaceId": "98e77847-0559-45b8-871e-b8706cb1740d"
+            },
+            "table_frozen_column_index": -1,
+            "hide_linked_collection_name": true
+          },
+          "parent_id": "17c0dfea-15a2-814c-aac5-efc5deb1a8f1",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "1900dfea-15a2-801a-8e2a-d9b59d78f238",
+            "17e0dfea-15a2-8053-9e7b-f4a8eefdaed1",
+            "17e0dfea-15a2-8002-afb6-dc7f35e55288",
+            "17c0dfea-15a2-806a-9c82-cc4c88de8889",
+            "1840dfea-15a2-80a8-9d0d-f0fa3bc0c3d2",
+            "17c0dfea-15a2-81bb-b921-f6feddcc1b62",
+            "17c0dfea-15a2-8088-bfcf-d04283fe60f1",
+            "17c0dfea-15a2-80c6-84e2-fbfdb5270b74",
+            "278a9eb9-3a5a-4222-9ae0-d899cc3010d0",
+            "ac818e88-4b04-46d4-a6e9-e05e7d7e6005"
+          ],
+          "query2": {
+            "sort": [
+              {
+                "property": "Jw~F",
+                "direction": "ascending"
+              }
+            ]
+          },
+          "space_id": "98e77847-0559-45b8-871e-b8706cb1740d"
+        },
+        "role": "editor"
+      }
+    },
+    "notion_user": {},
+    "collection_query": {},
+    "signed_urls": {}
+  }
+}
