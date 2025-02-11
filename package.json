@@ -12,7 +12,16 @@
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["nextjs", "react", "ssg", "static-site", "aws", "s3", "notion", "blog"],
+  "keywords": [
+    "nextjs",
+    "react",
+    "ssg",
+    "static-site",
+    "aws",
+    "s3",
+    "notion",
+    "blog"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -40,6 +49,8 @@
     "@types/node": "^20.14.8",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "eslint": "^9.20.0",
+    "eslint-config-next": "^15.1.7",
     "notion-types": "^7.1.6",
     "only-allow": "^1.2.1",
     "typescript": "^5.5.2"

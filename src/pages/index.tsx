@@ -63,7 +63,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const filterPosts = ({
+const useFilterPosts = ({
   selectedTab,
   selectedTag,
 }: {
