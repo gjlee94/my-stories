@@ -15,6 +15,7 @@ import { TabList } from "@/components/TabList";
 
 import fs from "fs";
 import path from "path";
+import { HeadConfig } from "@/components/HeadConfig";
 
 const Main = styled(Flex)`
   max-width: 1000px;
@@ -105,41 +106,51 @@ export default function PostsPage() {
   const tags = [...new Set(posts.flatMap((post) => post.tags))];
 
   return (
-    <Flex justify="center" css={{ width: "100%", maxWidth: "1300px" }}>
-      <Main as="main">
-        <Flex direction="column" gap={20} css={{ width: "100%" }}>
-          <TabList
-            tabs={tabs}
-            selectedTab={selectedTab}
-            onTabClick={setSelectedTab}
-          />
-          {filteredPosts.length > 0 ? (
-            filteredPosts.map((post) => (
-              <Link key={post.slug} href={`/${post.slug}`}>
-                <PreviewContent post={post} />
-              </Link>
-            ))
-          ) : (
-            <Flex
-              justify="center"
-              align="center"
-              css={{ width: "100%", height: "148px", backgroundColor: "white" }}
-            >
-              데이터 없음
-            </Flex>
-          )}
-        </Flex>
-      </Main>
-      {!isMobile && !isTablet && (
-        <Aside as="aside" direction="column">
-          <Profile />
-          <TagList
-            tags={tags}
-            selectedTag={selectedTag}
-            onTagClick={setSelectedTag}
-          />
-        </Aside>
-      )}
-    </Flex>
+    <>
+      <HeadConfig
+        title="Gyoungjun's Blog"
+        summary="개인적으로 사용해보고 싶은 기술들을 적용해 만든 블로그입니다. 개발하면서 배운 것들을 기록하고 아카이빙하는 공간으로 활용합니다. 실험하고 탐구한 기술들을 공유하며, 더 나은 개발 방법을 찾아가는 과정입니다. 🚀"
+      />
+      <Flex justify="center" css={{ width: "100%", maxWidth: "1300px" }}>
+        <Main as="main">
+          <Flex direction="column" gap={20} css={{ width: "100%" }}>
+            <TabList
+              tabs={tabs}
+              selectedTab={selectedTab}
+              onTabClick={setSelectedTab}
+            />
+            {filteredPosts.length > 0 ? (
+              filteredPosts.map((post) => (
+                <Link key={post.slug} href={`/${post.slug}`}>
+                  <PreviewContent post={post} />
+                </Link>
+              ))
+            ) : (
+              <Flex
+                justify="center"
+                align="center"
+                css={{
+                  width: "100%",
+                  height: "148px",
+                  backgroundColor: "white",
+                }}
+              >
+                데이터 없음
+              </Flex>
+            )}
+          </Flex>
+        </Main>
+        {!isMobile && !isTablet && (
+          <Aside as="aside" direction="column">
+            <Profile />
+            <TagList
+              tags={tags}
+              selectedTag={selectedTag}
+              onTagClick={setSelectedTag}
+            />
+          </Aside>
+        )}
+      </Flex>
+    </>
   );
 }
