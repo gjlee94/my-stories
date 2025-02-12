@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://dz8loj6wyz9a4.cloudfront.net
+
+# Sitemaps
+Sitemap: https://dz8loj6wyz9a4.cloudfront.net/sitemap.xml
