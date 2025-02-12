@@ -7,8 +7,10 @@
   "packageManager": "pnpm@8.15.5",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "sitemap": "next-sitemap",
     "dev": "next dev --turbo",
     "build": "next build",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -34,6 +36,7 @@
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
     "next": "^15.1.6",
+    "next-sitemap": "^4.2.3",
     "nodemon": "^3.1.9",
     "notion-client": "^7.1.6",
     "notion-utils": "^7.1.6",

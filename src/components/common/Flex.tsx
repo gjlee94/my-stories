@@ -1,3 +1,4 @@
+import { Interpolation, Theme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { CSSProperties, JSX } from "react";
 
@@ -9,7 +10,7 @@ type FlexProps = {
   gap?: number | string;
   children: React.ReactNode;
   as?: keyof JSX.IntrinsicElements;
-  css?: CSSProperties;
+  css?: Interpolation<Theme>;
 };
 
 const StyledFlex = styled.div<Omit<FlexProps, "children" | "as">>`

@@ -17,7 +17,7 @@ export const Header = () => {
     <Wrapper justify="space-between" align="center">
       <Link href="/">
         <Typography as="h1" variant="title4">
-          Gyoungjun's Blog
+          {`Gyoungjun's Blog`}
         </Typography>
       </Link>
       <a href={portfolioLink} target="_blank">

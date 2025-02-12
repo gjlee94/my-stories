@@ -17,6 +17,7 @@ export const Profile = () => {
           src="/assets/profile.png"
           alt="profile"
           priority
+          layout="intrinsic"
           width={200}
           height={210}
         />

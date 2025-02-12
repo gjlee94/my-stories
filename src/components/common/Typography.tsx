@@ -1,5 +1,6 @@
-import styled from "@emotion/styled";
-import { CSSProperties, JSX } from "react";
+import { Theme } from "@emotion/react";
+import styled, { Interpolation } from "@emotion/styled";
+import { JSX } from "react";
 
 type TypographyElementType = keyof JSX.IntrinsicElements;
 
@@ -54,7 +55,7 @@ interface TypographyProps {
   as?: TypographyElementType;
   variant: TypographyVariant;
   children: React.ReactNode;
-  css?: CSSProperties;
+  css?: Interpolation<Theme>;
 }
 
 const StyledTypography = styled.p<{ variant: TypographyVariant }>`
