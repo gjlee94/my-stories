@@ -20,4 +20,3 @@ export function logout() {
   sessionStorage.removeItem("authToken");
   window.location.reload();
 }
-https://dz8loj6wyz9a4.cloudfront.net/auth/callback#error_description=Response+from+IdP+token+endpoint+cannot+be+parsed+as+JSON+or+has+an+invalid+format.&error=invalid_request
