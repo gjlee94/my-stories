@@ -16,7 +16,8 @@ import { HeadConfig } from "@/components/HeadConfig";
 
 import fs from "fs";
 import path from "path";
-import { openLoginPopup } from "@/utils/auth";
+import { CommentBox } from "@/components/CommentBox";
+import { EmoticonBox } from "@/components/EmoticonBox";
 export async function getStaticPaths() {
   const posts = await getPosts();
   const slugs = posts.map((post) => post.slug);
@@ -107,7 +108,8 @@ export default function PostDetailPage({
           ))}
         </Flex>
         <NotionRenderer posts={post.recordMap} />
-        <button onClick={openLoginPopup}>로그인 팝업</button>
+        <EmoticonBox />
+        <CommentBox />
       </Wrapper>
     </>
   );
