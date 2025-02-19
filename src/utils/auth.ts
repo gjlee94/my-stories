@@ -16,9 +16,6 @@ export function openLoginPopup() {
       popup?.close();
       window.location.reload();
     }
-    if (event.data.refreshToken) {
-      sessionStorage.setItem("authToken", event.data.refreshToken);
-    }
   });
 }
 export function getIdToken() {
@@ -27,13 +24,9 @@ export function getIdToken() {
 export function getAccessToken() {
   return sessionStorage.getItem("accessToken");
 }
-export function getRefreshToken() {
-  return sessionStorage.getItem("refreshToken");
-}
 
 export function logout() {
   sessionStorage.removeItem("idToken");
   sessionStorage.removeItem("accessToken");
-  sessionStorage.removeItem("refreshToken");
   window.location.reload();
 }

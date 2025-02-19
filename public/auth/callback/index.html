@@ -12,11 +12,10 @@
       );
       const idToken = urlParams.get("id_token");
       const accessToken = urlParams.get("access_token");
-      const refreshToken = urlParams.get("refresh_token");
 
       if (idToken) {
         window.opener.postMessage(
-          { idToken, accessToken, refreshToken },
+          { idToken, accessToken },
           window.location.origin
         );
         window.close();
