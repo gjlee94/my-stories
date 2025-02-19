@@ -14,10 +14,20 @@ const StyledCommentInput = styled.textarea<{ disabled: boolean }>`
   ${({ disabled }) => disabled && `cursor: not-allowed;`}
 `;
 
-export const CommentInput = ({ disabled }: { disabled: boolean }) => {
+export const CommentInput = ({
+  disabled,
+  value,
+  onChange,
+}: {
+  disabled: boolean;
+  value: string;
+  onChange: (value: string) => void;
+}) => {
   return (
     <StyledCommentInput
       disabled={disabled}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
       placeholder={
         disabled ? "로그인 후 댓글을 작성할 수 있습니다" : "댓글을 입력해주세요"
       }

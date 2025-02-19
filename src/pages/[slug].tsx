@@ -4,11 +4,10 @@ import { Typography } from "@/components/common/Typography";
 import type { Post } from "@/types/post";
 import { format } from "date-fns";
 import styled from "@emotion/styled";
-import { getPosts } from "@/apis/getPosts";
-import { queryClient } from "@/lib/queryClient";
-import { queryKey } from "@/lib/queryKey";
-import { dehydrate, useQuery } from "@tanstack/react-query";
-import { getRecordMap } from "@/apis/getRecordMap";
+import { getPosts } from "@/apis/posts";
+import { queryClient } from "@/query/queryClient";
+import { dehydrate, useMutation, useQuery } from "@tanstack/react-query";
+import { getRecordMap } from "@/apis/posts/utils/getRecordMap";
 import { uuidToId } from "notion-utils";
 import NotionRenderer from "@/components/NotionRenderer";
 import { ExtendedRecordMap } from "notion-types";
@@ -18,6 +17,9 @@ import fs from "fs";
 import path from "path";
 import { CommentBox } from "@/components/CommentBox";
 import { EmoticonBox } from "@/components/EmoticonBox";
+import { queries } from "@/query/queries";
+import { addComment } from "@/apis/comments";
+
 export async function getStaticPaths() {
   const posts = await getPosts();
   const slugs = posts.map((post) => post.slug);
@@ -31,7 +33,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const posts = await getPosts();
 
   await queryClient.prefetchQuery({
-    queryKey: queryKey.posts(),
+    queryKey: queries.posts.list(),
     queryFn: () => posts,
   });
 
@@ -39,7 +41,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const recordMap = await getRecordMap(uuidToId(detailPost.id));
 
   await queryClient.prefetchQuery({
-    queryKey: queryKey.post(params.slug),
+    queryKey: queries.posts.detail(params.slug),
     queryFn: () => ({ ...detailPost, recordMap }),
   });
 
@@ -82,8 +84,33 @@ export default function PostDetailPage({
   params: { slug: string };
 }) {
   const query = useQuery<Post & { recordMap: ExtendedRecordMap }>({
-    queryKey: queryKey.post(params.slug),
+    queryKey: queries.posts.detail(params.slug),
   });
+  const commentsQuery = useQuery(
+    queries.comments.detail(params.slug ?? "1234")
+  );
+  const userQuery = useQuery(queries.user.detail());
+
+  if (userQuery.isSuccess) {
+    console.log("userQuery: ", userQuery.data);
+  }
+
+  const addCommentMutation = useMutation({
+    mutationFn: (payload: { content: string; author: string }) => {
+      return addComment(params.slug, payload);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries(queries.comments.detail(params.slug));
+    },
+  });
+
+  const handleAddComment = (comment: string) => {
+    const payload = {
+      content: comment,
+      author: userQuery.data?.username ?? "gyoungjun_lee",
+    };
+    addCommentMutation.mutate(payload);
+  };
 
   const post = query.data;
 
@@ -109,7 +136,14 @@ export default function PostDetailPage({
         </Flex>
         <NotionRenderer posts={post.recordMap} />
         <EmoticonBox />
-        <CommentBox />
+        {commentsQuery.isSuccess ? (
+          <CommentBox
+            comments={commentsQuery.data}
+            onCommentSubmit={handleAddComment}
+          />
+        ) : (
+          "...Loading"
+        )}
       </Wrapper>
     </>
   );
