@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Typography } from "../common/Typography";
 import { CommentInput } from "./CommentInput";
 import { CommentList } from "./CommentList";
-
+import { openLoginPopup } from "@/utils/auth";
 const Wrapper = styled(Flex)``;
 
 const RequireLoginRegion = styled.div<{ disabled: boolean }>`
@@ -22,6 +22,8 @@ export const CommentBox = ({}) => {
   const [disabled, setDisabled] = useState(true);
 
   const handleLogin = () => {
+    openLoginPopup();
+
     // TODO: authLogin 연동 필요
     // if (hasAuthToken()) {
     //   setDisabled(false);

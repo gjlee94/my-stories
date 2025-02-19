@@ -1,8 +1,7 @@
 import { NotionAPI } from "notion-client";
 import { idToUuid } from "notion-utils";
-import getAllPageIds from "./getAllPageIds";
-import getPageProperties from "./getPageProperties";
-import { Post } from "@/types/post";
+import getAllPageIds from "./utils/getAllPageIds";
+import getPageProperties from "./utils/getPageProperties";
 
 export const getPosts = async () => {
   let id = process.env.NEXT_PUBLIC_NOTION_PAGE_ID;
@@ -25,7 +24,6 @@ export const getPosts = async () => {
   const schema = collection?.schema;
 
   const rawMetadata = block[id].value;
-
 
   if (
     rawMetadata?.type !== "collection_view_page" &&

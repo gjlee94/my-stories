@@ -9,7 +9,7 @@ import { Profile } from "@/components/Profile";
 import { TagList } from "@/components/TagList";
 import { dehydrate, useQuery } from "@tanstack/react-query";
 import { queryClient } from "@/lib/queryClient";
-import { getPosts } from "@/apis/getPosts";
+import { getPosts } from "@/apis/posts";
 import { TabList } from "@/components/TabList";
 import queryOptions from "@/queryOptions";
 import fs from "fs";
