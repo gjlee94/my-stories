@@ -28,8 +28,7 @@ export const addComment = async (
   }
 ) => {
   try {
-    const token = sessionStorage.getItem("authToken");
-    console.log("token: ", token);
+    const token = sessionStorage.getItem("idToken");
     await fetch(`${BASE_URL}/comments/${postId}`, {
       method: "POST",
       headers: {

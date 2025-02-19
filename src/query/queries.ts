@@ -1,4 +1,5 @@
 import { getComments } from "@/apis/comments";
+import { getUser } from "@/apis/user";
 import { queryOptions } from "@tanstack/react-query";
 
 export const queries = {
@@ -14,6 +15,16 @@ export const queries = {
         queryKey: [queries.comments.all(), "detail", postId],
         queryFn: async () => {
           return await getComments(postId);
+        },
+      }),
+  },
+  user: {
+    all: () => ["user"],
+    detail: () =>
+      queryOptions({
+        queryKey: [queries.user.all(), "detail"],
+        queryFn: async () => {
+          return await getUser();
         },
       }),
   },

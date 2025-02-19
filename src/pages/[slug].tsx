@@ -89,6 +89,11 @@ export default function PostDetailPage({
   const commentsQuery = useQuery(
     queries.comments.detail(params.slug ?? "1234")
   );
+  const userQuery = useQuery(queries.user.detail());
+
+  if (userQuery.isSuccess) {
+    console.log("userQuery: ", userQuery.data);
+  }
 
   const addCommentMutation = useMutation({
     mutationFn: (payload: { content: string; author: string }) => {
@@ -102,7 +107,7 @@ export default function PostDetailPage({
   const handleAddComment = (comment: string) => {
     const payload = {
       content: comment,
-      author: "gyoungjun_lee",
+      author: userQuery.data?.username ?? "gyoungjun_lee",
     };
     addCommentMutation.mutate(payload);
   };

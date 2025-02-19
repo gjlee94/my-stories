@@ -30,7 +30,7 @@ export const CommentBox = ({
   const [comment, setComment] = useState("");
   const handleLogin = () => {
     openLoginPopup();
-    const token = sessionStorage.getItem("authToken");
+    const token = sessionStorage.getItem("idToken");
     if (token) {
       setDisabled(false);
     }
