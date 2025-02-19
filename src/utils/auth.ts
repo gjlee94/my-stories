@@ -5,18 +5,34 @@ export function openLoginPopup() {
 
   window.addEventListener("message", (event) => {
     if (event.origin !== window.location.origin) return;
-    if (event.data.token) {
-      sessionStorage.setItem("authToken", event.data.token);
+    if (event.data.idToken) {
+      sessionStorage.setItem("idToken", event.data.idToken);
       popup?.close();
       window.location.reload();
     }
+    if (event.data.accessToken) {
+      sessionStorage.setItem("accessToken", event.data.accessToken);
+      popup?.close();
+      window.location.reload();
+    }
+    if (event.data.refreshToken) {
+      sessionStorage.setItem("authToken", event.data.refreshToken);
+    }
   });
 }
-export function getAuthToken() {
-  return sessionStorage.getItem("authToken");
+export function getIdToken() {
+  return sessionStorage.getItem("idToken");
+}
+export function getAccessToken() {
+  return sessionStorage.getItem("accessToken");
+}
+export function getRefreshToken() {
+  return sessionStorage.getItem("refreshToken");
 }
 
 export function logout() {
-  sessionStorage.removeItem("authToken");
+  sessionStorage.removeItem("idToken");
+  sessionStorage.removeItem("accessToken");
+  sessionStorage.removeItem("refreshToken");
   window.location.reload();
 }

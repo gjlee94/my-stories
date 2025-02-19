@@ -9,10 +9,9 @@ import { Profile } from "@/components/Profile";
 import { TagList } from "@/components/TagList";
 import { dehydrate, useQuery } from "@tanstack/react-query";
 import { queryClient } from "@/lib/queryClient";
-import { getPosts } from "@/apis/getPosts";
-import { queryKey } from "@/lib/queryKey";
+import { getPosts } from "@/apis/posts";
 import { TabList } from "@/components/TabList";
-
+import { queries } from "@/query/queries";
 import fs from "fs";
 import path from "path";
 import { HeadConfig } from "@/components/HeadConfig";
@@ -36,7 +35,7 @@ export const getStaticProps = async () => {
   const posts = await getPosts();
 
   await queryClient.prefetchQuery({
-    queryKey: queryKey.posts(),
+    queryKey: queries.posts.list(),
     queryFn: () => posts,
   });
 
@@ -71,7 +70,7 @@ const useFilterPosts = ({
   selectedTag: string | undefined;
 }) => {
   const query = useQuery<Post[]>({
-    queryKey: queryKey.posts(),
+    queryKey: queries.posts.list(),
   });
 
   const posts = query.data;
@@ -92,7 +91,7 @@ export default function PostsPage() {
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);
 
   const query = useQuery<Post[]>({
-    queryKey: queryKey.posts(),
+    queryKey: queries.posts.list(),
   });
 
   const posts = query.data;

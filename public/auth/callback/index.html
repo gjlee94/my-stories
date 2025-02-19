@@ -10,10 +10,15 @@
       const urlParams = new URLSearchParams(
         window.location.hash.replace("#", "?")
       );
-      const token = urlParams.get("id_token");
+      const idToken = urlParams.get("id_token");
+      const accessToken = urlParams.get("access_token");
+      const refreshToken = urlParams.get("refresh_token");
 
-      if (token) {
-        window.opener.postMessage({ token }, window.location.origin);
+      if (idToken) {
+        window.opener.postMessage(
+          { idToken, accessToken, refreshToken },
+          window.location.origin
+        );
         window.close();
       }
     </script>
