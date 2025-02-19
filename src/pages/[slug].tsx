@@ -6,7 +6,6 @@ import { format } from "date-fns";
 import styled from "@emotion/styled";
 import { getPosts } from "@/apis/getPosts";
 import { queryClient } from "@/lib/queryClient";
-import { queryKey } from "@/lib/queryKey";
 import { dehydrate, useQuery } from "@tanstack/react-query";
 import { getRecordMap } from "@/apis/getRecordMap";
 import { uuidToId } from "notion-utils";
