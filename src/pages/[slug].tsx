@@ -18,6 +18,7 @@ import fs from "fs";
 import path from "path";
 import { CommentBox } from "@/components/CommentBox";
 import { EmoticonBox } from "@/components/EmoticonBox";
+import queryOptions from "@/queryOptions";
 export async function getStaticPaths() {
   const posts = await getPosts();
   const slugs = posts.map((post) => post.slug);
@@ -31,7 +32,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const posts = await getPosts();
 
   await queryClient.prefetchQuery({
-    queryKey: queryKey.posts(),
+    queryKey: queryOptions.posts.list(),
     queryFn: () => posts,
   });
 
@@ -39,7 +40,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const recordMap = await getRecordMap(uuidToId(detailPost.id));
 
   await queryClient.prefetchQuery({
-    queryKey: queryKey.post(params.slug),
+    queryKey: queryOptions.posts.detail(params.slug),
     queryFn: () => ({ ...detailPost, recordMap }),
   });
 
@@ -82,7 +83,7 @@ export default function PostDetailPage({
   params: { slug: string };
 }) {
   const query = useQuery<Post & { recordMap: ExtendedRecordMap }>({
-    queryKey: queryKey.post(params.slug),
+    queryKey: queryOptions.posts.detail(params.slug),
   });
 
   const post = query.data;
