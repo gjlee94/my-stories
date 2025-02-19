@@ -4,6 +4,7 @@ export function openLoginPopup() {
   const popup = window.open(loginUrl, "Login", "width=500,height=600");
 
   window.addEventListener("message", (event) => {
+    console.debug("event: ", event);
     if (event.origin !== window.location.origin) return;
     if (event.data.idToken) {
       sessionStorage.setItem("idToken", event.data.idToken);
