@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_AWS_API_URL;
 
 export const getComments = async (postId: string) => {
   const response = await fetch(`${BASE_URL}/comments/${postId}`, {

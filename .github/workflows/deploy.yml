@@ -15,7 +15,8 @@ jobs:
       NEXT_PUBLIC_ACTIVE_NOTION_USER_ID: ${{ secrets.ACTIVE_NOTION_USER_ID }}
       NEXT_PUBLIC_NOTION_AUTH_TOKEN: ${{ secrets.NOTION_AUTH_TOKEN }}
       NEXT_PUBLIC_SITE_URL: ${{ secrets.SITE_URL }}
-
+      NEXT_PUBLIC_AWS_API_URL: ${{ vars.AWS_API_URL }}
+      NEXT_PUBLIC_AWS_COGNITO_URL: ${{ vars.AWS_COGNITO_URL }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
