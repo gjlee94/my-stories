@@ -6,7 +6,7 @@ import { format } from "date-fns";
 import styled from "@emotion/styled";
 import { getPosts } from "@/apis/posts";
 import { queryClient } from "@/query/queryClient";
-import { dehydrate, useQuery } from "@tanstack/react-query";
+import { dehydrate, useMutation, useQuery } from "@tanstack/react-query";
 import { getRecordMap } from "@/apis/posts/utils/getRecordMap";
 import { uuidToId } from "notion-utils";
 import NotionRenderer from "@/components/NotionRenderer";
@@ -17,7 +17,9 @@ import fs from "fs";
 import path from "path";
 import { CommentBox } from "@/components/CommentBox";
 import { EmoticonBox } from "@/components/EmoticonBox";
-import queryOptions from "@/queryOptions";
+import { queries } from "@/query/queries";
+import { addComment } from "@/apis/comments";
+
 export async function getStaticPaths() {
   const posts = await getPosts();
   const slugs = posts.map((post) => post.slug);
@@ -31,7 +33,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const posts = await getPosts();
 
   await queryClient.prefetchQuery({
-    queryKey: queryOptions.posts.list(),
+    queryKey: queries.posts.list(),
     queryFn: () => posts,
   });
 
@@ -39,7 +41,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const recordMap = await getRecordMap(uuidToId(detailPost.id));
 
   await queryClient.prefetchQuery({
-    queryKey: queryOptions.posts.detail(params.slug),
+    queryKey: queries.posts.detail(params.slug),
     queryFn: () => ({ ...detailPost, recordMap }),
   });
 
@@ -82,8 +84,28 @@ export default function PostDetailPage({
   params: { slug: string };
 }) {
   const query = useQuery<Post & { recordMap: ExtendedRecordMap }>({
-    queryKey: queryOptions.posts.detail(params.slug),
+    queryKey: queries.posts.detail(params.slug),
   });
+  const commentsQuery = useQuery(
+    queries.comments.detail(params.slug ?? "1234")
+  );
+
+  const addCommentMutation = useMutation({
+    mutationFn: (payload: { content: string; author: string }) => {
+      return addComment(params.slug, payload);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries(queries.comments.detail(params.slug));
+    },
+  });
+
+  const handleAddComment = (comment: string) => {
+    const payload = {
+      content: comment,
+      author: "gyoungjun_lee",
+    };
+    addCommentMutation.mutate(payload);
+  };
 
   const post = query.data;
 
@@ -109,7 +131,14 @@ export default function PostDetailPage({
         </Flex>
         <NotionRenderer posts={post.recordMap} />
         <EmoticonBox />
-        <CommentBox />
+        {commentsQuery.isSuccess ? (
+          <CommentBox
+            comments={commentsQuery.data}
+            onCommentSubmit={handleAddComment}
+          />
+        ) : (
+          "...Loading"
+        )}
       </Wrapper>
     </>
   );
