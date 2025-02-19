@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Typography } from "../common/Typography";
 import { CommentInput } from "./CommentInput";
 import { CommentList } from "./CommentList";
-import { openLoginPopup } from "@/utils/auth";
+import { getIdToken, openLoginPopup } from "@/utils/auth";
 import { Comment } from "@/apis/comments";
 const Wrapper = styled(Flex)``;
 
@@ -30,19 +30,16 @@ export const CommentBox = ({
   const [comment, setComment] = useState("");
   const handleLogin = () => {
     openLoginPopup();
-    const token = sessionStorage.getItem("idToken");
+    const token = getIdToken();
     if (token) {
       setDisabled(false);
     }
-
-    console.log("로그인 팝업 열기");
   };
 
   const handleWriteComment = () => {
     // TODO: 댓글 작성 API 호출
     onCommentSubmit(comment);
     setComment("");
-    console.log("댓글 작성");
   };
 
   return (

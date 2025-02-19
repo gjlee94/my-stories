@@ -107,7 +107,7 @@ export default function PostDetailPage({
   const handleAddComment = (comment: string) => {
     const payload = {
       content: comment,
-      author: userQuery.data?.username ?? "gyoungjun_lee",
+      author: userQuery.data?.preferred_username ?? "gyoungjun_lee",
     };
     addCommentMutation.mutate(payload);
   };
