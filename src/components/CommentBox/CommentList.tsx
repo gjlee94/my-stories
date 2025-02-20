@@ -4,7 +4,7 @@ import { Comment } from "@/apis/comments";
 import { Typography } from "../common/Typography";
 import { compareDesc, differenceInMinutes, format } from "date-fns";
 const Wrapper = styled(Flex)`
-  height: 200px;
+  height: 100%;
   border: 1px solid #ccc;
   padding: 16px;
 `;
@@ -27,8 +27,8 @@ export const CommentList = ({ comments }: { comments: Comment[] }) => {
       {[...comments]
         .sort((a, b) => compareDesc(a.createdAt, b.createdAt))
         .map((comment) => (
-          <CommentItem key={comment.commentId} direction="column" gap={4}>
-            <Flex gap={4}>
+          <CommentItem key={comment.commentId} direction="column" gap={8}>
+            <Flex gap={12}>
               <Typography as="p" variant="body3">
                 {comment.author}
               </Typography>
@@ -37,6 +37,7 @@ export const CommentList = ({ comments }: { comments: Comment[] }) => {
               </Typography>
             </Flex>
             <Typography as="p" variant="body3">
+              <span css={{ position: "relative", top: "-2px" }}>↳</span>{" "}
               {comment.content}
             </Typography>
           </CommentItem>
