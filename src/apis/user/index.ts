@@ -1,7 +1,13 @@
+import { getAccessToken } from "@/utils/auth";
+
 export const getUser = async () => {
   const userInfoEndpoint = `${process.env.NEXT_PUBLIC_AWS_COGNITO_URL}/oauth2/userInfo`;
 
-  const token = sessionStorage.getItem("accessToken");
+  const token = getAccessToken();
+
+  if (!token) {
+    return null;
+  }
 
   const response = await fetch(userInfoEndpoint, {
     headers: {

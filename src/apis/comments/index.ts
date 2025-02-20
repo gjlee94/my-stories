@@ -1,3 +1,5 @@
+import { getIdToken } from "@/utils/auth";
+
 const BASE_URL = process.env.NEXT_PUBLIC_AWS_API_URL;
 
 export const getComments = async (postId: string) => {
@@ -28,7 +30,7 @@ export const addComment = async (
   }
 ) => {
   try {
-    const token = sessionStorage.getItem("idToken");
+    const token = getIdToken();
     await fetch(`${BASE_URL}/comments/${postId}`, {
       method: "POST",
       headers: {
