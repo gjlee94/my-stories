@@ -27,7 +27,7 @@ export const CommentBox = ({
   /** TODO: 댓글 목록 조회 API 호출 */
 
   const [comment, setComment] = useState("");
-  const [token, setToken] = useState<string | null>();
+  const [token, setToken] = useState<string>();
 
   useEffect(() => {
     setToken(getIdToken());
@@ -53,7 +53,7 @@ export const CommentBox = ({
       {comments && <CommentList comments={comments} />}
       <CommentInput disabled={!token} value={comment} onChange={setComment} />
       <Flex justify="flex-end">
-        {token === null && (
+        {token === undefined && (
           <Button onClick={handleLogin}>로그인하고 댓글 작성하기</Button>
         )}
         {token !== undefined && (

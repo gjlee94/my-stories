@@ -22,10 +22,10 @@ export function openLoginPopup() {
   );
 }
 export function getIdToken() {
-  return sessionStorage.getItem("idToken");
+  return sessionStorage.getItem("idToken") ?? undefined;
 }
 export function getAccessToken() {
-  return sessionStorage.getItem("accessToken");
+  return sessionStorage.getItem("accessToken") ?? undefined;
 }
 
 export function logout() {
