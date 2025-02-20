@@ -50,7 +50,9 @@ export const CommentBox = ({
       <CommentList comments={comments} />
       <CommentInput disabled={disabled} value={comment} onChange={setComment} />
       <Flex justify="flex-end">
-        <Button onClick={handleLogin}>로그인하고 댓글 작성하기</Button>
+        {disabled === true && (
+          <Button onClick={handleLogin}>로그인하고 댓글 작성하기</Button>
+        )}
         {disabled === false && (
           <Button onClick={handleWriteComment}>댓글 작성</Button>
         )}
