@@ -107,14 +107,10 @@ export default function PostDetailPage({
     onError: (error: any) => {
       console.error("Error in mutation:", error);
 
-      if (error.status === 401 || error.status === 403) {
-        alert("권한이 만료되었습니다. 다시 로그인해주세요.");
-        sessionStorage.removeItem("idToken");
-        sessionStorage.removeItem("accessToken");
-        window.location.reload();
-      }
-
-      return;
+      alert("권한이 만료되었습니다. 다시 로그인해주세요.");
+      sessionStorage.removeItem("idToken");
+      sessionStorage.removeItem("accessToken");
+      window.location.reload();
     },
   });
 
