@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Flex } from "../common/Flex";
 import { Comment } from "@/apis/comments";
 import { Typography } from "../common/Typography";
-import { format } from "date-fns";
+import { compareDesc, format } from "date-fns";
 const Wrapper = styled(Flex)`
   height: 200px;
   border: 1px solid #ccc;
@@ -24,21 +24,23 @@ export const CommentList = ({ comments }: { comments: Comment[] }) => {
   }
   return (
     <Wrapper direction="column">
-      {comments.map((comment) => (
-        <CommentItem key={comment.commentId} direction="column" gap={4}>
-          <Flex gap={4}>
+      {[...comments]
+        .sort((a, b) => compareDesc(a.createdAt, b.createdAt))
+        .map((comment) => (
+          <CommentItem key={comment.commentId} direction="column" gap={4}>
+            <Flex gap={4}>
+              <Typography as="p" variant="body3">
+                {comment.author}
+              </Typography>
+              <Typography as="p" variant="body3">
+                {format(comment.createdAt, "yyyy-MM-dd")}
+              </Typography>
+            </Flex>
             <Typography as="p" variant="body3">
-              {comment.author}
+              {comment.content}
             </Typography>
-            <Typography as="p" variant="body3">
-              {format(comment.createdAt, "yyyy-MM-dd")}
-            </Typography>
-          </Flex>
-          <Typography as="p" variant="body3">
-            {comment.content}
-          </Typography>
-        </CommentItem>
-      ))}
+          </CommentItem>
+        ))}
     </Wrapper>
   );
 };
