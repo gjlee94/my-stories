@@ -3,19 +3,23 @@ export function openLoginPopup() {
 
   const popup = window.open(loginUrl, "Login", "width=500,height=600");
 
-  window.addEventListener("message", (event) => {
-    if (event.origin !== window.location.origin) return;
-    if (event.data.idToken) {
-      sessionStorage.setItem("idToken", event.data.idToken);
-      popup?.close();
-      window.location.reload();
-    }
-    if (event.data.accessToken) {
-      sessionStorage.setItem("accessToken", event.data.accessToken);
-      popup?.close();
-      window.location.reload();
-    }
-  });
+  window.addEventListener(
+    "message",
+    (event) => {
+      if (event.origin !== window.location.origin) return;
+      if (event.data.idToken) {
+        sessionStorage.setItem("idToken", event.data.idToken);
+        popup?.close();
+        window.location.reload();
+      }
+      if (event.data.accessToken) {
+        sessionStorage.setItem("accessToken", event.data.accessToken);
+        popup?.close();
+        window.location.reload();
+      }
+    },
+    { once: true }
+  );
 }
 export function getIdToken() {
   return sessionStorage.getItem("idToken");
