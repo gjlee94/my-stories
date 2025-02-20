@@ -91,24 +91,39 @@ export default function PostDetailPage({
   );
   const userQuery = useQuery(queries.user.detail());
 
-  if (userQuery.isSuccess) {
-    console.log("userQuery: ", userQuery.data);
-  }
-
   const addCommentMutation = useMutation({
-    mutationFn: (payload: { content: string; author: string }) => {
-      return addComment(params.slug, payload);
+    mutationFn: async (payload: { content: string; author: string }) => {
+      try {
+        const response = await addComment(params.slug, payload);
+        return response;
+      } catch (error) {
+        // API 에러를 mutation의 onError로 전달
+        throw error;
+      }
     },
     onSuccess: () => {
       queryClient.invalidateQueries(queries.comments.detail(params.slug));
     },
+    onError: (error: any) => {
+      console.error("Error in mutation:", error);
+
+      if (error.status === 401) {
+        alert("권한이 만료되었습니다. 다시 로그인해주세요.");
+        sessionStorage.removeItem("idToken");
+        sessionStorage.removeItem("accessToken");
+        window.location.reload();
+      }
+
+      return;
+    },
   });
 
-  const handleAddComment = (comment: string) => {
+  const handleAddComment = async (comment: string) => {
     const payload = {
       content: comment,
       author: userQuery.data?.preferred_username ?? "gyoungjun_lee",
     };
+
     addCommentMutation.mutate(payload);
   };
 
@@ -136,14 +151,10 @@ export default function PostDetailPage({
         </Flex>
         <NotionRenderer posts={post.recordMap} />
         <EmoticonBox />
-        {commentsQuery.isSuccess ? (
-          <CommentBox
-            comments={commentsQuery.data}
-            onCommentSubmit={handleAddComment}
-          />
-        ) : (
-          "...Loading"
-        )}
+        <CommentBox
+          comments={commentsQuery.data}
+          onCommentSubmit={handleAddComment}
+        />
       </Wrapper>
     </>
   );

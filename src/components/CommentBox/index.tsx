@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Button } from "../common/Button";
 import { Flex } from "../common/Flex";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Typography } from "../common/Typography";
 import { CommentInput } from "./CommentInput";
 import { CommentList } from "./CommentList";
@@ -26,14 +26,17 @@ export const CommentBox = ({
 }) => {
   /** TODO: 댓글 목록 조회 API 호출 */
 
-  const [disabled, setDisabled] = useState(true);
   const [comment, setComment] = useState("");
+  const [token, setToken] = useState<string | null>();
+
+  useEffect(() => {
+    setToken(getIdToken());
+  }, []);
+
   const handleLogin = () => {
     openLoginPopup();
-    const token = getIdToken();
-    if (token) {
-      setDisabled(false);
-    }
+
+    setToken(getIdToken());
   };
 
   const handleWriteComment = () => {
@@ -47,13 +50,13 @@ export const CommentBox = ({
       <Typography as="h1" variant="title5">
         {`댓글 ${comments?.length ?? 0}개`}
       </Typography>
-      <CommentList comments={comments} />
-      <CommentInput disabled={disabled} value={comment} onChange={setComment} />
+      {comments && <CommentList comments={comments} />}
+      <CommentInput disabled={!token} value={comment} onChange={setComment} />
       <Flex justify="flex-end">
-        {disabled === true && (
+        {token === null && (
           <Button onClick={handleLogin}>로그인하고 댓글 작성하기</Button>
         )}
-        {disabled === false && (
+        {token !== undefined && (
           <Button onClick={handleWriteComment}>댓글 작성</Button>
         )}
       </Flex>

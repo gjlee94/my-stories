@@ -31,7 +31,12 @@ export const addComment = async (
 ) => {
   try {
     const token = getIdToken();
-    await fetch(`${BASE_URL}/comments/${postId}`, {
+
+    if (!token) {
+      throw new Error("인증 토큰이 없습니다.");
+    }
+
+    const response = await fetch(`${BASE_URL}/comments/${postId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +44,13 @@ export const addComment = async (
       },
       body: JSON.stringify(payload),
     });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return await response.json();
   } catch (error) {
-    console.error(error);
+    throw error;
   }
 };
