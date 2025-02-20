@@ -18,8 +18,8 @@ export interface Comment {
   commentId: string;
   content: string;
   author: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export const addComment = async (
