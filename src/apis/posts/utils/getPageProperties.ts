@@ -1,7 +1,7 @@
 import { Client } from "@notionhq/client";
 
 const notion = new Client({
-  auth: process.env.NEXT_PUBLIC_NOTION_AUTH_TOKEN,
+  auth: process.env.NEXT_PUBLIC_NOTION_API_KEY,
 });
 
 async function getPageProperties(pageId: string) {

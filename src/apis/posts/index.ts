@@ -1,11 +1,11 @@
 import { Client } from "@notionhq/client";
 
 const notion = new Client({
-  auth: process.env.NEXT_PUBLIC_NOTION_AUTH_TOKEN,
+  auth: process.env.NEXT_PUBLIC_NOTION_API_KEY,
 });
 
 export const getPosts = async () => {
-  const databaseId = process.env.NEXT_PUBLIC_NOTION_PAGE_ID;
+  const databaseId = process.env.NEXT_PUBLIC_NOTION_DATABASE_ID;
 
   try {
     const response = await notion.databases.query({
@@ -20,8 +20,6 @@ export const getPosts = async () => {
 
     const posts = response.results.map((page: any) => {
       const properties = page.properties;
-
-      console.log("properties: ", properties);
 
       return {
         id: page.id,

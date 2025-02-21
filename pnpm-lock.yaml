@@ -41,6 +41,9 @@ dependencies:
   nodemon:
     specifier: ^3.1.9
     version: 3.1.9
+  notion-client:
+    specifier: ^7.1.6
+    version: 7.1.6
   prismjs:
     specifier: ^1.29.0
     version: 1.29.0
@@ -4151,6 +4154,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
+  /ky@1.7.5:
+    resolution: {integrity: sha512-HzhziW6sc5m0pwi5M196+7cEBtbt0lCYi67wNsiwMUmz833wloE0gbzJPWKs1gliFKQb34huItDQX97LyOdPdA==}
+    engines: {node: '>=18'}
+    dev: false
+
   /language-subtag-registry@0.3.23:
     resolution: {integrity: sha512-0K65Lea881pHotoGEa5gDlMxt3pctLi2RplBb7Ezh4rRdLEOtgi7n4EwK9lamnUCkKBqaeKRVebTq6BAxSkpXQ==}
     dev: true
@@ -4702,6 +4710,16 @@ packages:
     engines: {node: '>=14.16'}
     dev: false
 
+  /notion-client@7.1.6:
+    resolution: {integrity: sha512-NWcUM7wsMQnTLU/CLiuhQt4Zkollx+ZQy5L+3vn9SYBq7tr+d2JWzxCUSpRujVA7NGIqUR/7bphHa8HvayG4BA==}
+    engines: {node: '>=18'}
+    dependencies:
+      ky: 1.7.5
+      notion-types: 7.1.6
+      notion-utils: 7.1.6
+      p-map: 7.0.3
+    dev: false
+
   /notion-types@7.1.6:
     resolution: {integrity: sha512-bWv5wGrlaEKPd0qGWJq0G5cq8uwgfMKhCM+5GEgdXfzuDD9eoKX2pkfdXnE5bU2uFJJK+LGc2XWggBJ+P8AWCg==}
     engines: {node: '>=18'}
@@ -4846,6 +4864,11 @@ packages:
     dependencies:
       p-limit: 3.1.0
     dev: true
+
+  /p-map@7.0.3:
+    resolution: {integrity: sha512-VkndIv2fIB99swvQoA65bm+fsmt6UNdGeIB0oxBs+WhAhdh08QA04JXpI7rbB9r08/nkbysKoya9rtDERYOYMA==}
+    engines: {node: '>=18'}
+    dev: false
 
   /p-queue@8.1.0:
     resolution: {integrity: sha512-mxLDbbGIBEXTJL0zEx8JIylaj3xQ7Z/7eEVjcF9fJX4DBiH9oqe+oahYnlKKxm0Ci9TlWTyhSHgygxMxjIB2jw==}
