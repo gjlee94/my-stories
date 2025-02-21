@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 import { getPosts } from "@/apis/posts";
 import { queryClient } from "@/query/queryClient";
 import { dehydrate, useMutation, useQuery } from "@tanstack/react-query";
-import { getRecordMap } from "@/apis/posts/utils/getRecordMap";
+import { getRecordMap } from "@/components/NotionRenderer/getRecordMap";
 
 import type {
   PageObjectResponse,
