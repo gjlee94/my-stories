@@ -8,9 +8,14 @@ import { getPosts } from "@/apis/posts";
 import { queryClient } from "@/query/queryClient";
 import { dehydrate, useMutation, useQuery } from "@tanstack/react-query";
 import { getRecordMap } from "@/apis/posts/utils/getRecordMap";
-import { uuidToId } from "notion-utils";
+import { Client } from "@notionhq/client";
+import type {
+  PageObjectResponse,
+  BlockObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints";
+
 import NotionRenderer from "@/components/NotionRenderer";
-import { ExtendedRecordMap } from "notion-types";
+
 import { HeadConfig } from "@/components/HeadConfig";
 
 import fs from "fs";
@@ -19,6 +24,8 @@ import { CommentBox } from "@/components/CommentBox";
 import { EmoticonBox } from "@/components/EmoticonBox";
 import { queries } from "@/query/queries";
 import { addComment } from "@/apis/comments";
+
+const uuidToId = (uuid: string) => uuid.replace(/-/g, "");
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -38,7 +45,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   });
 
   const detailPost = posts.find((post) => post.slug === params.slug);
-  const recordMap = await getRecordMap(uuidToId(detailPost.id));
+  const recordMap = await getRecordMap(detailPost.id);
 
   await queryClient.prefetchQuery({
     queryKey: queries.posts.detail(params.slug),
@@ -83,7 +90,14 @@ export default function PostDetailPage({
 }: {
   params: { slug: string };
 }) {
-  const query = useQuery<Post & { recordMap: ExtendedRecordMap }>({
+  const query = useQuery<
+    Post & {
+      recordMap: {
+        page: PageObjectResponse;
+        blocks: BlockObjectResponse[];
+      };
+    }
+  >({
     queryKey: queries.posts.detail(params.slug),
   });
   const commentsQuery = useQuery(

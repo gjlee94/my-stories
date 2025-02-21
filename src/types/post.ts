@@ -4,7 +4,7 @@ export interface Post {
   date: { start_date: string };
   slug: string;
   tags?: string[];
-  category?: string[];
+  category?: string;
   summary?: string;
   title: string;
   status: PostStatus[];

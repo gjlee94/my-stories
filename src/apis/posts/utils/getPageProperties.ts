@@ -1,96 +1,64 @@
-import { getTextContent, getDateValue } from "notion-utils";
-import { NotionAPI } from "notion-client";
-import { BlockMap, CollectionPropertySchemaMap } from "notion-types";
-import { customMapImageUrl } from "./customMapImageUrl";
+import { Client } from "@notionhq/client";
 
-async function getPageProperties(
-  id: string,
-  block: BlockMap,
-  schema: CollectionPropertySchemaMap
-) {
-  const api = new NotionAPI({
-    activeUser: process.env.NEXT_PUBLIC_ACTIVE_NOTION_USER_ID,
-    authToken: process.env.NEXT_PUBLIC_NOTION_AUTH_TOKEN,
-  });
-  const rawProperties = Object.entries(block?.[id]?.value?.properties || []);
+const notion = new Client({
+  auth: process.env.NEXT_PUBLIC_NOTION_AUTH_TOKEN,
+});
 
-  const excludeProperties = [
-    "date",
-    "select",
-    "multi_select",
-    "person",
-    "file",
-  ];
-  const properties: any = {};
-  for (let i = 0; i < rawProperties.length; i++) {
-    const [key, val]: any = rawProperties[i];
-    properties.id = id;
+async function getPageProperties(pageId: string) {
+  try {
+    const page = await notion.pages.retrieve({
+      page_id: pageId,
+    });
 
-    if (schema[key]?.type && !excludeProperties.includes(schema[key].type)) {
-      properties[schema[key].name] = getTextContent(val);
-    } else {
-      switch (schema[key]?.type) {
-        case "file": {
-          try {
-            const Block = block?.[id].value;
-            const url: string = val[0][1][0][1];
-            const newurl = customMapImageUrl(url, Block);
-            properties[schema[key].name] = newurl;
-          } catch (error) {
-            properties[schema[key].name] = undefined;
-          }
-          break;
-        }
-        case "date": {
-          const dateProperty: any = getDateValue(val);
-          delete dateProperty.type;
-          properties[schema[key].name] = dateProperty;
-          break;
-        }
-        case "select": {
-          const selects = getTextContent(val);
-          if (selects[0]?.length) {
-            properties[schema[key].name] = selects.split(",");
-          }
-          break;
-        }
-        case "multi_select": {
-          const selects = getTextContent(val);
-          if (selects[0]?.length) {
-            properties[schema[key].name] = selects.split(",");
-          }
-          break;
-        }
-        case "person": {
-          const rawUsers = val.flat();
+    const properties: any = {
+      id: page.id,
+    };
 
-          const users = [];
-          for (let i = 0; i < rawUsers.length; i++) {
-            if (rawUsers[i][0][1]) {
-              const userId = rawUsers[i][0];
-              const res: any = await api.getUsers(userId);
-              const resValue =
-                res?.recordMapWithRoles?.notion_user?.[userId[1]]?.value;
-              const user = {
-                id: resValue?.id,
-                name:
-                  resValue?.name ||
-                  `${resValue?.family_name}${resValue?.given_name}` ||
-                  undefined,
-                profile_photo: resValue?.profile_photo || null,
-              };
-              users.push(user);
-            }
-          }
-          properties[schema[key].name] = users;
-          break;
+    // Notion API v2에서는 properties가 더 구조화되어 있습니다
+    Object.entries(page.properties).forEach(
+      ([key, property]: [string, any]) => {
+        switch (property.type) {
+          case "title":
+            properties[key] = property.title[0]?.plain_text || "";
+            break;
+          case "rich_text":
+            properties[key] = property.rich_text[0]?.plain_text || "";
+            break;
+          case "date":
+            properties[key] = property.date;
+            break;
+          case "select":
+            properties[key] = property.select?.name
+              ? [property.select.name]
+              : [];
+            break;
+          case "multi_select":
+            properties[key] = property.multi_select.map(
+              (item: any) => item.name
+            );
+            break;
+          case "people":
+            properties[key] = property.people.map((person: any) => ({
+              id: person.id,
+              name: person.name,
+              profile_photo: person.avatar_url,
+            }));
+            break;
+          case "files":
+            properties[key] =
+              property.files[0]?.file?.url ||
+              property.files[0]?.external?.url ||
+              undefined;
+            break;
         }
-        default:
-          break;
       }
-    }
+    );
+
+    return properties;
+  } catch (error) {
+    console.error("Error fetching page properties:", error);
+    return null;
   }
-  return properties;
 }
 
 export { getPageProperties as default };
