@@ -1,4 +1,5 @@
 import { getComments } from "@/apis/comments";
+import { getReactions } from "@/apis/reactions";
 import { getUser } from "@/apis/user";
 import { queryOptions } from "@tanstack/react-query";
 
@@ -25,6 +26,16 @@ export const queries = {
         queryKey: [queries.user.all(), "detail"],
         queryFn: async () => {
           return await getUser();
+        },
+      }),
+  },
+  reactions: {
+    all: () => ["reactions"],
+    detail: (pageId: string) =>
+      queryOptions({
+        queryKey: [queries.reactions.all(), "detail", pageId],
+        queryFn: async () => {
+          return await getReactions(pageId);
         },
       }),
   },

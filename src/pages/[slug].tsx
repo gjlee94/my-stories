@@ -24,6 +24,9 @@ import { CommentBox } from "@/components/CommentBox";
 import { EmoticonBox } from "@/components/EmoticonBox";
 import { queries } from "@/query/queries";
 import { addComment } from "@/apis/comments";
+import { useEffect, useState } from "react";
+import { getIdToken, openLoginPopup } from "@/utils/auth";
+import { addReaction } from "@/apis/reactions";
 
 const uuidToId = (uuid: string) => uuid.replaceAll("-", "");
 
@@ -85,60 +88,45 @@ const Wrapper = styled(Flex)`
   background-color: white;
 `;
 
+const RequireLoginRegion = styled.div<{ disabled: boolean }>`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  ${({ disabled }) => disabled && `cursor: not-allowed;`}
+`;
+
+type PostDetail = Post & {
+  recordMap: {
+    page: PageObjectResponse;
+    blocks: BlockObjectResponse[];
+  };
+};
+
 export default function PostDetailPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const query = useQuery<
-    Post & {
-      recordMap: {
-        page: PageObjectResponse;
-        blocks: BlockObjectResponse[];
-      };
-    }
-  >({
+  const [token, setToken] = useState<string>();
+
+  useEffect(() => {
+    setToken(getIdToken());
+  }, []);
+
+  const handleLogin = () => {
+    openLoginPopup();
+
+    setToken(getIdToken());
+  };
+
+  const postDetailQuery = useQuery<PostDetail>({
     queryKey: queries.posts.detail(params.slug),
   });
 
-  const commentsQuery = useQuery(
-    queries.comments.detail(params.slug ?? "1234")
-  );
   const userQuery = useQuery(queries.user.detail());
 
-  const addCommentMutation = useMutation({
-    mutationFn: async (payload: { content: string; author: string }) => {
-      try {
-        const response = await addComment(params.slug, payload);
-        return response;
-      } catch (error) {
-        // API 에러를 mutation의 onError로 전달
-        throw error;
-      }
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries(queries.comments.detail(params.slug));
-    },
-    onError: (error: any) => {
-      console.error("Error in mutation:", error);
-
-      alert("권한이 만료되었습니다. 다시 로그인해주세요.");
-      sessionStorage.removeItem("idToken");
-      sessionStorage.removeItem("accessToken");
-      window.location.reload();
-    },
-  });
-
-  const handleAddComment = async (comment: string) => {
-    const payload = {
-      content: comment,
-      author: userQuery.data?.preferred_username ?? "gyoungjun_lee",
-    };
-
-    addCommentMutation.mutate(payload);
-  };
-
-  const post = query.data;
+  const post = postDetailQuery.data;
 
   return (
     <>
@@ -161,11 +149,19 @@ export default function PostDetailPage({
           ))}
         </Flex>
         <NotionRenderer posts={post.recordMap} />
-        <EmoticonBox />
-        <CommentBox
-          comments={commentsQuery.data}
-          onCommentSubmit={handleAddComment}
-        />
+        <RequireLoginRegion disabled={!token}>
+          <EmoticonBox
+            id={post.id}
+            username={userQuery.data?.preferred_username ?? "-"}
+            token={token}
+          />
+          <CommentBox
+            slug={params.slug}
+            token={token}
+            handleLogin={handleLogin}
+            username={userQuery.data?.preferred_username ?? "-"}
+          />
+        </RequireLoginRegion>
       </Wrapper>
     </>
   );

@@ -1,4 +1,4 @@
-import { Flex } from "../common/Flex";
+
 import styled from "@emotion/styled";
 import { Tag } from "../common/Tag";
 
@@ -23,14 +23,16 @@ export const Emoticon = ({
   count,
   active = false,
   onClick,
+  disabled,
 }: {
   type: "like" | "dislike" | "heart";
   count: number;
   active?: boolean;
   onClick?: () => void;
+  disabled?: boolean;
 }) => {
   return (
-    <Tag active={active} onClick={onClick}>
+    <Tag active={active} onClick={onClick} disabled={disabled}>
       <StyledEmoticon active={active}>{emoticonSet[type]}</StyledEmoticon>
       <span>{count}</span>
     </Tag>

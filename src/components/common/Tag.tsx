@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Wrapper = styled.button<{ active?: boolean }>`
+const Wrapper = styled.button<{ active?: boolean; disabled?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,13 +18,18 @@ export const Tag = ({
   onClick,
   children,
   active,
+  disabled,
 }: {
   children: React.ReactNode;
   onClick?: () => void;
   active?: boolean;
+  disabled?: boolean;
 }) => {
   return (
-    <Wrapper active={active} onClick={onClick}>
+    <Wrapper
+      active={active}
+      onClick={!disabled ? onClick : () => alert("로그인이 필요합니다.")}
+    >
       {children}
     </Wrapper>
   );

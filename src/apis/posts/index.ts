@@ -1,12 +1,28 @@
+import { Post } from "@/types/post";
 import { Client } from "@notionhq/client";
+
+interface Page {
+  id: string;
+  createdTime: string;
+  lastEditedTime: string;
+  title: string;
+  fullWidth: boolean;
+  slug: string;
+  category: string;
+  tags: string[];
+  status: string;
+  summary: string;
+  like: string;
+  dislike: string;
+  heart: string;
+}
 
 const notion = new Client({
   auth: process.env.NEXT_PUBLIC_NOTION_API_KEY,
 });
+const databaseId = process.env.NEXT_PUBLIC_NOTION_DATABASE_ID;
 
 export const getPosts = async () => {
-  const databaseId = process.env.NEXT_PUBLIC_NOTION_DATABASE_ID;
-
   try {
     const response = await notion.databases.query({
       database_id: databaseId,
@@ -34,10 +50,13 @@ export const getPosts = async () => {
         tags:
           properties.tags?.multi_select?.map((item: any) => item.name) || [],
         status: properties.status?.status?.name || "",
-        summary: properties.summary?.rich_text[0]?.plain_text || "",
-        like: properties.like?.number || 0,
-        dislike: properties.dislike?.number || 0,
-        heart: properties.heart?.number || 0,
+        summary:
+          properties.summary?.rich_text
+            .map((item) => item.plain_text)
+            .join("") || "",
+        like: properties.like?.rich_text[0]?.plain_text || "",
+        dislike: properties.dislike?.rich_text[0]?.plain_text || "",
+        heart: properties.heart?.rich_text[0]?.plain_text || "",
       };
     });
 
@@ -45,26 +64,5 @@ export const getPosts = async () => {
   } catch (error) {
     console.error("Error fetching posts:", error);
     return [];
-  }
-};
-
-export const updateFeedBack = async (
-  pageId: string,
-  type: "like" | "dislike" | "heart"
-) => {
-  try {
-    const response = await notion.pages.update({
-      page_id: pageId,
-      properties: {
-        // 피드백 타입에 따른 속성 업데이트
-        [type]: {
-          number: 1, // 또는 기존 값에 1을 더하는 로직
-        },
-      },
-    });
-    return response;
-  } catch (error) {
-    console.error("Error updating feedback:", error);
-    throw error;
   }
 };
