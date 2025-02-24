@@ -4,6 +4,7 @@ import { Comment } from "@/apis/comments";
 import { Typography } from "../common/Typography";
 import { compareDesc, differenceInMinutes, format } from "date-fns";
 import Image from "next/image";
+import { css } from "@emotion/react";
 
 const Wrapper = styled(Flex)`
   height: 100%;
@@ -20,7 +21,7 @@ const CommentItem = styled(Flex)`
   }
 `;
 
-const DeleteButton = styled.button`
+const DeleteButton = styled.button<{ disabled: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,6 +38,13 @@ const DeleteButton = styled.button`
 
   transition: all 0.2s ease;
 
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      opacity: 0.5;
+      cursor: not-allowed;
+    `}
+
   &:hover {
     background-color: #f0f0f0;
     color: #ff4444;
@@ -50,9 +58,11 @@ const DeleteButton = styled.button`
 
 export const CommentList = ({
   comments,
+  username,
   onDeleteComment,
 }: {
   comments: Comment[];
+  username: string;
   onDeleteComment: (postId: string, commentId: string) => void;
 }) => {
   if (comments.length === 0) {
@@ -79,6 +89,7 @@ export const CommentList = ({
               </Typography>
             </Flex>
             <DeleteButton
+              disabled={username !== comment.author}
               onClick={() => onDeleteComment(comment.postId, comment.commentId)}
             >
               <Image
