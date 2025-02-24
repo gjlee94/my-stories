@@ -66,7 +66,7 @@ export const CommentBox = ({
   const handleWriteComment = () => {
     const payload = {
       content: comment,
-      author: username ?? "gyoungjun_lee",
+      author: username ?? "-",
     };
 
     addCommentMutation.mutate(payload);
@@ -80,11 +80,12 @@ export const CommentBox = ({
   return (
     <Wrapper direction="column" gap={16}>
       <Typography as="h1" variant="title5">
-        {`댓글 ${addCommentMutation.data?.length ?? 0}개`}
+        {`댓글 ${commentsQuery.data?.length ?? 0}개`}
       </Typography>
       {commentsQuery.isSuccess && (
         <CommentList
           comments={commentsQuery.data}
+          username={username}
           onDeleteComment={handleDeleteComment}
         />
       )}
