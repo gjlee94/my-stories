@@ -25,6 +25,7 @@ import { EmoticonBox } from "@/components/EmoticonBox";
 import { queries } from "@/query/queries";
 import { useEffect, useState } from "react";
 import { getAccessToken, openLoginPopup } from "@/utils/auth";
+import { useBreakpoints } from "@/hooks/useBreakpoints";
 
 const uuidToId = (uuid: string) => uuid.replaceAll("-", "");
 
@@ -84,6 +85,11 @@ const Wrapper = styled(Flex)`
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   border-radius: 12px;
   background-color: white;
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 24px);
+    padding: 12px;
+  }
 `;
 
 const RequireLoginRegion = styled.div<{ disabled: boolean }>`
@@ -108,12 +114,18 @@ export default function PostDetailPage({
 }) {
   const [token, setToken] = useState<string>();
 
+  const { isDesktop } = useBreakpoints();
+
   useEffect(() => {
     setToken(getAccessToken());
   }, []);
 
   const handleLogin = () => {
     openLoginPopup();
+
+    queryClient.invalidateQueries({
+      queryKey: queries.user.all(),
+    });
 
     setToken(getAccessToken());
   };
@@ -135,7 +147,7 @@ export default function PostDetailPage({
         slug={params.slug}
       />
       <Wrapper direction="column" gap={20}>
-        <Typography as="h1" variant="title3">
+        <Typography as="h1" variant={isDesktop ? "title3" : "title4"}>
           {post.title}
         </Typography>
         <Typography as="p" variant="body3">

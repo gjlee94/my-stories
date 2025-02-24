@@ -27,6 +27,7 @@ export const queries = {
         queryFn: async () => {
           return await getUser();
         },
+        staleTime: 60 * 1000 * 3,
       }),
   },
   reactions: {
