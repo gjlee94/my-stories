@@ -15,6 +15,7 @@ import { queries } from "@/query/queries";
 import fs from "fs";
 import path from "path";
 import { HeadConfig } from "@/components/HeadConfig";
+import { ContactList } from "@/components/ContactList";
 
 const Main = styled(Flex)`
   max-width: 1000px;
@@ -146,6 +147,7 @@ export default function PostsPage() {
               selectedTag={selectedTag}
               onTagClick={setSelectedTag}
             />
+            <ContactList />
           </Aside>
         )}
       </Flex>
