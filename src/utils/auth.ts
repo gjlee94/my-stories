@@ -7,11 +7,6 @@ export function openLoginPopup() {
     "message",
     (event) => {
       if (event.origin !== window.location.origin) return;
-      if (event.data.idToken) {
-        sessionStorage.setItem("idToken", event.data.idToken);
-        popup?.close();
-        window.location.reload();
-      }
       if (event.data.accessToken) {
         sessionStorage.setItem("accessToken", event.data.accessToken);
         popup?.close();
@@ -21,15 +16,12 @@ export function openLoginPopup() {
     { once: true }
   );
 }
-export function getIdToken() {
-  return sessionStorage.getItem("idToken") ?? undefined;
-}
+
 export function getAccessToken() {
   return sessionStorage.getItem("accessToken") ?? undefined;
 }
 
 export function logout() {
-  sessionStorage.removeItem("idToken");
   sessionStorage.removeItem("accessToken");
   window.location.reload();
 }

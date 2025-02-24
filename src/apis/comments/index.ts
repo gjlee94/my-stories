@@ -1,4 +1,4 @@
-import { getIdToken } from "@/utils/auth";
+import { getAccessToken } from "@/utils/auth";
 
 const BASE_URL = process.env.NEXT_PUBLIC_AWS_API_URL;
 
@@ -30,7 +30,7 @@ export const addComment = async (
   }
 ) => {
   try {
-    const token = getIdToken();
+    const token = getAccessToken();
 
     if (!token) {
       throw new Error("인증 토큰이 없습니다.");

@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { Typography } from "../common/Typography";
 import { CommentInput } from "./CommentInput";
 import { CommentList } from "./CommentList";
-import { getIdToken, openLoginPopup } from "@/utils/auth";
 import { addComment, Comment } from "@/apis/comments";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { queryClient } from "@/query/queryClient";
@@ -52,8 +51,9 @@ export const CommentBox = ({
       console.error("Error in mutation:", error);
 
       alert("권한이 만료되었습니다. 다시 로그인해주세요.");
-      sessionStorage.removeItem("idToken");
+      
       sessionStorage.removeItem("accessToken");
+
       window.location.reload();
     },
   });

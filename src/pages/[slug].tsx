@@ -23,10 +23,8 @@ import path from "path";
 import { CommentBox } from "@/components/CommentBox";
 import { EmoticonBox } from "@/components/EmoticonBox";
 import { queries } from "@/query/queries";
-import { addComment } from "@/apis/comments";
 import { useEffect, useState } from "react";
-import { getIdToken, openLoginPopup } from "@/utils/auth";
-import { addReaction } from "@/apis/reactions";
+import { getAccessToken, openLoginPopup } from "@/utils/auth";
 
 const uuidToId = (uuid: string) => uuid.replaceAll("-", "");
 
@@ -111,13 +109,13 @@ export default function PostDetailPage({
   const [token, setToken] = useState<string>();
 
   useEffect(() => {
-    setToken(getIdToken());
+    setToken(getAccessToken());
   }, []);
 
   const handleLogin = () => {
     openLoginPopup();
 
-    setToken(getIdToken());
+    setToken(getAccessToken());
   };
 
   const postDetailQuery = useQuery<PostDetail>({

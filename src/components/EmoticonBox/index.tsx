@@ -36,11 +36,11 @@ export const EmoticonBox = ({
       queryClient.invalidateQueries(queries.reactions.detail(id));
     },
     onError: (error: any) => {
-      console.error("Error in mutation:", error);
-
       alert("권한이 만료되었습니다. 다시 로그인해주세요.");
-      sessionStorage.removeItem("idToken");
+
       sessionStorage.removeItem("accessToken");
+
+      window.location.reload();
     },
   });
 
