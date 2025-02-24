@@ -1,4 +1,4 @@
-import { getIdToken } from "@/utils/auth";
+import { getAccessToken } from "@/utils/auth";
 
 const BASE_URL = process.env.NEXT_PUBLIC_AWS_API_URL;
 
@@ -18,8 +18,8 @@ export interface Comment {
   commentId: string;
   content: string;
   author: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export const addComment = async (
@@ -30,7 +30,7 @@ export const addComment = async (
   }
 ) => {
   try {
-    const token = getIdToken();
+    const token = getAccessToken();
 
     if (!token) {
       throw new Error("인증 토큰이 없습니다.");
@@ -44,6 +44,35 @@ export const addComment = async (
       },
       body: JSON.stringify(payload),
     });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const deleteComment = async (postId: string, commentId: string) => {
+  try {
+    const token = getAccessToken();
+
+    if (!token) {
+      throw new Error("인증 토큰이 없습니다.");
+    }
+
+    const response = await fetch(
+      `${BASE_URL}/comments/${postId}?commentId=${commentId}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

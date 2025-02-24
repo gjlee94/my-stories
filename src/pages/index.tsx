@@ -76,7 +76,7 @@ const useFilterPosts = ({
   const posts = query.data;
 
   return posts.filter((post) => {
-    const matchTab = selectedTab === "전체" || post.category[0] === selectedTab;
+    const matchTab = selectedTab === "전체" || post.category === selectedTab;
     const matchTag =
       selectedTag === undefined || post.tags.includes(selectedTag);
     const isPublished = post.status.includes("Published");
@@ -100,8 +100,7 @@ export default function PostsPage() {
     selectedTab,
     selectedTag,
   });
-
-  const tabs = ["전체", ...new Set(posts.map((post) => post.category[0]))];
+  const tabs = ["전체", ...new Set(posts.map((post) => post.category))];
   const tags = [...new Set(posts.flatMap((post) => post.tags))];
 
   return (

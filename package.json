@@ -32,6 +32,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.0",
+    "@notionhq/client": "^2.2.14",
     "@tanstack/react-query": "^5.66.0",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
@@ -39,7 +40,6 @@
     "next-sitemap": "^4.2.3",
     "nodemon": "^3.1.9",
     "notion-client": "^7.1.6",
-    "notion-utils": "^7.1.6",
     "prismjs": "^1.29.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -54,7 +54,6 @@
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "eslint": "^9.20.0",
     "eslint-config-next": "^15.1.7",
-    "notion-types": "^7.1.6",
     "only-allow": "^1.2.1",
     "typescript": "^5.5.2"
   }

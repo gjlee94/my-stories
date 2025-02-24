@@ -7,10 +7,15 @@ import styled from "@emotion/styled";
 import { getPosts } from "@/apis/posts";
 import { queryClient } from "@/query/queryClient";
 import { dehydrate, useMutation, useQuery } from "@tanstack/react-query";
-import { getRecordMap } from "@/apis/posts/utils/getRecordMap";
-import { uuidToId } from "notion-utils";
+import { getRecordMap } from "@/components/NotionRenderer/getRecordMap";
+
+import type {
+  PageObjectResponse,
+  BlockObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints";
+
 import NotionRenderer from "@/components/NotionRenderer";
-import { ExtendedRecordMap } from "notion-types";
+
 import { HeadConfig } from "@/components/HeadConfig";
 
 import fs from "fs";
@@ -18,7 +23,10 @@ import path from "path";
 import { CommentBox } from "@/components/CommentBox";
 import { EmoticonBox } from "@/components/EmoticonBox";
 import { queries } from "@/query/queries";
-import { addComment } from "@/apis/comments";
+import { useEffect, useState } from "react";
+import { getAccessToken, openLoginPopup } from "@/utils/auth";
+
+const uuidToId = (uuid: string) => uuid.replaceAll("-", "");
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -78,52 +86,45 @@ const Wrapper = styled(Flex)`
   background-color: white;
 `;
 
+const RequireLoginRegion = styled.div<{ disabled: boolean }>`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  ${({ disabled }) => disabled && `cursor: not-allowed;`}
+`;
+
+type PostDetail = Post & {
+  recordMap: {
+    page: PageObjectResponse;
+    blocks: BlockObjectResponse[];
+  };
+};
+
 export default function PostDetailPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const query = useQuery<Post & { recordMap: ExtendedRecordMap }>({
-    queryKey: queries.posts.detail(params.slug),
-  });
-  const commentsQuery = useQuery(
-    queries.comments.detail(params.slug ?? "1234")
-  );
-  const userQuery = useQuery(queries.user.detail());
+  const [token, setToken] = useState<string>();
 
-  const addCommentMutation = useMutation({
-    mutationFn: async (payload: { content: string; author: string }) => {
-      try {
-        const response = await addComment(params.slug, payload);
-        return response;
-      } catch (error) {
-        // API 에러를 mutation의 onError로 전달
-        throw error;
-      }
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries(queries.comments.detail(params.slug));
-    },
-    onError: (error: any) => {
-      console.error("Error in mutation:", error);
+  useEffect(() => {
+    setToken(getAccessToken());
+  }, []);
 
-      alert("권한이 만료되었습니다. 다시 로그인해주세요.");
-      sessionStorage.removeItem("idToken");
-      sessionStorage.removeItem("accessToken");
-      window.location.reload();
-    },
-  });
+  const handleLogin = () => {
+    openLoginPopup();
 
-  const handleAddComment = async (comment: string) => {
-    const payload = {
-      content: comment,
-      author: userQuery.data?.preferred_username ?? "gyoungjun_lee",
-    };
-
-    addCommentMutation.mutate(payload);
+    setToken(getAccessToken());
   };
 
-  const post = query.data;
+  const postDetailQuery = useQuery<PostDetail>({
+    queryKey: queries.posts.detail(params.slug),
+  });
+
+  const userQuery = useQuery(queries.user.detail());
+
+  const post = postDetailQuery.data;
 
   return (
     <>
@@ -146,11 +147,19 @@ export default function PostDetailPage({
           ))}
         </Flex>
         <NotionRenderer posts={post.recordMap} />
-        <EmoticonBox />
-        <CommentBox
-          comments={commentsQuery.data}
-          onCommentSubmit={handleAddComment}
-        />
+        <RequireLoginRegion disabled={!token}>
+          <EmoticonBox
+            id={post.id}
+            username={userQuery.data?.preferred_username ?? "-"}
+            token={token}
+          />
+          <CommentBox
+            slug={params.slug}
+            token={token}
+            handleLogin={handleLogin}
+            username={userQuery.data?.preferred_username ?? "-"}
+          />
+        </RequireLoginRegion>
       </Wrapper>
     </>
   );
