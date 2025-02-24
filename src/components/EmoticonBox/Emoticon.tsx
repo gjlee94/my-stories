@@ -1,4 +1,3 @@
-
 import styled from "@emotion/styled";
 import { Tag } from "../common/Tag";
 
@@ -21,12 +20,14 @@ const StyledEmoticon = styled.div<{ active?: boolean }>`
 export const Emoticon = ({
   type,
   count,
+  clickedBy,
   active = false,
   onClick,
   disabled,
 }: {
   type: "like" | "dislike" | "heart";
   count: number;
+  clickedBy: string;
   active?: boolean;
   onClick?: () => void;
   disabled?: boolean;

@@ -1,23 +1,15 @@
 import styled from "@emotion/styled";
 import { Button } from "../common/Button";
 import { Flex } from "../common/Flex";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Typography } from "../common/Typography";
 import { CommentInput } from "./CommentInput";
 import { CommentList } from "./CommentList";
-import { addComment, Comment } from "@/apis/comments";
+import { addComment } from "@/apis/comments";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { queryClient } from "@/query/queryClient";
 import { queries } from "@/query/queries";
+
 const Wrapper = styled(Flex)``;
-
-const RequireLoginRegion = styled.div<{ disabled: boolean }>`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  ${({ disabled }) => disabled && `cursor: not-allowed;`}
-`;
 
 export const CommentBox = ({
   slug,
@@ -45,13 +37,13 @@ export const CommentBox = ({
       }
     },
     onSuccess: () => {
-      queryClient.invalidateQueries(queries.comments.detail(slug));
+      commentsQuery.refetch();
     },
     onError: (error: any) => {
       console.error("Error in mutation:", error);
 
       alert("권한이 만료되었습니다. 다시 로그인해주세요.");
-      
+
       sessionStorage.removeItem("accessToken");
 
       window.location.reload();

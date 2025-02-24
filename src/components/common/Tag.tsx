@@ -6,10 +6,11 @@ const Wrapper = styled.button<{ active?: boolean; disabled?: boolean }>`
   justify-content: center;
   gap: 4px;
 
-  border: 1px solid rgb(232, 232, 232);
+  border: ${({ active }) => (active ? "none" : "1px solid rgb(232, 232, 232)")};
   border-radius: 50px;
   background-color: ${({ active }) =>
-    active ? "rgb(232, 232, 232)" : "rgb(255, 255, 255)"};
+    active ? "rgb(0, 123, 255)" : "rgb(255, 255, 255)"};
+  color: ${({ active }) => (active ? "rgb(255, 255, 255)" : "rgb(0, 0, 0)")};
   padding: 4px 8px;
   width: fit-content;
 `;

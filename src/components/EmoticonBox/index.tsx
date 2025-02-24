@@ -4,8 +4,6 @@ import { Flex } from "../common/Flex";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { queries } from "@/query/queries";
 import { addReaction } from "@/apis/reactions";
-import { useState } from "react";
-import { queryClient } from "@/query/queryClient";
 
 type EmoticonType = "like" | "dislike" | "heart";
 
@@ -27,13 +25,18 @@ export const EmoticonBox = ({
     keyof typeof emoticonSet
   >;
 
-  const reactionQuery = useQuery(queries.reactions.detail(id));
+  const reactionQuery = useQuery({
+    ...queries.reactions.detail(id),
+    staleTime: 0,
+  });
+
   const reactionMutation = useMutation({
     mutationFn: async (payload: { action: EmoticonType; username: string }) => {
-      return await addReaction(id, payload);
+      const response = await addReaction(id, payload);
+      return response;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries(queries.reactions.detail(id));
+      reactionQuery.refetch();
     },
     onError: (error: any) => {
       alert("권한이 만료되었습니다. 다시 로그인해주세요.");
@@ -44,20 +47,32 @@ export const EmoticonBox = ({
     },
   });
 
-  const onReactionClick = (reaction: EmoticonType) => {
+  const onReactionClick = async (reaction: EmoticonType) => {
     reactionMutation.mutate({ action: reaction, username });
   };
 
-  console.log("reactions", reactionQuery.data);
+  const clickedBy = (key: EmoticonType) => {
+    switch (key) {
+      case "like":
+        return reactionQuery.data?.likedBy?.join(",") ?? "";
+      case "dislike":
+        return reactionQuery.data?.dislikedBy?.join(",") ?? "";
+      case "heart":
+        return reactionQuery.data?.heartedBy?.join(",") ?? "";
+    }
+  };
+
   return (
     <Wrapper>
       <Flex gap={8}>
         {emotionList.map((key) => (
           <Emoticon
             disabled={!token}
+            active={clickedBy(key).includes(username)}
             key={key}
             type={key}
-            count={0}
+            count={reactionQuery.data?.[`${key}Count`] ?? 0}
+            clickedBy={clickedBy(key)}
             onClick={() => onReactionClick(key)}
           />
         ))}
