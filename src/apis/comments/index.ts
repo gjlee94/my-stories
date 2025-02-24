@@ -54,3 +54,32 @@ export const addComment = async (
     throw error;
   }
 };
+
+export const deleteComment = async (postId: string, commentId: string) => {
+  try {
+    const token = getAccessToken();
+
+    if (!token) {
+      throw new Error("인증 토큰이 없습니다.");
+    }
+
+    const response = await fetch(
+      `${BASE_URL}/comments/${postId}?commentId=${commentId}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    throw error;
+  }
+};

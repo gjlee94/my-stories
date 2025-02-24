@@ -3,6 +3,8 @@ import { Flex } from "../common/Flex";
 import { Comment } from "@/apis/comments";
 import { Typography } from "../common/Typography";
 import { compareDesc, differenceInMinutes, format } from "date-fns";
+import Image from "next/image";
+
 const Wrapper = styled(Flex)`
   height: 100%;
   border: 1px solid #ccc;
@@ -18,7 +20,41 @@ const CommentItem = styled(Flex)`
   }
 `;
 
-export const CommentList = ({ comments }: { comments: Comment[] }) => {
+const DeleteButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  color: #666;
+  font-size: 12px;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #f0f0f0;
+    color: #ff4444;
+  }
+
+  &:active {
+    background-color: #e8e8e8;
+    transform: scale(0.95);
+  }
+`;
+
+export const CommentList = ({
+  comments,
+  onDeleteComment,
+}: {
+  comments: Comment[];
+  onDeleteComment: (postId: string, commentId: string) => void;
+}) => {
   if (comments.length === 0) {
     return <Wrapper direction="column">댓글이 없습니다.</Wrapper>;
   }
@@ -27,19 +63,31 @@ export const CommentList = ({ comments }: { comments: Comment[] }) => {
       {[...comments]
         .sort((a, b) => compareDesc(a.createdAt, b.createdAt))
         .map((comment) => (
-          <CommentItem key={comment.commentId} direction="column" gap={8}>
-            <Flex gap={12}>
+          <CommentItem justify="space-between" align="center">
+            <Flex key={comment.commentId} direction="column" gap={8}>
+              <Flex gap={12}>
+                <Typography as="p" variant="body3">
+                  {comment.author}
+                </Typography>
+                <Typography as="p" variant="body3">
+                  {parseSpendTime(comment.createdAt)}
+                </Typography>
+              </Flex>
               <Typography as="p" variant="body3">
-                {comment.author}
-              </Typography>
-              <Typography as="p" variant="body3">
-                {parseSpendTime(comment.createdAt)}
+                <span css={{ position: "relative", top: "-2px" }}>↳</span>{" "}
+                {comment.content}
               </Typography>
             </Flex>
-            <Typography as="p" variant="body3">
-              <span css={{ position: "relative", top: "-2px" }}>↳</span>{" "}
-              {comment.content}
-            </Typography>
+            <DeleteButton
+              onClick={() => onDeleteComment(comment.postId, comment.commentId)}
+            >
+              <Image
+                src="/assets/icons/delete.svg"
+                alt="delete"
+                width={20}
+                height={20}
+              />
+            </DeleteButton>
           </CommentItem>
         ))}
     </Wrapper>

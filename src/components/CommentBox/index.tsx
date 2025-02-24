@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Typography } from "../common/Typography";
 import { CommentInput } from "./CommentInput";
 import { CommentList } from "./CommentList";
-import { addComment } from "@/apis/comments";
+import { addComment, deleteComment } from "@/apis/comments";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { queries } from "@/query/queries";
 
@@ -50,6 +50,19 @@ export const CommentBox = ({
     },
   });
 
+  const deleteCommentMutation = useMutation({
+    mutationFn: async (params: { postId: string; commentId: string }) => {
+      const response = await deleteComment(params.postId, params.commentId);
+      return response;
+    },
+    onSuccess: () => {
+      commentsQuery.refetch();
+    },
+    onError: (error: any) => {
+      console.error("Error in mutation:", error);
+    },
+  });
+
   const handleWriteComment = () => {
     const payload = {
       content: comment,
@@ -60,12 +73,21 @@ export const CommentBox = ({
     setComment("");
   };
 
+  const handleDeleteComment = (postId: string, commentId: string) => {
+    deleteCommentMutation.mutate({ postId, commentId });
+  };
+
   return (
     <Wrapper direction="column" gap={16}>
       <Typography as="h1" variant="title5">
         {`댓글 ${addCommentMutation.data?.length ?? 0}개`}
       </Typography>
-      {commentsQuery.isSuccess && <CommentList comments={commentsQuery.data} />}
+      {commentsQuery.isSuccess && (
+        <CommentList
+          comments={commentsQuery.data}
+          onDeleteComment={handleDeleteComment}
+        />
+      )}
       <CommentInput disabled={!token} value={comment} onChange={setComment} />
       <Flex justify="flex-end">
         {token === undefined && (
