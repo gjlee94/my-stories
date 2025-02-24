@@ -73,8 +73,12 @@ export const CommentList = ({
       {[...comments]
         .sort((a, b) => compareDesc(a.createdAt, b.createdAt))
         .map((comment) => (
-          <CommentItem justify="space-between" align="center">
-            <Flex key={comment.commentId} direction="column" gap={8}>
+          <CommentItem
+            key={comment.commentId}
+            justify="space-between"
+            align="center"
+          >
+            <Flex direction="column" gap={8}>
               <Flex gap={12}>
                 <Typography as="p" variant="body3">
                   {comment.author}
