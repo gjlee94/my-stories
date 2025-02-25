@@ -65,10 +65,10 @@ export const getStaticProps = async () => {
 
 const useFilterPosts = ({
   selectedTab,
-  selectedTag,
+  selectedTags,
 }: {
   selectedTab: string;
-  selectedTag: string | undefined;
+  selectedTags: Set<string>;
 }) => {
   const query = useQuery<Post[]>({
     queryKey: queries.posts.list(),
@@ -78,18 +78,19 @@ const useFilterPosts = ({
 
   return posts.filter((post) => {
     const matchTab = selectedTab === "전체" || post.category === selectedTab;
-    const matchTag =
-      selectedTag === undefined || post.tags.includes(selectedTag);
+    const matchTags =
+      selectedTags.size === 0 ||
+      [...selectedTags].every((tag) => post.tags.includes(tag));
     const isPublished = post.status.includes("Published");
 
-    return matchTab && matchTag && isPublished;
+    return matchTab && matchTags && isPublished;
   });
 };
 
 export default function PostsPage() {
   const { isTablet, isMobile } = useBreakpoints();
   const [selectedTab, setSelectedTab] = useState("전체");
-  const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
 
   const query = useQuery<Post[]>({
     queryKey: queries.posts.list(),
@@ -99,10 +100,22 @@ export default function PostsPage() {
 
   const filteredPosts = useFilterPosts({
     selectedTab,
-    selectedTag,
+    selectedTags,
   });
   const tabs = ["전체", ...new Set(posts.map((post) => post.category))];
   const tags = [...new Set(posts.flatMap((post) => post.tags))];
+
+  const onSelectedTag = (tag: string) => {
+    const newSelectedTags = new Set(selectedTags);
+
+    if (selectedTags.has(tag)) {
+      newSelectedTags.delete(tag);
+    } else {
+      newSelectedTags.add(tag);
+    }
+
+    setSelectedTags(newSelectedTags);
+  };
 
   return (
     <>
@@ -144,8 +157,8 @@ export default function PostsPage() {
             <Profile />
             <TagList
               tags={tags}
-              selectedTag={selectedTag}
-              onTagClick={setSelectedTag}
+              selectedTags={selectedTags}
+              onTagClick={onSelectedTag}
             />
             <ContactList />
           </Aside>

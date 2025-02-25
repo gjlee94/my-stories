@@ -7,11 +7,11 @@ const Wrapper = styled(Flex)``;
 
 export const TagList = ({
   tags,
-  selectedTag,
+  selectedTags,
   onTagClick,
 }: {
   tags: string[];
-  selectedTag: string | undefined;
+  selectedTags: Set<string>;
   onTagClick: (tag: string) => void;
 }) => {
   return (
@@ -26,8 +26,8 @@ export const TagList = ({
           return (
             <Tag
               key={tag}
-              active={selectedTag === tag}
-              onClick={() => onTagClick(selectedTag === tag ? undefined : tag)}
+              active={selectedTags.has(tag)}
+              onClick={() => onTagClick(selectedTags.has(tag) ? tag : tag)}
             >
               {tag}
             </Tag>
