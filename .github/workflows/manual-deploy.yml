@@ -1,4 +1,4 @@
-name: Deploy to AWS S3 & CloudFront
+name: Manual Deploy to AWS S3 & CloudFront
 
 on:
   workflow_dispatch:
