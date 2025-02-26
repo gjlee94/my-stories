@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 
 interface HeadConfigProps {
   title: string;
@@ -31,11 +32,12 @@ export const HeadConfig = ({ title, summary, tags, slug }: HeadConfigProps) => {
         }
       />
       <meta property="og:type" content="website" />
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9393302787267646"
+      <Script
+        strategy="afterInteractive"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        data-ad-client="ca-pub-9393302787267646"
         crossOrigin="anonymous"
-      ></script>
+      />
     </Head>
   );
 };
