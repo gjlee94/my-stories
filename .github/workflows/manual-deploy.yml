@@ -25,10 +25,14 @@ jobs:
       NEXT_PUBLIC_AWS_COGNITO_URL: ${{ vars.AWS_COGNITO_URL }}
 
     steps:
+      - name: Debug Input Branch
+        run: echo "Selected branch: ${{ github.event.inputs.branch }}"
+
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.branch || github.ref_name }}
+          ref: refs/heads/${{ github.event.inputs.branch }}
+          fetch-depth: 0
 
       - name: Setup pnpm & Node
         uses: ./.github/actions/pnpm-setup-node
