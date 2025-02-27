@@ -19,7 +19,6 @@ jobs:
       NEXT_PUBLIC_SITE_URL: ${{ secrets.SITE_URL }}
       NEXT_PUBLIC_AWS_API_URL: ${{ vars.AWS_API_URL }}
       NEXT_PUBLIC_AWS_COGNITO_URL: ${{ vars.AWS_COGNITO_URL }}
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -40,46 +39,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      - name: Upload excluding *.html, *.css, *.js, *.jpg, *.png
-        run: |
-          aws s3 cp ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --recursive \
-            --exclude "*.html" \
-            --exclude "*.json" \
-            --exclude "*.js" \
-            --exclude "*.jpg" \
-            --exclude "*.png" \
-            --exclude "*.json" \
-            --metadata-directive REPLACE \
-            --cache-control max-age=86400,s-maxage=31536000
+      - name: Sync Static Files to S3
+        run: aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete
 
-      - name: Upload HTML to S3 (No Cache for Browser)
-        run: |
-          aws s3 cp ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --recursive --exclude "*" --include "*.html"  \
-            --metadata-directive REPLACE \
-            --cache-control "max-age=0, s-maxage=31536000"
-
-      - name: Upload CSS & JS Files to S3 (Long-term Cache)
-        run: |
-          aws s3 cp ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --recursive --exclude "*" --include "*.css" --include "*.js" \
-            --metadata-directive REPLACE \
-            --cache-control "max-age=31536000, immutable"
-
-      - name: Upload Images to S3 (1 Week Cache)
-        run: |
-          aws s3 cp ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --recursive --exclude "*" --include "*.jpg" --include "*.png" \
-            --metadata-directive REPLACE \
-            --cache-control "max-age=604800, public"
-
-      - name: Upload *.json file to s3
-        run: |
-          aws s3 cp ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --recursive \
-          --exclude "*" \
-          --include "*.json" \
-          --metadata-directive REPLACE \
-          --content-type application/json \
-          --cache-control "max-age=0, s-maxage=31536000"
-
-      - name: Invalidate CloudFront Cache (Only HTML, JSON)
-        run: |
-          aws cloudfront create-invalidation --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths "/*.html" "/_next/data/*"
+      - name: Invalidate CloudFront Cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
