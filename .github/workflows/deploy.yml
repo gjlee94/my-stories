@@ -55,6 +55,7 @@ jobs:
         run: |
           aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
             --exclude "*" --include "*.json" \
+            --content-type "application/json" \
             --cache-control "max-age=0, s-maxage=31536000"
 
       - name: Sync HTML Files to S3 (No Cache)
@@ -78,4 +79,4 @@ jobs:
       - name: Invalidate CloudFront Cache (Only HTML)
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths "/*.html" "/*.json" "/_next/data/*"
+            --paths "/*.html" "/_next/data/*"
