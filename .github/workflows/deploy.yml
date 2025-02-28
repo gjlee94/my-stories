@@ -78,4 +78,4 @@ jobs:
       - name: Invalidate CloudFront Cache (Only HTML)
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths "/*.html, /*.json"
+            --paths "/*.html" "/*.json" "/_next/data/*"
