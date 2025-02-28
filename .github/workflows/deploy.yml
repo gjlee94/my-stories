@@ -19,6 +19,7 @@ jobs:
       NEXT_PUBLIC_SITE_URL: ${{ secrets.SITE_URL }}
       NEXT_PUBLIC_AWS_API_URL: ${{ vars.AWS_API_URL }}
       NEXT_PUBLIC_AWS_COGNITO_URL: ${{ vars.AWS_COGNITO_URL }}
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -39,8 +40,42 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      - name: Sync Static Files to S3
-        run: aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete
+      - name: Sync all other files except HTML, JSON, CSS, JS, Images (Efficient)
+        run: |
+          aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
+            --exclude "*.html" \
+            --exclude "*.json" \
+            --exclude "*.js" \
+            --exclude "*.css" \
+            --exclude "*.jpg" \
+            --exclude "*.png" \
+            --cache-control "max-age=86400,s-maxage=31536000"
 
-      - name: Invalidate CloudFront Cache
-        run: aws cloudfront create-invalidation --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+      - name: Sync JSON Files to S3 (No Cache)
+        run: |
+          aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
+            --exclude "*" --include "*.json" \
+            --cache-control "max-age=0, s-maxage=31536000"
+
+      - name: Sync HTML Files to S3 (No Cache)
+        run: |
+          aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
+            --exclude "*" --include "*.html" \
+            --cache-control "max-age=0, s-maxage=31536000"
+
+      - name: Sync CSS & JS Files to S3 (Long-term Cache)
+        run: |
+          aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
+            --exclude "*" --include "*.css" --include "*.js" \
+            --cache-control "max-age=31536000, immutable"
+
+      - name: Sync Images to S3 (1 Week Cache)
+        run: |
+          aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
+            --exclude "*" --include "*.jpg" --include "*.png" \
+            --cache-control "max-age=604800, public"
+
+      - name: Invalidate CloudFront Cache (Only HTML)
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*.html, /*.json"
