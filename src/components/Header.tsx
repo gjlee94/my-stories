@@ -14,9 +14,6 @@ const Wrapper = styled(Flex)`
   }
 `;
 
-const portfolioLink =
-  "https://serious-curler-ce2.notion.site/98d45e81d19046bea98d6803e6cb4d3e?pvs=4";
-
 export const Header = () => {
   const { isDesktop } = useBreakpoints();
 
@@ -27,7 +24,7 @@ export const Header = () => {
           {`Gyoungjun's Blog`}
         </Typography>
       </Link>
-      <a href={portfolioLink} target="_blank">
+      <Link href="/portfolio">
         <Flex justify="flex-end" align="center" gap="4px">
           <Typography as="p" variant={isDesktop ? "body2" : "body3"}>
             포트폴리오
@@ -39,7 +36,7 @@ export const Header = () => {
             height={isDesktop ? 20 : 16}
           />
         </Flex>
-      </a>
+      </Link>
     </Wrapper>
   );
 };
