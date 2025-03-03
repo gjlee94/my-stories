@@ -12,7 +12,7 @@ export const TagList = ({
 }: {
   tags: string[];
   selectedTags: Set<string>;
-  onTagClick: (tag: string) => void;
+  onTagClick: (selectedTag: string) => void;
 }) => {
   return (
     <Wrapper direction="column" gap={10}>
@@ -27,7 +27,7 @@ export const TagList = ({
             <Tag
               key={tag}
               active={selectedTags.has(tag)}
-              onClick={() => onTagClick(selectedTags.has(tag) ? tag : tag)}
+              onClick={() => onTagClick(tag)}
             >
               {tag}
             </Tag>

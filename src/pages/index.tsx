@@ -16,6 +16,7 @@ import fs from "fs";
 import path from "path";
 import { HeadConfig } from "@/components/HeadConfig";
 import { ContactList } from "@/components/ContactList";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const Main = styled(Flex)`
   max-width: 1000px;
@@ -89,8 +90,31 @@ const useFilterPosts = ({
 
 export default function PostsPage() {
   const { isTablet, isMobile } = useBreakpoints();
+
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
   const [selectedTab, setSelectedTab] = useState("전체");
-  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+  const selectedTags = new Set([...searchParams.getAll("tag")]);
+  // const [selectedTags, setSelectedTags] = useState<Set<string>>(
+  //   new Set([...searchParams.getAll("tag")])
+  // );
+
+  const handleSelectedTag = (selectedTag: string) => {
+    const params = new URLSearchParams();
+    const newSelectedTags = new Set([...searchParams.getAll("tag")]);
+    if (newSelectedTags.has(selectedTag)) {
+      newSelectedTags.delete(selectedTag);
+    } else {
+      newSelectedTags.add(selectedTag);
+    }
+
+    [...newSelectedTags].forEach((tag) => {
+      params.append("tag", tag);
+    });
+
+    router.push(`/?${params.toString()}`);
+  };
 
   const query = useQuery<Post[]>({
     queryKey: queries.posts.list(),
@@ -100,22 +124,10 @@ export default function PostsPage() {
 
   const filteredPosts = useFilterPosts({
     selectedTab,
-    selectedTags,
+    selectedTags
   });
   const tabs = ["전체", ...new Set(posts.map((post) => post.category))];
   const tags = [...new Set(posts.flatMap((post) => post.tags))];
-
-  const onSelectedTag = (tag: string) => {
-    const newSelectedTags = new Set(selectedTags);
-
-    if (selectedTags.has(tag)) {
-      newSelectedTags.delete(tag);
-    } else {
-      newSelectedTags.add(tag);
-    }
-
-    setSelectedTags(newSelectedTags);
-  };
 
   return (
     <>
@@ -158,7 +170,7 @@ export default function PostsPage() {
             <TagList
               tags={tags}
               selectedTags={selectedTags}
-              onTagClick={onSelectedTag}
+              onTagClick={handleSelectedTag}
             />
             <ContactList />
           </Aside>
