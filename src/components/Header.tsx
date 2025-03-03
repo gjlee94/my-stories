@@ -29,12 +29,6 @@ export const Header = () => {
           <Typography as="p" variant={isDesktop ? "body2" : "body3"}>
             포트폴리오
           </Typography>
-          <Image
-            src="/assets/icons/external-link.svg"
-            alt="external-link"
-            width={isDesktop ? 20 : 16}
-            height={isDesktop ? 20 : 16}
-          />
         </Flex>
       </Link>
     </Wrapper>
