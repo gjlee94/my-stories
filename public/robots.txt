@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://dz8loj6wyz9a4.cloudfront.net
+Host: https://gyoungjun-log.me/
 
 # Sitemaps
-Sitemap: https://dz8loj6wyz9a4.cloudfront.net/sitemap.xml
+Sitemap: https://gyoungjun-log.me/sitemap.xml
