@@ -64,7 +64,7 @@ export const EmoticonBox = ({
 
   return (
     <Wrapper>
-      <Flex gap={8}>
+      <Flex gap={8} css={{ flexWrap: "wrap" }}>
         {emotionList.map((key) => (
           <Emoticon
             disabled={!token}

@@ -30,7 +30,7 @@ export const PreviewContent = ({ post }: PreviewContentType) => {
           <Typography as="p" variant="body6">
             {format(new Date(post.createdTime), "yyyy년 MM월 dd일")}
           </Typography>
-          <Flex gap={6}>
+          <Flex gap={6} css={{ flexWrap: "wrap" }}>
             {post.tags.map((tag, idx) => (
               <Tag key={tag + idx}>{tag}</Tag>
             ))}

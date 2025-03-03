@@ -5,6 +5,7 @@ const Wrapper = styled.button<{ active?: boolean; disabled?: boolean }>`
   align-items: center;
   justify-content: center;
   gap: 4px;
+  white-space: nowrap;
 
   border: ${({ active }) => (active ? "none" : "1px solid rgb(232, 232, 232)")};
   border-radius: 50px;
