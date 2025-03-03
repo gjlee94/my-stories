@@ -23,6 +23,7 @@ jobs:
       NEXT_PUBLIC_SITE_URL: ${{ secrets.SITE_URL }}
       NEXT_PUBLIC_AWS_API_URL: ${{ vars.AWS_API_URL }}
       NEXT_PUBLIC_AWS_COGNITO_URL: ${{ vars.AWS_COGNITO_URL }}
+      NEXT_PUBLIC_NOTION_PORTFOLIO_PAGE_ID: ${{ secrets.NOTION_PORTFOLIO_PAGE_ID }}
 
     steps:
       - name: Checkout Repository
