@@ -21,10 +21,14 @@ export const PreviewContent = ({ post }: PreviewContentType) => {
         }}
       >
         <Flex direction="column" gap="6px">
-          <Typography as="h2" variant="title4">
+          <Typography as="h2" variant="title4" css={{ marginBottom: "10px" }}>
             {post.title}
           </Typography>
-          <Typography as="p" variant="body3" css={{ paddingBottom: "10px" }}>
+          <Typography
+            as="p"
+            variant="body3"
+            css={{ paddingBottom: "10px", whiteSpace: "pre-line" }}
+          >
             {post.summary}
           </Typography>
           <Typography as="p" variant="body6">
