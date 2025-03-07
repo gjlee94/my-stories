@@ -14,7 +14,7 @@ import type {
   BlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 
-// import NotionRenderer from "@/components/NotionRenderer";
+import NotionRenderer from "@/components/NotionRenderer";
 
 import { HeadConfig } from "@/components/HeadConfig";
 
@@ -158,7 +158,7 @@ export default function PostDetailPage({
             <Tag key={tag + idx}>{tag}</Tag>
           ))}
         </Flex>
-        {/* <NotionRenderer posts={post.recordMap} /> */}
+        <NotionRenderer posts={post.recordMap} />
         <RequireLoginRegion disabled={!token}>
           <EmoticonBox
             id={post.id}
