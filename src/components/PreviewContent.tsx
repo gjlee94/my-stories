@@ -2,7 +2,7 @@ import type { Post } from "@/types/post";
 import { Flex } from "./common/Flex";
 import { Typography } from "./common/Typography";
 import { Tag } from "./common/Tag";
-// import { format } from "date-fns";
+import { format } from "date-fns";
 
 interface PreviewContentType {
   post: Post;
@@ -31,9 +31,9 @@ export const PreviewContent = ({ post }: PreviewContentType) => {
           >
             {post.summary}
           </Typography>
-          {/* <Typography as="p" variant="body6">
+          <Typography as="p" variant="body6">
             {format(new Date(post.createdTime), "yyyy년 MM월 dd일")}
-          </Typography> */}
+          </Typography>
           <Flex gap={6} css={{ flexWrap: "wrap" }}>
             {post.tags.map((tag, idx) => (
               <Tag key={tag + idx}>{tag}</Tag>

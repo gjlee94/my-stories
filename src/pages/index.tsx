@@ -96,9 +96,6 @@ export default function PostsPage() {
 
   const [selectedTab, setSelectedTab] = useState("전체");
   const selectedTags = new Set([...searchParams.getAll("tag")]);
-  // const [selectedTags, setSelectedTags] = useState<Set<string>>(
-  //   new Set([...searchParams.getAll("tag")])
-  // );
 
   const handleSelectedTag = (selectedTag: string) => {
     const params = new URLSearchParams();
@@ -124,7 +121,7 @@ export default function PostsPage() {
 
   const filteredPosts = useFilterPosts({
     selectedTab,
-    selectedTags
+    selectedTags,
   });
   const tabs = ["전체", ...new Set(posts.map((post) => post.category))];
   const tags = [...new Set(posts.flatMap((post) => post.tags))];
