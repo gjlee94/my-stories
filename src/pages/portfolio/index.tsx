@@ -9,7 +9,7 @@ import type {
   BlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 
-import NotionRenderer from "@/components/NotionRenderer";
+// import NotionRenderer from "@/components/NotionRenderer";
 
 import { queries } from "@/query/queries";
 import { HeadConfig } from "@/components/HeadConfig";
@@ -54,7 +54,7 @@ type PortfolioDetail = {
   recordMap: {
     page: PageObjectResponse;
     blocks: BlockObjectResponse[];
-  };  
+  };
 };
 
 export default function PostDetailPage() {
@@ -66,7 +66,8 @@ export default function PostDetailPage() {
     <>
       <HeadConfig title={"포트폴리오"} />
       <Wrapper direction="column" gap={20}>
-        <NotionRenderer posts={portfolioQuery.data?.recordMap} />
+        디버깅
+        {/* <NotionRenderer posts={portfolioQuery.data?.recordMap} /> */}
       </Wrapper>
     </>
   );
