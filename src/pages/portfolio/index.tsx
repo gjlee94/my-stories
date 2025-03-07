@@ -12,6 +12,7 @@ import type {
 import NotionRenderer from "@/components/NotionRenderer";
 
 import { queries } from "@/query/queries";
+import { HeadConfig } from "@/components/HeadConfig";
 
 const uuidToId = (uuid: string) => uuid.replaceAll("-", "");
 
@@ -19,8 +20,6 @@ export async function getStaticProps() {
   const recordMap = await getRecordMap(
     uuidToId(process.env.NEXT_PUBLIC_NOTION_PORTFOLIO_PAGE_ID)
   );
-
-  console.log("recordMap", recordMap);
 
   await queryClient.prefetchQuery({
     queryKey: queries.portfolio.get(),
@@ -55,7 +54,7 @@ type PortfolioDetail = {
   recordMap: {
     page: PageObjectResponse;
     blocks: BlockObjectResponse[];
-  };
+  };  
 };
 
 export default function PostDetailPage() {
@@ -65,11 +64,7 @@ export default function PostDetailPage() {
 
   return (
     <>
-      {/* <HeadConfig
-        title={portfolioQuery.data?.recordMap.page.title}
-        summary={portfolioQuery.data?.recordMap.page.summary}
-        tags={portfolioQuery.data?.recordMap.page.tags}
-      /> */}
+      <HeadConfig title={"포트폴리오"} />
       <Wrapper direction="column" gap={20}>
         <NotionRenderer posts={portfolioQuery.data?.recordMap} />
       </Wrapper>
