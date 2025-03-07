@@ -7,7 +7,7 @@ import { HydrationBoundary, QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "@/lib/queryClient";
 import { ErrorBoundary, Suspense } from "@suspensive/react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface MyAppProps extends AppProps {
   tags: string[];
@@ -35,8 +35,10 @@ function ErrorFallback({ error }: { error: Error }) {
 }
 
 function MyApp({ Component, pageProps }: MyAppProps) {
+  const [queryClientInstance] = useState(() => queryClient);
+
   return (
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClientInstance}>
       <HydrationBoundary state={pageProps.dehydratedState}>
         <ErrorBoundary fallback={ErrorFallback}>
           <Suspense fallback={<div>Loading...</div>}>

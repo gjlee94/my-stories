@@ -2,10 +2,9 @@ import styled from "@emotion/styled";
 import { Flex } from "../common/Flex";
 import { Comment } from "@/apis/comments";
 import { Typography } from "../common/Typography";
-import { compareDesc, differenceInMinutes, format } from "date-fns";
+import { differenceInMinutes, format } from "date-fns";
 import Image from "next/image";
 import { css } from "@emotion/react";
-import { useState, useEffect } from "react";
 
 const Wrapper = styled(Flex)`
   height: 100%;
@@ -66,29 +65,13 @@ export const CommentList = ({
   username: string;
   onDeleteComment: (postId: string, commentId: string) => void;
 }) => {
-  const [formattedComments, setFormattedComments] = useState([]);
-  // const [timeStrings, setTimeStrings] = useState({});
-
-  // useEffect(() => {
-  //   const sorted = [...comments].sort((a, b) =>
-  //     compareDesc(a.createdAt, b.createdAt)
-  //   );
-  //   const times = {};
-  //   sorted.forEach((comment) => {
-  //     times[comment.commentId] = parseSpendTime(comment.createdAt);
-  //   });
-
-  //   setFormattedComments(sorted);
-  //   setTimeStrings(times);
-  // }, [comments]);
-
   if (comments.length === 0) {
     return <Wrapper direction="column">댓글이 없습니다.</Wrapper>;
   }
 
   return (
     <Wrapper direction="column">
-      {formattedComments.map((comment) => (
+      {comments.map((comment) => (
         <CommentItem
           key={comment.commentId}
           justify="space-between"
@@ -99,9 +82,6 @@ export const CommentList = ({
               <Typography as="p" variant="body3">
                 {comment.author}
               </Typography>
-              {/* <Typography as="p" variant="body3">
-                {timeStrings[comment.commentId] || ""}
-              </Typography> */}
             </Flex>
             <Typography as="p" variant="body3">
               <span css={{ position: "relative", top: "-2px" }}>↳</span>{" "}
