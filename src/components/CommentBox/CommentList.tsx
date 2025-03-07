@@ -66,13 +66,21 @@ export const CommentList = ({
   username: string;
   onDeleteComment: (postId: string, commentId: string) => void;
 }) => {
-  const [formattedComments, setFormattedComments] = useState(comments);
+  const [formattedComments, setFormattedComments] = useState([]);
+  // const [timeStrings, setTimeStrings] = useState({});
 
-  useEffect(() => {
-    setFormattedComments(
-      [...comments].sort((a, b) => compareDesc(a.createdAt, b.createdAt))
-    );
-  }, [comments]);
+  // useEffect(() => {
+  //   const sorted = [...comments].sort((a, b) =>
+  //     compareDesc(a.createdAt, b.createdAt)
+  //   );
+  //   const times = {};
+  //   sorted.forEach((comment) => {
+  //     times[comment.commentId] = parseSpendTime(comment.createdAt);
+  //   });
+
+  //   setFormattedComments(sorted);
+  //   setTimeStrings(times);
+  // }, [comments]);
 
   if (comments.length === 0) {
     return <Wrapper direction="column">댓글이 없습니다.</Wrapper>;
@@ -91,9 +99,9 @@ export const CommentList = ({
               <Typography as="p" variant="body3">
                 {comment.author}
               </Typography>
-              <Typography as="p" variant="body3">
-                {parseSpendTime(comment.createdAt)}
-              </Typography>
+              {/* <Typography as="p" variant="body3">
+                {timeStrings[comment.commentId] || ""}
+              </Typography> */}
             </Flex>
             <Typography as="p" variant="body3">
               <span css={{ position: "relative", top: "-2px" }}>↳</span>{" "}
