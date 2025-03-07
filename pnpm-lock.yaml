@@ -23,6 +23,9 @@ dependencies:
   '@notionhq/client':
     specifier: ^2.2.14
     version: 2.2.16
+  '@suspensive/react':
+    specifier: ^2.18.12
+    version: 2.18.12(react@19.0.0)
   '@tanstack/react-query':
     specifier: ^5.66.0
     version: 5.66.0(react@19.0.0)
@@ -1884,6 +1887,14 @@ packages:
   /@rushstack/eslint-patch@1.10.5:
     resolution: {integrity: sha512-kkKUDVlII2DQiKy7UstOR1ErJP8kUKAQ4oa+SQtM0K+lPdmmjj0YnnxBgtTVYH7mUKtbsxeFC9y0AmK7Yb78/A==}
     dev: true
+
+  /@suspensive/react@2.18.12(react@19.0.0):
+    resolution: {integrity: sha512-De3sVLxLnMpTSOfW3t3D8uh8+/bK8+L/mV8YRAwjW2PyR8BBe9+nctFRVO+ZCIFKUs7VPtnIXnb+5bKfBQ1vog==}
+    peerDependencies:
+      react: ^18 || ^19
+    dependencies:
+      react: 19.0.0
+    dev: false
 
   /@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.26.7):
     resolution: {integrity: sha512-b9MIk7yhdS1pMCZM8VeNfUlSKVRhsHZNMl5O9SfaX0l0t5wjdgu4IDzGB8bpnGBBOjGST3rRFVsaaEtI4W6f7g==}

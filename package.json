@@ -33,6 +33,7 @@
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.0",
     "@notionhq/client": "^2.2.14",
+    "@suspensive/react": "^2.18.12",
     "@tanstack/react-query": "^5.66.0",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
