@@ -5,7 +5,7 @@ import type { AppProps } from "next/app";
 import { Header } from "@/components/Header";
 import { HydrationBoundary, QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "@/lib/queryClient";
-import { Suspense } from "react";
+// import { Suspense } from "react";
 // import { ErrorBoundary, Suspense } from "@suspensive/react";
 // import { useRouter } from "next/router";
 // import { useEffect } from "react";
@@ -40,14 +40,14 @@ function MyApp({ Component, pageProps }: MyAppProps) {
     <QueryClientProvider client={queryClient}>
       <HydrationBoundary state={pageProps.dehydratedState}>
         {/* <ErrorBoundary fallback={ErrorFallback}> */}
-        <Suspense fallback={<div>Loading...</div>}>
-          <Wrapper direction="column" align="center">
-            <div style={{ width: "100%", borderBottom: "1px solid #e0e0e0" }}>
-              <Header />
-            </div>
-            <Component {...pageProps} />
-          </Wrapper>
-        </Suspense>
+        {/* <Suspense fallback={<div>Loading...</div>}> */}
+        <Wrapper direction="column" align="center">
+          <div style={{ width: "100%", borderBottom: "1px solid #e0e0e0" }}>
+            <Header />
+          </div>
+          <Component {...pageProps} />
+        </Wrapper>
+        {/* </Suspense> */}
         {/* </ErrorBoundary> */}
       </HydrationBoundary>
     </QueryClientProvider>
