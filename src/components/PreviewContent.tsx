@@ -4,7 +4,7 @@ import { Typography } from "./common/Typography";
 import { Tag } from "./common/Tag";
 import { format } from "date-fns";
 import { ko } from "date-fns/locale";
-
+import { utcToKoTime } from "@/utils/utcToKoTime";
 interface PreviewContentType {
   post: Post;
 }
@@ -33,7 +33,7 @@ export const PreviewContent = ({ post }: PreviewContentType) => {
             {post.summary}
           </Typography>
           <Typography as="p" variant="body6">
-            {format(post.createdTime, "yyyy년 MM월 dd일", {
+            {format(utcToKoTime(post.createdTime), "yyyy년 MM월 dd일", {
               locale: ko,
             })}
           </Typography>
