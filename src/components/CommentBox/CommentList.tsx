@@ -6,6 +6,8 @@ import { compareDesc, differenceInMinutes, format } from "date-fns";
 import Image from "next/image";
 import { css } from "@emotion/react";
 import { ko } from "date-fns/locale";
+import { utcToKoTime } from "@/utils/utcToKoTime";
+
 const Wrapper = styled(Flex)`
   height: 100%;
   border: 1px solid #ccc;
@@ -121,5 +123,5 @@ const parseSpendTime = (targetDate: Date) => {
   if (diff < 24 * 60 * 60) {
     return `${Math.floor(diff / (24 * 60))}일 전`;
   }
-  return format(targetDate, "yyyy-MM-dd", { locale: ko });
+  return format(utcToKoTime(targetDate), "yyyy-MM-dd", { locale: ko });
 };

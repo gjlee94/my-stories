@@ -36,6 +36,7 @@
     "@suspensive/react": "^2.18.12",
     "@tanstack/react-query": "^5.66.0",
     "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
     "gray-matter": "^4.0.3",
     "next": "^15.1.6",
     "next-sitemap": "^4.2.3",

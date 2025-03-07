@@ -27,6 +27,7 @@ import { useEffect, useState } from "react";
 import { getAccessToken, openLoginPopup } from "@/utils/auth";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { ko } from "date-fns/locale";
+import { utcToKoTime } from "@/utils/utcToKoTime";
 
 const uuidToId = (uuid: string) => uuid.replaceAll("-", "");
 
@@ -152,7 +153,9 @@ export default function PostDetailPage({
           {post.title}
         </Typography>
         <Typography as="p" variant="body3">
-          {format(post.createdTime, "yyyy년 MM월 dd일", { locale: ko })}
+          {format(utcToKoTime(post.createdTime), "yyyy년 MM월 dd일", {
+            locale: ko,
+          })}
         </Typography>
         <Flex gap={6} css={{ flexWrap: "wrap" }}>
           {post.tags.map((tag, idx) => (
