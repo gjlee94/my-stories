@@ -1,4 +1,3 @@
-import { Post } from "@/types/post";
 import { Client } from "@notionhq/client";
 
 interface Page {
