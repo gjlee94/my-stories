@@ -5,6 +5,7 @@ import { Typography } from "../common/Typography";
 import { compareDesc, differenceInMinutes, format } from "date-fns";
 import Image from "next/image";
 import { css } from "@emotion/react";
+import { useState, useEffect } from "react";
 
 const Wrapper = styled(Flex)`
   height: 100%;
@@ -65,46 +66,53 @@ export const CommentList = ({
   username: string;
   onDeleteComment: (postId: string, commentId: string) => void;
 }) => {
+  const [formattedComments, setFormattedComments] = useState(comments);
+
+  useEffect(() => {
+    setFormattedComments(
+      [...comments].sort((a, b) => compareDesc(a.createdAt, b.createdAt))
+    );
+  }, [comments]);
+
   if (comments.length === 0) {
     return <Wrapper direction="column">댓글이 없습니다.</Wrapper>;
   }
+
   return (
     <Wrapper direction="column">
-      {[...comments]
-        .sort((a, b) => compareDesc(a.createdAt, b.createdAt))
-        .map((comment) => (
-          <CommentItem
-            key={comment.commentId}
-            justify="space-between"
-            align="center"
-          >
-            <Flex direction="column" gap={8}>
-              <Flex gap={12}>
-                <Typography as="p" variant="body3">
-                  {comment.author}
-                </Typography>
-                <Typography as="p" variant="body3">
-                  {parseSpendTime(comment.createdAt)}
-                </Typography>
-              </Flex>
+      {formattedComments.map((comment) => (
+        <CommentItem
+          key={comment.commentId}
+          justify="space-between"
+          align="center"
+        >
+          <Flex direction="column" gap={8}>
+            <Flex gap={12}>
               <Typography as="p" variant="body3">
-                <span css={{ position: "relative", top: "-2px" }}>↳</span>{" "}
-                {comment.content}
+                {comment.author}
+              </Typography>
+              <Typography as="p" variant="body3">
+                {parseSpendTime(comment.createdAt)}
               </Typography>
             </Flex>
-            <DeleteButton
-              disabled={username !== comment.author}
-              onClick={() => onDeleteComment(comment.postId, comment.commentId)}
-            >
-              <Image
-                src="/assets/icons/delete.svg"
-                alt="delete"
-                width={20}
-                height={20}
-              />
-            </DeleteButton>
-          </CommentItem>
-        ))}
+            <Typography as="p" variant="body3">
+              <span css={{ position: "relative", top: "-2px" }}>↳</span>{" "}
+              {comment.content}
+            </Typography>
+          </Flex>
+          <DeleteButton
+            disabled={username !== comment.author}
+            onClick={() => onDeleteComment(comment.postId, comment.commentId)}
+          >
+            <Image
+              src="/assets/icons/delete.svg"
+              alt="delete"
+              width={20}
+              height={20}
+            />
+          </DeleteButton>
+        </CommentItem>
+      ))}
     </Wrapper>
   );
 };
