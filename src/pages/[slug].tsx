@@ -64,10 +64,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     `debug-${params.slug}.json`
   );
 
-  fs.writeFileSync(
-    debugFilePath,
-    JSON.stringify({ posts, recordMap }, null, 2)
-  );
+  fs.writeFileSync(debugFilePath, JSON.stringify({ recordMap }, null, 2));
 
   return {
     props: {
