@@ -20,7 +20,7 @@ export const ContactList = ({}: {}) => {
     <Wrapper direction="column" gap={10}>
       <Typography variant="title6">📞 Contact</Typography>
       <Flex align="center" justify="space-between" css={{ padding: "0 16px" }}>
-        <ContactItem href="https://github.com/gyoungjun-dev">
+        <ContactItem href="https://github.com/gjlee94">
           <Image
             src="/assets/icons/github-mark.svg"
             alt="github"
