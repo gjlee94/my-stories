@@ -18,6 +18,12 @@ export default class MyDocument extends Document {
             sizes="180x180"
             href="/apple-icon-180x180.png"
           />
+          {/* Google AdSense 자동 광고 스크립트 */}
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-9393302787267646"
+            crossOrigin="anonymous"
+          ></script>
         </Head>
         <body>
           <Main />
