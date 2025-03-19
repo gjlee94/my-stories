@@ -82,10 +82,9 @@ jobs:
         run: |
           aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
             --exclude "*" --include "*.xml" \
-            --content-type "application/xml" \
             --cache-control "max-age=0, s-maxage=31536000"
 
-      - name: Invalidate CloudFront Cache (Only HTML)
+      - name: Invalidate CloudFront Cache
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ vars.AWS_CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/*"

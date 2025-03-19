@@ -6,4 +6,5 @@ export default {
   exclude: [], // ❌ 검색에서 제외할 페이지
   changefreq: "daily",
   priority: 0.7,
+  outDir: "./out",
 };
