@@ -6,7 +6,7 @@ import { format } from "date-fns";
 import styled from "@emotion/styled";
 import { getPosts } from "@/apis/posts";
 import { queryClient } from "@/query/queryClient";
-import { dehydrate, useMutation, useQuery } from "@tanstack/react-query";
+import { dehydrate, DehydratedState, useQuery } from "@tanstack/react-query";
 import { getRecordMap } from "@/components/NotionRenderer/getRecordMap";
 
 import type {
@@ -107,8 +107,10 @@ type PostDetail = Post & {
 };
 
 export default function PostDetailPage({
+  dehydratedState,
   params,
 }: {
+  dehydratedState: DehydratedState;
   params: { slug: string };
 }) {
   const [token, setToken] = useState<string>();
@@ -118,7 +120,7 @@ export default function PostDetailPage({
   useEffect(() => {
     setToken(getAccessToken());
   }, []);
-
+  console.log(dehydratedState);
   const handleLogin = () => {
     openLoginPopup();
 
@@ -131,6 +133,10 @@ export default function PostDetailPage({
 
   const postDetailQuery = useQuery<PostDetail>({
     queryKey: queries.posts.detail(params.slug),
+    initialData: dehydratedState.queries.find(
+      (query) => query.queryKey[0] === queries.posts.detail(params.slug)
+    )?.state.data as PostDetail,
+    staleTime: Infinity,
   });
 
   const userQuery = useQuery(queries.user.detail());
