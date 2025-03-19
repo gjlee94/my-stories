@@ -83,7 +83,7 @@ jobs:
           --include "*.json" \
           --metadata-directive REPLACE \
           --content-type application/json \
-          --cache-control "max-age=0, s-maxage=31536000"
+          --cache-control "max-age=31536000, s-maxage=31536000"
 
       - name: Sync Sitemap Files to S3 (No Cache)
         run: |
