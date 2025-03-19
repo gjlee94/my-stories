@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { Profile } from "@/components/Profile";
 import { TagList } from "@/components/TagList";
-import { dehydrate, useQuery } from "@tanstack/react-query";
+import { dehydrate, DehydratedState, useQuery } from "@tanstack/react-query";
 import { queryClient } from "@/lib/queryClient";
 import { getPosts } from "@/apis/posts";
 import { TabList } from "@/components/TabList";
@@ -88,7 +88,11 @@ const useFilterPosts = ({
   });
 };
 
-export default function PostsPage() {
+export default function PostsPage({
+  dehydratedState,
+}: {
+  dehydratedState: DehydratedState;
+}) {
   const { isTablet, isMobile } = useBreakpoints();
 
   const searchParams = useSearchParams();
@@ -115,6 +119,10 @@ export default function PostsPage() {
 
   const query = useQuery<Post[]>({
     queryKey: queries.posts.list(),
+    initialData: dehydratedState.queries.find(
+      (query) => query.queryKey[0] === queries.posts.list()
+    )?.state.data as Post[],
+    staleTime: Infinity,
   });
 
   const posts = query.data;

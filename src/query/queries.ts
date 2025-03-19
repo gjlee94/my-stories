@@ -6,14 +6,14 @@ import { queryOptions } from "@tanstack/react-query";
 export const queries = {
   posts: {
     all: () => ["posts"],
-    list: () => [queries.posts.all(), "list"],
-    detail: (slug: string) => [queries.posts.all(), "detail", slug],
+    list: () => [...queries.posts.all(), "list"],
+    detail: (slug: string) => [...queries.posts.all(), "detail", slug],
   },
   comments: {
     all: () => ["comments"],
     detail: (postId: string) =>
       queryOptions({
-        queryKey: [queries.comments.all(), "detail", postId],
+        queryKey: [...queries.comments.all(), "detail", postId],
         queryFn: async () => {
           return await getComments(postId);
         },
@@ -23,7 +23,7 @@ export const queries = {
     all: () => ["user"],
     detail: () =>
       queryOptions({
-        queryKey: [queries.user.all(), "detail"],
+        queryKey: [...queries.user.all(), "detail"],
         queryFn: async () => {
           return await getUser();
         },
@@ -34,7 +34,7 @@ export const queries = {
     all: () => ["reactions"],
     detail: (pageId: string) =>
       queryOptions({
-        queryKey: [queries.reactions.all(), "detail", pageId],
+        queryKey: [...queries.reactions.all(), "detail", pageId],
         queryFn: async () => {
           return await getReactions(pageId);
         },
@@ -42,6 +42,6 @@ export const queries = {
   },
   portfolio: {
     all: () => ["portfolio"],
-    get: () => [queries.portfolio.all(), "get"],
+    get: () => [...queries.portfolio.all(), "get"],
   },
 };
