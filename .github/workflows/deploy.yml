@@ -50,6 +50,7 @@ jobs:
             --exclude "*.css" \
             --exclude "*.jpg" \
             --exclude "*.png" \
+            --exclude "*.xml" \
             --cache-control "max-age=86400,s-maxage=31536000"
 
       - name: Sync JSON Files to S3 (No Cache)
@@ -76,6 +77,13 @@ jobs:
           aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
             --exclude "*" --include "*.jpg" --include "*.png" \
             --cache-control "max-age=604800, public"
+
+      - name: Sync Sitemap Files to S3 (No Cache)
+        run: |
+          aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
+            --exclude "*" --include "*.xml" \
+            --content-type "application/xml" \
+            --cache-control "max-age=0, s-maxage=31536000"
 
       - name: Invalidate CloudFront Cache (Only HTML)
         run: |
