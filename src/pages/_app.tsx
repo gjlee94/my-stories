@@ -8,6 +8,7 @@ import { queryClient } from "@/query/queryClient";
 import { ErrorBoundary, Suspense } from "@suspensive/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 interface MyAppProps extends AppProps {
   tags: string[];
@@ -51,6 +52,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
           </Suspense>
         </ErrorBoundary>
       </HydrationBoundary>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
