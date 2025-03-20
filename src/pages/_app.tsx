@@ -4,7 +4,7 @@ import { Flex } from "@/components/common/Flex";
 import type { AppProps } from "next/app";
 import { Header } from "@/components/Header";
 import { HydrationBoundary, QueryClientProvider } from "@tanstack/react-query";
-import { queryClient } from "@/lib/queryClient";
+import { queryClient } from "@/query/queryClient";
 import { ErrorBoundary, Suspense } from "@suspensive/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";

@@ -8,7 +8,7 @@ import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { Profile } from "@/components/Profile";
 import { TagList } from "@/components/TagList";
 import { dehydrate, DehydratedState, useQuery } from "@tanstack/react-query";
-import { queryClient } from "@/lib/queryClient";
+import { queryClient } from "@/query/queryClient";
 import { getPosts } from "@/apis/posts";
 import { TabList } from "@/components/TabList";
 import { queries } from "@/query/queries";
