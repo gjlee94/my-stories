@@ -58,7 +58,14 @@ jobs:
             --metadata-directive REPLACE \
             --cache-control max-age=86400,s-maxage=31536000
 
-      - name: Upload HTML to S3 (No Cache for Browser)
+      - name: Sync JSON Files to S3
+        run: |
+          aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
+            --exclude "*" --include "*.json" \
+            --content-type "application/json" \
+            --cache-control "max-age=86400, s-maxage=31536000"
+
+      - name: Upload HTML to S3
         run: |
           aws s3 cp ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --recursive --exclude "*" --include "*.html"  \
             --metadata-directive REPLACE \
@@ -75,15 +82,6 @@ jobs:
           aws s3 cp ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --recursive --exclude "*" --include "*.jpg" --include "*.png" \
             --metadata-directive REPLACE \
             --cache-control "max-age=604800, public"
-
-      - name: Upload *.json file to s3
-        run: |
-          aws s3 cp ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --recursive \
-          --exclude "*" \
-          --include "*.json" \
-          --metadata-directive REPLACE \
-          --content-type application/json \
-          --cache-control "max-age=31536000, s-maxage=31536000"
 
       - name: Sync Sitemap Files to S3 (No Cache)
         run: |

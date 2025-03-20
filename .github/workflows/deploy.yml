@@ -53,12 +53,12 @@ jobs:
             --exclude "*.xml" \
             --cache-control "max-age=86400,s-maxage=31536000"
 
-      - name: Sync JSON Files to S3 (No Cache)
+      - name: Sync JSON Files to S3
         run: |
           aws s3 sync ./out s3://${{ vars.AWS_S3_BUCKET_NAME }} --delete \
             --exclude "*" --include "*.json" \
             --content-type "application/json" \
-            --cache-control "max-age=31536000, s-maxage=31536000"
+            --cache-control "max-age=86400, s-maxage=31536000"
 
       - name: Sync HTML Files to S3 (No Cache)
         run: |
