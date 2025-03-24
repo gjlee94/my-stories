@@ -21,9 +21,9 @@ export default class MyDocument extends Document {
           {/* Google AdSense 자동 광고 스크립트 */}
           <script
             async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-9393302787267646"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
             crossOrigin="anonymous"
-          ></script>
+          />
         </Head>
         <body>
           <Main />

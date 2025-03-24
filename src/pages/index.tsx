@@ -17,6 +17,7 @@ import path from "path";
 import { HeadConfig } from "@/components/HeadConfig";
 import { ContactList } from "@/components/ContactList";
 import { useRouter, useSearchParams } from "next/navigation";
+import AdSenseBanner from "@/components/Adsense";
 
 const Main = styled(Flex)`
   max-width: 1000px;
@@ -178,6 +179,7 @@ export default function PostsPage({
               onTagClick={handleSelectedTag}
             />
             <ContactList />
+            <AdSenseBanner />
           </Aside>
         )}
       </Flex>
