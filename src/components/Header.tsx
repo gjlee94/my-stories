@@ -19,8 +19,6 @@ export const Header = () => {
   const { isDesktop } = useBreakpoints();
   const router = useRouter();
 
-  const isPortfolioPage = router.pathname === "/portfolio";
-  const isErrorPage = router.pathname === "/error";
 
   return (
     <Wrapper justify="space-between" align="center">
@@ -29,15 +27,6 @@ export const Header = () => {
           {`Gyoungjun's Blog`}
         </Typography>
       </Link>
-      {!isPortfolioPage && !isErrorPage && (
-        <Link href="/portfolio">
-          <Flex justify="flex-end" align="center" gap="4px">
-            <Typography as="p" variant={isDesktop ? "body2" : "body3"}>
-              포트폴리오
-            </Typography>
-          </Flex>
-        </Link>
-      )}
     </Wrapper>
   );
 };

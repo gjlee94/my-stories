@@ -40,8 +40,4 @@ export const queries = {
         },
       }),
   },
-  portfolio: {
-    all: () => ["portfolio"],
-    get: () => [...queries.portfolio.all(), "get"],
-  },
 };

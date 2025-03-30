@@ -21,7 +21,7 @@ const AdBanner = () => {
       }
     };
 
-    const timeout = setTimeout(tryPush, 1000);
+    const timeout = setTimeout(tryPush, 2000);
     return () => clearTimeout(timeout);
   }, []);
 
